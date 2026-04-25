@@ -1,0 +1,7839 @@
+{
+  "n_samples": 355,
+  "samples": [
+    {
+      "utterance": "これだけで朝までもつかな？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる"
+      ],
+      "ref_utterance": "どこに片付けたかな？",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ちょっと休憩しようかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[3]コップを持ってくる",
+        "[8]スマホを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "これでいいかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "サランラップ"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "おはよう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "これも今日温めて食べよう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "食べてる時間はなさそう",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる"
+      ],
+      "ref_utterance": "これで汚れは取れたかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "糖分が欲しいな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "たくさん作っちゃったから、これは今日食べずに置いておこう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "このバナナ美味しそう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[6]ペットボトルを持ってくる"
+      ],
+      "ref_utterance": "お菓子邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "なんかお腹が空いたなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "リモコンいつも片付け忘れるんだよな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "リモコン"
+      ],
+      "ref_reflective_actions": [
+        "[16]リモコンを片付ける"
+      ]
+    },
+    {
+      "utterance": "朝ごはん食べよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる"
+      ],
+      "ref_utterance": "グラスも洗わないと",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ",
+        "水筒",
+        "キッチンペーパー",
+        "サランラップ",
+        "オリーブオイル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "やあ！",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "缶切り何処にしまったんだっけ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "映画でも観ようかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "クッキングシート、あんなところにあったの？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "充電切れそう、困ったな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ],
+      "ref_utterance": "コーヒー美味しかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "休まずゲームしてたら疲れたよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "喉が渇いたな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ",
+        "水筒",
+        "キッチンペーパー",
+        "サランラップ",
+        "オリーブオイル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[23]グラスを持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "そろそろ充電しなきゃ",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ],
+      "ref_utterance": "鼻水が止まらない",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "充電するの忘れてた",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ],
+      "ref_utterance": "くしゃみが出そう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "バッテリー食うなあ",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ],
+      "ref_utterance": "焼く前にクッキングシートを敷かなきゃな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "バッテリーがやばい",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ],
+      "ref_utterance": "何だろう？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "充電が足りない",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ],
+      "ref_utterance": "そろそろ連絡来るかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "今日は忙しい",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "このグラスで明日もおいしいく飲みたいな",
+      "ref_has": [
+        "グラス"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "薬飲まなきゃ",
+      "has": [
+        "袋"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる"
+      ],
+      "ref_utterance": "あれ、サランラップどこ置いたっけ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "お風呂入ったら喉乾いたな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる"
+      ],
+      "ref_utterance": "そろそろナスのアクが抜けたかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "コップ持ってくるの忘れた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる"
+      ],
+      "ref_utterance": "サランラップどこいったかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "コップが無いや",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる"
+      ],
+      "ref_utterance": "あ、グラス洗い忘れた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "緊張したなあ",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "缶切りはどこだったっけ？",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ただいま",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "できたできた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "ポテト"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "喉乾いたな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[23]グラスを持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "野菜無いんだった",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "休憩しようかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "早めに寝るか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル",
+        "ゴミ"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける",
+        "[12]コップを片付ける",
+        "[13]ケチャップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[36]ペットボトルを冷蔵庫にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "できたできた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "ポテト"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる"
+      ],
+      "ref_utterance": "あの水筒も洗わなきゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ポテト美味しいね",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "ポテト"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる",
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "水筒にお茶入れなきゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "今友達からフライドポテトを沢山貰っちゃったよ",
+      "has": [
+        "ポテト"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる",
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "クッキングシート忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ケチャップ掛け忘れた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "これで全部かな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "しまった、ケチャップ持ってくるの忘れた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "オムライス"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "このままだとペットボトルの飲み物がぬるくなるな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "ケチャップ準備してないや",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "オムライス"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "荷物の整理しなくちゃ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、ケチャップはどこにあったっけ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "バーみたいにオシャレにして出したいな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "味が薄いな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "あれ、オリーブオイルは？",
+      "ref_has": [
+        "箸"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ちょっと味を足そうか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "子どもはもう寝ちゃった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ]
+    },
+    {
+      "utterance": "これ味薄いね",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ],
+      "ref_utterance": "充電するの忘れてた",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "荷物の整理しなくちゃ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "レモン置きっぱなしだった",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "宅配便どこに置いたっけ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ],
+      "ref_utterance": "おはよう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あの宅配便どこに置いたかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ],
+      "ref_utterance": "ただいま",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[5]宅配便を持ってくる",
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "外出中問題なかった？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ],
+      "ref_utterance": "タッパーのもの温めてから食べたいな",
+      "ref_has": [
+        "タッパー"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "さっき届いたスマホケースどこに置いたかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ],
+      "ref_utterance": "磨いてないグラスがテーブルにもあるな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "そういえば何か届いてたな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ],
+      "ref_utterance": "グラスどこだっけ？",
+      "ref_has": [
+        "グラス"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "苦しい",
+      "has": [
+        "パン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる"
+      ],
+      "ref_utterance": "緊張したなあ",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "いい汗かいた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[8]スマホを持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "机の上をきれいにしたいな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる",
+        "[18]お菓子を片付ける",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "プレゼンの練習するか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[6]ペットボトルを持ってくる"
+      ],
+      "ref_utterance": "やっとあのオリーブオイル一本で終わりだ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "行ってきます",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[8]スマホを持ってくる",
+        "[12]コップを片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[30]水筒を持ってくる",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "おろし器が洗い終わって、乾いたな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "喉が乾燥するな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "そろそろ晩ごはんか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "暑いけどちょっと出かけてくるよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "食べ終わったよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "喉が乾いてきた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "疲れたね",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "まだこんなにしまうものがあって大変だな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "汗かいて気持ち悪い",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[10]ティッシュ箱を持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "サランラップがないとキッチンを広く使えるな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "おはよう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "空になってるの忘れてた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[15]ペットボトルを片付ける"
+      ]
+    },
+    {
+      "utterance": "ドラマ始まるの忘れてた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "ここから投げたら入るよな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "そろそろ始まるな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "サラダ油は健康に悪いんだっけ？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "そろそろ別の番組が始まるね",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "明日はやっと休みだ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ、リモコンは？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "ごちそうさま",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "そろそろ野球の時間だ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "休憩時間だ",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "リモコンどこだっけ？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "あれ、スマホは？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ただいま",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[5]宅配便を持ってくる",
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "そろそろ別の番組が始まるね",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "疲れた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "キッチンペーパー忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "そろそろ連絡来るかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "じゃがいもを持ってくるのを忘れてた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "電話が来たみたい",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "冷やして熟成させてから食べるとおいしいんだ。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "メッセージが届いたのかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "サランラップどこだっけ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "先方に電話しないといけなかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "水筒にお茶入れないと。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "スマホどこだっけ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "あの宅配便どこに置いたかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ、スマホは？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "片付けなくちゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "缶切り"
+      ],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "ダイエット器具欲しいな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "これってどうやって開けるんだっけ？",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "スマホどこ置いたっけ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "遊びはやめて、仕事しよう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ]
+    },
+    {
+      "utterance": "何だろう？",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "そろそろ充電しなきゃ",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "今日はこれから友達を誘って買い物にでかけるよ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "もうケーブル使わないな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ]
+    },
+    {
+      "utterance": "ちょっと小腹が空いたな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "水筒忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "小腹が空いた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "もう行かなきゃ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "コップ"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "なかなか片付かなくて大変だったよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける",
+        "[30]水筒を持ってくる",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "ポテト美味しいね",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "ポテト"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる",
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "おやつの時間だ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる",
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "水筒も洗わなくちゃだった。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "休憩時間だ",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "鼻がスッキリした",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "お菓子あったっけ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "鼻血だ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "友達が遊びに来るんだよ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "クッキングシートがない",
+      "ref_has": [],
+      "ref_position": "ダイニングテーブル",
+      "ref_near_objects": [
+        "コップ",
+        "お菓子",
+        "ティッシュ"
+      ],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "何か食べようかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "ちょっと休憩しようかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[3]コップを持ってくる",
+        "[8]スマホを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "疲れたね",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "作っておいた煮物冷えちゃったなぁ",
+      "ref_has": [
+        "タッパー"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる",
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "美味しかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "後片付けをして休むか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "鼻水が止まらない",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "ちょっと小腹が空いたな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "花粉症は辛いな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "洗い物が終わったな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "グラス"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[33]グラスを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "鼻血だ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "コーヒー飲みすぎたな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "コップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "帰りにお菓子買って来たよ",
+      "has": [
+        "お菓子"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる"
+      ],
+      "ref_utterance": "ついでに付け合わせ用にフライドポテトも作っちゃおうかな",
+      "ref_has": [
+        "箸"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる",
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "水こぼしちゃった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "疲れた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ティッシュが無いや",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "飲み物がぬるくなっちゃう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "いいシーンだな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "グラスが出しっぱなしだと危ないなぁ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "グラス"
+      ],
+      "ref_reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "泣きそう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "クッキーをお皿に盛りつけよう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "クッキングシート"
+      ],
+      "ref_reflective_actions": [
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "くしゃみが出そう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ],
+      "ref_utterance": "あれ？買ってきたレモンがなくなっちゃった。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ケーブル邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "充電ケーブル"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ],
+      "ref_utterance": "買い物に行ってくる",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "今日は急いでいるんだ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "充電ケーブル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[11]充電ケーブルを片付ける",
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける"
+      ],
+      "ref_utterance": "ううん、余ったカレーはとりあえず今度にしよう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "もうケーブル必要ないな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "充電ケーブル"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ],
+      "ref_utterance": "もう出る時間か",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "机の上をきれいにしたいな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる",
+        "[18]お菓子を片付ける",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "残りはまた後で飲もう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "もうケーブル使わないな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ],
+      "ref_utterance": "スマホどこ置いたっけ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "テーブルの上がごちゃごちゃしてる",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "一眠りしようかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "充電完了したね",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "充電ケーブル"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ],
+      "ref_utterance": "テーブルの上がごちゃごちゃしてるなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[14]ミニカーを片付ける",
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "スマホの充電終わったかな",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "充電ケーブル"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ],
+      "ref_utterance": "ケチャップ忘れてた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ]
+    },
+    {
+      "utterance": "充電が終わった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "充電ケーブル",
+        "スマートフォン"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ],
+      "ref_utterance": "おはよう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "コップが邪魔だな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "コップ"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "やあ！",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "トイレに行ってくる",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "コップ"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "あれ、クッキングシートは？",
+      "ref_has": [],
+      "ref_position": "ダイニングテーブル",
+      "ref_near_objects": [
+        "コップ",
+        "お菓子",
+        "ティッシュ"
+      ],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "飲み終わったよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "コップ"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "あれ？ジャガイモが１つ足りない！",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ごちそうさま",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "どうしよう。生地がはがれなくなっちゃった",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "もう行かなきゃ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "コップ"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "ごちそうさま、食器を片付けよう",
+      "ref_has": [
+        "皿"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける",
+        "[15]ペットボトルを片付ける"
+      ]
+    },
+    {
+      "utterance": "コーヒー美味しかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "水こぼしちゃった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "飲み干したよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "コップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "コップが邪魔だな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "コップ"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "コーヒー飲みすぎたな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "コップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "水分補給して洗い物もしたし、そろそろ出かけるかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "グラス"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "お客さん帰ったよ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "こっちのテーブルで食べよう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ケチャップ忘れてた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ],
+      "ref_utterance": "明日まで水筒は使わないよね",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "少し休んでくる",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[13]ケチャップを片付ける"
+      ],
+      "ref_utterance": "ゴミ箱まで歩くの面倒だな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "ケチャップ邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ],
+      "ref_utterance": "水筒がない",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "あとはケチャップか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ケチャップ"
+      ],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ],
+      "ref_utterance": "ああ、缶切りをしまうのを忘れた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "もうケチャップ使わない",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ],
+      "ref_utterance": "使ったものは片付けないとな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "サランラップ",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[27]オリーブオイルを持ってくる",
+        "[37]サランラップを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "美味しかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ"
+      ],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "よし、大根おろし準備完了だ",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器"
+      ],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "ごちそうさま",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ],
+      "ref_utterance": "いいシーンだな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "こっちのテーブルで食べよう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる"
+      ],
+      "ref_utterance": "美味しかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ"
+      ],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "ごちそうさま、食器を片付けよう",
+      "has": [
+        "皿"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[13]ケチャップを片付ける",
+        "[15]ペットボトルを片付ける"
+      ],
+      "ref_utterance": "もう喉は潤ったな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "子どもはもう寝ちゃった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ],
+      "ref_utterance": "あれ、おろし器はどこに置いたっけ？",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "子供を送ってくる",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "リモコンどこだっけ？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "遊びはやめて、仕事しよう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ],
+      "ref_utterance": "花粉症は辛いな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "もうあの子寝ちゃったのか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー"
+      ],
+      "reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ],
+      "ref_utterance": "今友達からフライドポテトを沢山貰っちゃったよ",
+      "ref_has": [
+        "ポテト"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる",
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "おもちゃ片付けなきゃ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー"
+      ],
+      "reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ],
+      "ref_utterance": "太るかも",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "テーブルの上がごちゃごちゃしてるなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[14]ミニカーを片付ける",
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "飲み終わったよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける"
+      ]
+    },
+    {
+      "utterance": "ニュース見ようかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "苦しい",
+      "ref_has": [
+        "パン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ミニカー壊れそう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ],
+      "ref_utterance": "じゃがいも忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "おもちゃ片付けるか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ],
+      "ref_utterance": "喉乾いたな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[23]グラスを持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "空になってるの忘れてた",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[15]ペットボトルを片付ける"
+      ],
+      "ref_utterance": "もう飲んだからペットボトルを冷やしておきたいな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "買い物に行ってくる",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "あれ、キッチンペーパーが邪魔で食器を置くスペースが無いな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "飲み終わったよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける"
+      ],
+      "ref_utterance": "スマホチェックの仕事が終わった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ペットボトル邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける"
+      ],
+      "ref_utterance": "お客さん帰ったよ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "一眠りしようかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "クッキングシートはもう使い終わったな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "クッキングシート",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "空になった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[15]ペットボトルを片付ける",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "じゃがいもがない、どこ行ったんだろう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "おはよう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "味が薄いな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "美味しかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける"
+      ],
+      "ref_utterance": "キッチンペーパーと間違えた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "クッキングシート"
+      ],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ペットボトルが視界に入るな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "おやつの時間だ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる",
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "もう喉は潤ったな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "今日は急いでいるんだ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "充電ケーブル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[11]充電ケーブルを片付ける",
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける"
+      ]
+    },
+    {
+      "utterance": "お客様と話してくるよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "リモコン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる",
+        "[15]ペットボトルを片付ける",
+        "[16]リモコンを片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "よし、缶はこれで全部かな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "缶切り"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "もうテレビ観ないや",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "リモコン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[16]リモコンを片付ける"
+      ],
+      "ref_utterance": "電話が来たみたい",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "リモコンいつも片付け忘れるんだよな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "リモコン"
+      ],
+      "reflective_actions": [
+        "[16]リモコンを片付ける"
+      ],
+      "ref_utterance": "ちょっと味を足そうか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "もう出る時間か",
+      "has": [
+        "スマートフォン"
+      ],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "あー、温めようと思ってたのに",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "おやすみ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "リモコン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "クッキングシートは持ってこれないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "面白かったよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "リモコン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[16]リモコンを片付ける"
+      ],
+      "ref_utterance": "キッチンペーパーがあんなところに",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "楽しかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "リモコン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[16]リモコンを片付ける"
+      ],
+      "ref_utterance": "あれってレモンだっけ？　ライムだっけ？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "スマホチェックの仕事が終わった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "あ、見たいテレビが始まっちゃう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "スマホ邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[17]スマホを片付ける"
+      ],
+      "ref_utterance": "子供を送ってくる",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "スマホがあると仕事に集中できない",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[17]スマホを片付ける"
+      ],
+      "ref_utterance": "ちょっとキッチンが狭いから物をどかさなきゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "寝る前にスマホ見たくない",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[17]スマホを片付ける"
+      ],
+      "ref_utterance": "スマホ邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[17]スマホを片付ける"
+      ]
+    },
+    {
+      "utterance": "テーブル片付けるか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[17]スマホを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "外出中問題なかった？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ]
+    },
+    {
+      "utterance": "テレビでも観よう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "またお菓子食べちゃったな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "おやすみなさい",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "トイレに行ってくる",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "コップ"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "スマホがつい気になっちゃうな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[17]スマホを片付ける"
+      ],
+      "ref_utterance": "どんな料理にお肉を使おうかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "サランラップ"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "スマホを使い終わったよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[17]スマホを片付ける"
+      ],
+      "ref_utterance": "美味しかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "お菓子邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "空になった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[15]ペットボトルを片付ける",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "子供を迎えに行ってくる",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[13]ケチャップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "あー、すっきりした",
+      "ref_has": [
+        "ティッシュ"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "食べ終わったよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "流し台を使いたいけど散らかってる",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "缶切り",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける"
+      ]
+    },
+    {
+      "utterance": "仕事に集中するか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "サランラップが邪魔だね",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "ダイエット中なんだ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "食べてる時間はなさそう",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる"
+      ]
+    },
+    {
+      "utterance": "お菓子があると食べちゃう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[9]お菓子を持ってくる",
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "プレゼンの練習するか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[6]ペットボトルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "そろそろ晩ごはんか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "しばらくおろし器は使わないかもな",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "仕事を再開するよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "これで綺麗になったかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "太るかも",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "私、おろし器、あそこに置いたのか…",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ"
+      ],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "またお菓子食べちゃったな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[18]お菓子を片付ける"
+      ],
+      "ref_utterance": "スマホどこだっけ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ティッシュはもう使わないよ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ],
+      "ref_utterance": "お客様と話してくるよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "リモコン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる",
+        "[15]ペットボトルを片付ける",
+        "[16]リモコンを片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "今日は早めに仕事終わろう",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[37]サランラップを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "泣きそう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ティッシュが邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ],
+      "ref_utterance": "サランラップを持って来ればよかった",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "オムライス"
+      ],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "鼻がスッキリした",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "さっき届いたスマホケースどこに置いたかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ティッシュはもういらないや",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ],
+      "ref_utterance": "バッテリー食うなあ",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "もうティッシュ必要ないな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン",
+        "ティッシュ"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ],
+      "ref_utterance": "ドラマ始まるの忘れてた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "これで汚れは取れたかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "レモン忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あー、すっきりした",
+      "has": [
+        "ティッシュ"
+      ],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "寝る前にスマホ見たくない",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[17]スマホを片付ける"
+      ]
+    },
+    {
+      "utterance": "今は鼻水は出ない",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ],
+      "ref_utterance": "明日はこれにお茶を入れて持っていこう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "掃除しよっと",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル",
+        "ゴミ"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "もうケーブル必要ないな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "充電ケーブル"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ]
+    },
+    {
+      "utterance": "早めに寝るか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル",
+        "ゴミ"
+      ],
+      "reflective_actions": [
+        "[11]充電ケーブルを片付ける",
+        "[12]コップを片付ける",
+        "[13]ケチャップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[36]ペットボトルを冷蔵庫にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "缶切り忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ゴミ箱まで歩くの面倒だな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "これで今日はおしまい",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "サランラップ"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "ごちそうさま",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "あれ、キッチンペーパーは？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ゴミが邪魔だなあ",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ゴミ"
+      ],
+      "reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "オーブンを予熱し始めよう",
+      "ref_has": [],
+      "ref_position": "ダイニングテーブル",
+      "ref_near_objects": [
+        "コップ",
+        "お菓子",
+        "ティッシュ"
+      ],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "これで綺麗になったかな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "子供を迎えに行ってくる",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[13]ケチャップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "後片付けをして休むか",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "充電切れそう、困ったな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ここから投げたら入るよな",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "もうあの子寝ちゃったのか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー"
+      ],
+      "ref_reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ]
+    },
+    {
+      "utterance": "美味しかった",
+      "has": [],
+      "position": "ソファ",
+      "near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ],
+      "ref_utterance": "ご飯の残りを温めて食べよう",
+      "ref_has": [
+        "タッパー"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる",
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "これってどうやって開けるんだっけ？",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "あ！フライパンに敷いたのコピー用紙だった",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    },
+    {
+      "utterance": "手始めに缶詰を開けよう",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "缶詰は使う必要はないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "缶切り"
+      ],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、缶切りは？",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "よし、常備菜ができたぞ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、缶切りがない",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "ケーブル邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "充電ケーブル"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ]
+    },
+    {
+      "utterance": "缶切りは…",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "何か食べようかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "缶切りはどこだったっけ？",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "ティッシュはもういらないや",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ]
+    },
+    {
+      "utterance": "缶切り何処にしまったんだっけ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "ペーパーで油を吸わせようかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "缶切りはどこに行ったんだろう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "キッチンペーパーで拭くか",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ？缶切りがないなぁ。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "今日は忙しい",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "缶切り忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "机の上の水筒取ってこなくちゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "オーブンを予熱し始めよう",
+      "has": [],
+      "position": "ダイニングテーブル",
+      "near_objects": [
+        "コップ",
+        "お菓子",
+        "ティッシュ"
+      ],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "これはサランラップ必要だな",
+      "ref_has": [
+        "唐揚げ"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ、クッキングシートは？",
+      "has": [],
+      "position": "ダイニングテーブル",
+      "near_objects": [
+        "コップ",
+        "お菓子",
+        "ティッシュ"
+      ],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "サランラップは最後で良かったな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "オリーブオイル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "クッキングシートがない",
+      "has": [],
+      "position": "ダイニングテーブル",
+      "near_objects": [
+        "コップ",
+        "お菓子",
+        "ティッシュ"
+      ],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "少し休んでくる",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[13]ケチャップを片付ける"
+      ]
+    },
+    {
+      "utterance": "クッキングシートは持ってこれないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "おやすみ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "リモコン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "どうしよう。生地がはがれなくなっちゃった",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "パン粉のころもをつけ終わった",
+      "ref_has": [
+        "箸"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "クッキングシート、あんなところにあったの？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "ごちそうさま",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "あ！フライパンに敷いたのコピー用紙だった",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "レモンを切りたいけど、テーブル汚いな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "焼く前にクッキングシートを敷かなきゃな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "缶切りはどこに行ったんだろう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "クッキングシート、どこにあったっけ？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "そろそろ始まるな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "クッキングシート忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "これで大根おろしは終わり",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "喉が渇いたな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ",
+        "水筒",
+        "キッチンペーパー",
+        "サランラップ",
+        "オリーブオイル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[23]グラスを持ってくる",
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "飲み物用意しなくて良いんだった",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "オリーブオイル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "あ、グラス",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ",
+        "水筒",
+        "キッチンペーパー",
+        "サランラップ",
+        "オリーブオイル"
+      ],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "今夜のデザートにしよう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "グラスも洗わないと",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ",
+        "水筒",
+        "キッチンペーパー",
+        "サランラップ",
+        "オリーブオイル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "休憩しよう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "グラスどこだっけ？",
+      "has": [
+        "グラス"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[3]コップを持ってくる",
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "あれ？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ？もう一個足りない",
+      "has": [
+        "グラス",
+        "お酒"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "このバナナ美味しそう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[6]ペットボトルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "グラスは二つ必要だった",
+      "has": [
+        "グラス",
+        "お酒"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "おろし器忘れてた。",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "磨いてないグラスがテーブルにもあるな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "映画でも観ようかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あ、グラス洗い忘れた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "先にオリーブオイルが必要だな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "グラス忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "もう缶切りは使わないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、おろし器は？",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ"
+      ],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "ただいま",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "おろし器どこだろう",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ"
+      ],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "飲み終わったよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル",
+        "コップ"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "私、おろし器、あそこに置いたのか…",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "ケチャップ"
+      ],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "しまった、ケチャップ持ってくるの忘れた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "オムライス"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "どこに片付けたかな？",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "見逃せないテレビがあるから片付けは後でいいや",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "おろし器忘れてた。",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "残り物は早めに冷凍しておかなきゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう",
+        "[39]タッパーを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、おろし器はどこに置いたっけ？",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "オリーブオイル忘れてた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "サンマには大根は不可欠だよね",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "なかなかうまく水がきれないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "大根おろしも作っておこうかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル",
+        "大根"
+      ],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "キッチンペーパーまだあったんだ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "大根おろしを添えようかな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル",
+        "大根"
+      ],
+      "reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ],
+      "ref_utterance": "なんかお腹が空いたなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ペーパーで油を吸わせようかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "薬飲まなきゃ",
+      "ref_has": [
+        "袋"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "油を吸うには、キッチンペーパーが一番だよね。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "ゴミが邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ゴミ"
+      ],
+      "ref_reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパー忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "昨日ワイン飲んだときに使ったものはいらないや",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "そろそろナスのアクが抜けたかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "もうテレビ観ないや",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "リモコン",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[16]リモコンを片付ける"
+      ]
+    },
+    {
+      "utterance": "なかなかうまく水がきれないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "大根おろすの疲れたなぁ",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器"
+      ],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "床を拭いた布巾しかないぞ",
+      "has": [
+        "ふきん"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[10]ティッシュ箱を持ってくる",
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "テーブル片付けるか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[17]スマホを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、キッチンペーパーは？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "おろし器どこだろう",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ"
+      ],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパーがあんなところに",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "休まずゲームしてたら疲れたよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパーで拭くか",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "やっぱパスタにはオリーブオイルが必要だよね",
+      "ref_has": [
+        "箸",
+        "パスタ"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "流し台にもキッチンペーパーがないと不便だよね",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "美味しかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ゴミ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる"
+      ]
+    },
+    {
+      "utterance": "嫌いな人もいるけど一応レモンも切って添えておくかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "油を吸うには、キッチンペーパーが一番だよね。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "レモン置きっぱなしだった",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "片付けは明日でいいや",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "あれ、レモンは？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "あれ、サランラップは？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "オムライス"
+      ],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "レモンがないとね",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "休憩しようかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "レモンを切りたいけど、テーブル汚いな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "バッテリーがやばい",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "バーみたいにオシャレにして出したいな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[23]グラスを持ってくる"
+      ],
+      "ref_utterance": "あれ、おろし器は？",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ"
+      ],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ？買ってきたレモンがなくなっちゃった。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "ケチャップ邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ]
+    },
+    {
+      "utterance": "あれってレモンだっけ？　ライムだっけ？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "じゃがいもどこにあったっけ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "レモン忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[26]レモンを持ってくる"
+      ],
+      "ref_utterance": "いい汗かいた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[8]スマホを持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "パン粉のころもをつけ終わった",
+      "has": [
+        "箸"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ],
+      "ref_utterance": "あれ？もう一個足りない",
+      "ref_has": [
+        "グラス",
+        "お酒"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ、オリーブオイルは？",
+      "has": [
+        "箸"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "水筒も持ってくればよかった。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "やっぱパスタにはオリーブオイルが必要だよね",
+      "has": [
+        "箸",
+        "パスタ"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "そろそろ野球の時間だ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "やっとあのオリーブオイル一本で終わりだ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "手始めに缶詰を開けよう",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "先にオリーブオイルが必要だな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "なんであんなところにジャガイモがあるの？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "もうちょっとオリーブオイルを足そうかな？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "今日はこれから友達を誘って買い物にでかけるよ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "サラダ油は健康に悪いんだっけ？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "あれ？缶切りがないなぁ。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "オリーブオイルも必要だけど取ってくるのが面倒だな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "糖分が欲しいな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "仕上げにオリーブオイルをかけたいな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "メッセージが届いたのかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "オリーブオイル忘れてた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ],
+      "ref_utterance": "今日はこれを食べてしまおう",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "ついでに付け合わせ用にフライドポテトも作っちゃおうかな",
+      "has": [
+        "箸"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[25]キッチンペーパーを持ってくる",
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "大根おろしを添えようかな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル",
+        "大根"
+      ],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "じゃがいもどこにあったっけ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "ティッシュが無いや",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ、じゃがいもは？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "うわ！温くなっちゃったな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "じゃがいもがない、どこ行ったんだろう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "スマホを使い終わったよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[17]スマホを片付ける"
+      ]
+    },
+    {
+      "utterance": "なぜ一個だけジャガイモがテーブルに…",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "おろし器はもう使ったよ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器"
+      ],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "なんであんなところにジャガイモがあるの？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "ケチャップ掛け忘れた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "他に具になるものは無いかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[26]レモンを持ってくる",
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "お菓子があると食べちゃう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[9]お菓子を持ってくる",
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "じゃがいもを持ってくるのを忘れてた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "帰りにお菓子買って来たよ",
+      "ref_has": [
+        "お菓子"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ？ジャガイモが１つ足りない！",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "コップが無いや",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "じゃがいも忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "あれ、缶切りがない",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "サランラップどこだっけ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "キッチンペーパーがなければ場所が空くのにな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "これはサランラップ必要だな",
+      "has": [
+        "唐揚げ"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "レモンがないとね",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ラップがテーブルに置きっぱなしだ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "面白かったよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "リモコン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[16]リモコンを片付ける"
+      ]
+    },
+    {
+      "utterance": "サランラップどこいったかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "サンマには大根は不可欠だよね",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ラップがない",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "あとはケチャップか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ケチャップ"
+      ],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ]
+    },
+    {
+      "utterance": "サランラップ忘れてた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "オムライス"
+      ],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "おもちゃ片付けなきゃ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー"
+      ],
+      "ref_reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ]
+    },
+    {
+      "utterance": "あれ、サランラップどこ置いたっけ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "楽しかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "リモコン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[16]リモコンを片付ける"
+      ]
+    },
+    {
+      "utterance": "あれ、サランラップは？",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "オムライス"
+      ],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "あ、グラス",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ",
+        "水筒",
+        "キッチンペーパー",
+        "サランラップ",
+        "オリーブオイル"
+      ],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "サランラップを持って来ればよかった",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "オムライス"
+      ],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ],
+      "ref_utterance": "ひとついらなかったな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "グラス"
+      ],
+      "ref_reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "水筒にお茶入れなきゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "お風呂入ったら喉乾いたな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "水筒、どこに置いたっけ。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "友達が遊びに来るんだよ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "机の上の水筒取ってこなくちゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "ダイエット器具欲しいな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あの水筒も洗わなきゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "行ってきます",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[8]スマホを持ってくる",
+        "[12]コップを片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[30]水筒を持ってくる",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "水筒にお茶入れないと。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "これ味薄いね",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "水筒がない",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "オリーブオイルも必要だけど取ってくるのが面倒だな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "水筒忘れてた。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "あとはタッパーで温めたものを添えれば出来上がりだ",
+      "ref_has": [
+        "タッパー"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "しまった、水筒持ってきてないな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "充電が足りない",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "水筒も持ってくればよかった。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "充電完了したね",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "充電ケーブル"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ]
+    },
+    {
+      "utterance": "水筒も洗わなくちゃだった。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる"
+      ],
+      "ref_utterance": "スマホの充電終わったかな",
+      "ref_has": [
+        "スマートフォン"
+      ],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "充電ケーブル"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ]
+    },
+    {
+      "utterance": "もう缶切りは使わないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "テーブルの上がごちゃごちゃしてる",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[35]キッチンペーパーを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "缶切りはもう必要ないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "おやすみなさい",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "よし、缶はこれで全部かな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "缶切り"
+      ],
+      "reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ],
+      "ref_utterance": "ミニカー壊れそう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ]
+    },
+    {
+      "utterance": "ようやく缶詰めを開封できた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "今日は早めに仕事終わろう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける",
+        "[18]お菓子を片付ける",
+        "[37]サランラップを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "ああ、缶切りをしまうのを忘れた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "水筒洗っておいたよ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "オリーブオイル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "缶切りは使わない缶だった",
+      "has": [
+        "缶詰"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "グラスだけ仕舞い忘れた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "グラス",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "片付けなくちゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "缶切り"
+      ],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "嫌いな人もいるけど一応レモンも切って添えておくかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "缶切りも片づけなくちゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "缶切り"
+      ],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "テレビでも観よう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "缶詰は使う必要はないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "缶切り"
+      ],
+      "reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ],
+      "ref_utterance": "クッキングシートはもう使わない",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "流し台を使いたいけど散らかってる",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "缶切り",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける"
+      ],
+      "ref_utterance": "飲み物も冷やしとかなくちゃいけないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "クッキングシートはもう使い終わったな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "クッキングシート",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ],
+      "ref_utterance": "缶切りはもう必要ないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "今日のメニューなら、クッキングシートはいらないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ],
+      "ref_utterance": "タッパーのご飯が温かいと嬉しいな",
+      "ref_has": [
+        "タッパー"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ]
+    },
+    {
+      "utterance": "クッキングシートはもう使わない",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ],
+      "ref_utterance": "今は使わないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "クッキーをお皿に盛りつけよう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "クッキングシート"
+      ],
+      "reflective_actions": [
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "先方に電話しないといけなかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパーと間違えた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "クッキングシート"
+      ],
+      "reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ],
+      "ref_utterance": "スマホがつい気になっちゃうな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[17]スマホを片付ける"
+      ]
+    },
+    {
+      "utterance": "クッキングシートはもう必要ないね",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "クッキングシート"
+      ],
+      "reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ],
+      "ref_utterance": "水分補給もしたし、そろそろ寝ようかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "昨日ワイン飲んだときに使ったものはいらないや",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[12]コップを片付ける"
+      ],
+      "ref_utterance": "仕事に集中するか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[2]充電ケーブルを持ってくる",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "このグラスで明日もおいしいく飲みたいな",
+      "has": [
+        "グラス"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ],
+      "ref_utterance": "あれ、リモコンは？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "洗い物が終わったな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "グラス"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[33]グラスを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "なぜ一個だけジャガイモがテーブルに…",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "水分補給して洗い物もしたし、そろそろ出かけるかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "グラス"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "ラップがない",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "グラスが出しっぱなしだと危ないなぁ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "グラス"
+      ],
+      "reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ],
+      "ref_utterance": "ティッシュが邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ]
+    },
+    {
+      "utterance": "ひとついらなかったな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "グラス"
+      ],
+      "reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ],
+      "ref_utterance": "そういえば何か届いてたな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ]
+    },
+    {
+      "utterance": "グラスだけ仕舞い忘れた",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "グラス",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[33]グラスを棚にしまう"
+      ],
+      "ref_utterance": "喉が乾燥するな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる",
+        "[6]ペットボトルを持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "よし、大根おろしは出来上がり",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器"
+      ],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "あれ、レモンは？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる"
+      ]
+    },
+    {
+      "utterance": "大根おろすの疲れたなぁ",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器"
+      ],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "ようやく缶詰めを開封できた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "よし、大根おろし準備完了だ",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器"
+      ],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "なかなか片付かなくて大変だったよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける",
+        "[30]水筒を持ってくる",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "これで大根おろしは終わり",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "ニュース見ようかな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "しばらくおろし器は使わないかもな",
+      "has": [
+        "大根"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "ごちそうさま",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ケチャップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ]
+    },
+    {
+      "utterance": "見逃せないテレビがあるから片付けは後でいいや",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "クッキングシートはもう必要ないね",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "クッキングシート"
+      ],
+      "ref_reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "おろし器が洗い終わって、乾いたな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "充電が終わった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "充電ケーブル",
+        "スマートフォン"
+      ],
+      "ref_reflective_actions": [
+        "[11]充電ケーブルを片付ける"
+      ]
+    },
+    {
+      "utterance": "これで全部かな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "あれ、ケチャップはどこにあったっけ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "オムライス",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "野菜無いんだった",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ],
+      "ref_utterance": "もうティッシュ必要ないな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ティッシュ"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ]
+    },
+    {
+      "utterance": "おろし器はもう使ったよ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "おろし器"
+      ],
+      "reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ],
+      "ref_utterance": "おもちゃ片付けるか",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ミニカー",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[14]ミニカーを片付ける"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパーでお皿をしっかり拭き終わったぞ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[33]グラスを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "掃除しよっと",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル",
+        "ゴミ"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[20]ゴミをゴミ箱に入れる",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパーがなければ場所が空くのにな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "他に具になるものは無いかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[26]レモンを持ってくる",
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "あれ、キッチンペーパーが邪魔で食器を置くスペースが無いな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "これだけで朝までもつかな？",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる"
+      ]
+    },
+    {
+      "utterance": "ちょっとキッチンが狭いから物をどかさなきゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "グラスは二つ必要だった",
+      "ref_has": [
+        "グラス",
+        "お酒"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "今日は色々な所を回ったからもう疲れて動けない",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる"
+      ],
+      "ref_utterance": "暑いけどちょっと出かけてくるよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[8]スマホを持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "まだこんなにしまうものがあって大変だな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "朝ごはん食べよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる"
+      ]
+    },
+    {
+      "utterance": "今は使わないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "缶切りは使わない缶だった",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "キッチンペーパーまだあったんだ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "ケチャップ準備してないや",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "オムライス"
+      ],
+      "ref_reflective_actions": [
+        "[4]ケチャップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "買い物行ってきたよ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ],
+      "ref_utterance": "ペットボトルが視界に入るな",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "もう飲んだからペットボトルを冷やしておきたいな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "水筒、どこに置いたっけ。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "このままだとペットボトルの飲み物がぬるくなるな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "流し台にもキッチンペーパーがないと不便だよね",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "残りはまた後で飲もう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "明日のお弁当ができたな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー"
+      ],
+      "ref_reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる",
+        "[30]水筒を持ってくる",
+        "[35]キッチンペーパーを棚にしまう",
+        "[39]タッパーを冷蔵庫にしまう"
+      ]
+    },
+    {
+      "utterance": "水分補給もしたし、そろそろ寝ようかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "缶切りも片づけなくちゃ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "缶切り"
+      ],
+      "ref_reflective_actions": [
+        "[31]缶切りを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "飲み物も冷やしとかなくちゃいけないな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "飲み干したよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "コップ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける"
+      ]
+    },
+    {
+      "utterance": "休憩しよう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "今日は色々な所を回ったからもう疲れて動けない",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "うわ！温くなっちゃったな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "ティッシュはもう使わないよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ]
+    },
+    {
+      "utterance": "飲み物がぬるくなっちゃう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[36]ペットボトルを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "床を拭いた布巾しかないぞ",
+      "ref_has": [
+        "ふきん"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[10]ティッシュ箱を持ってくる",
+        "[25]キッチンペーパーを持ってくる"
+      ]
+    },
+    {
+      "utterance": "使ったものは片付けないとな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "サランラップ",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[27]オリーブオイルを持ってくる",
+        "[37]サランラップを棚にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "あれ、缶切りは？",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ケチャップ",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "これで今日はおしまい",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "サランラップ"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[18]お菓子を片付ける",
+        "[19]ティッシュ箱を片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "おはよう",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[7]リモコンを持ってくる",
+        "[8]スマホを持ってくる"
+      ]
+    },
+    {
+      "utterance": "どんな料理にお肉を使おうかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "サランラップ"
+      ],
+      "reflective_actions": [
+        "[8]スマホを持ってくる"
+      ],
+      "ref_utterance": "今日のメニューなら、クッキングシートはいらないな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[32]クッキングシートを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "これでいいかな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "サランラップ"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[32]クッキングシートを棚にしまう",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "もうちょっとオリーブオイルを足そうかな？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "サランラップが邪魔だね",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "今は鼻水は出ない",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ティッシュ",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[19]ティッシュ箱を片付ける"
+      ]
+    },
+    {
+      "utterance": "片付けは明日でいいや",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "宅配便どこに置いたっけ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[5]宅配便を持ってくる"
+      ]
+    },
+    {
+      "utterance": "サランラップがないとキッチンを広く使えるな。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "汗かいて気持ち悪い",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[10]ティッシュ箱を持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "サランラップは最後で良かったな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "オリーブオイル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる",
+        "[37]サランラップを棚にしまう"
+      ],
+      "ref_utterance": "仕事を再開するよ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "お菓子",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "タッパーのもの温めてから食べたいな",
+      "has": [
+        "タッパー"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "お菓子あったっけ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "タッパーのご飯が温かいと嬉しいな",
+      "has": [
+        "タッパー"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "キッチンペーパーでお皿をしっかり拭き終わったぞ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[33]グラスを棚にしまう",
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "作っておいた煮物冷えちゃったなぁ",
+      "has": [
+        "タッパー"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる",
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "しまった、水筒持ってきてないな。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "ご飯の残りを温めて食べよう",
+      "has": [
+        "タッパー"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[29]サランラップを持ってくる",
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "ペットボトル邪魔だなあ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[15]ペットボトルを片付ける"
+      ]
+    },
+    {
+      "utterance": "あとはタッパーで温めたものを添えれば出来上がりだ",
+      "has": [
+        "タッパー"
+      ],
+      "position": "キッチン",
+      "near_objects": [],
+      "reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "買い物行ってきたよ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "今日はこれを食べてしまおう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "喉が乾いてきた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[6]ペットボトルを持ってくる",
+        "[30]水筒を持ってくる"
+      ]
+    },
+    {
+      "utterance": "あー、温めようと思ってたのに",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "このままだと残り物が腐っちゃうか",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[12]コップを片付ける",
+        "[29]サランラップを持ってくる",
+        "[35]キッチンペーパーを棚にしまう",
+        "[39]タッパーを冷蔵庫にしまう",
+        "[40]水筒を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "これも今日温めて食べよう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[38]タッパーをレンジに入れる"
+      ],
+      "ref_utterance": "スマホがあると仕事に集中できない",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "スマートフォン",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[17]スマホを片付ける"
+      ]
+    },
+    {
+      "utterance": "このままだと残り物が腐っちゃうか",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[12]コップを片付ける",
+        "[29]サランラップを持ってくる",
+        "[35]キッチンペーパーを棚にしまう",
+        "[39]タッパーを冷蔵庫にしまう",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "小腹が空いた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ]
+    },
+    {
+      "utterance": "冷やして熟成させてから食べるとおいしいんだ。",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "ラップがテーブルに置きっぱなしだ",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[37]サランラップを棚にしまう"
+      ]
+    },
+    {
+      "utterance": "よし、常備菜ができたぞ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "もうケチャップ使わない",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[13]ケチャップを片付ける"
+      ]
+    },
+    {
+      "utterance": "ううん、余ったカレーはとりあえず今度にしよう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "よし、大根おろしは出来上がり",
+      "ref_has": [
+        "大根"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "おろし器"
+      ],
+      "ref_reflective_actions": [
+        "[34]おろし器を棚にしまう"
+      ]
+    },
+    {
+      "utterance": "今夜のデザートにしよう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[1]バナナを持ってくる",
+        "[9]お菓子を持ってくる"
+      ],
+      "ref_utterance": "缶切りは…",
+      "ref_has": [
+        "缶詰"
+      ],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[21]缶切りを持ってくる"
+      ]
+    },
+    {
+      "utterance": "明日のお弁当ができたな",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[20]ゴミをゴミ箱に入れる",
+        "[30]水筒を持ってくる",
+        "[35]キッチンペーパーを棚にしまう",
+        "[39]タッパーを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "仕上げにオリーブオイルをかけたいな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[27]オリーブオイルを持ってくる"
+      ]
+    },
+    {
+      "utterance": "残り物は早めに冷凍しておかなきゃ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[35]キッチンペーパーを棚にしまう",
+        "[39]タッパーを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "ダイエット中なんだ",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[18]お菓子を片付ける"
+      ]
+    },
+    {
+      "utterance": "たくさん作っちゃったから、これは今日食べずに置いておこう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "タッパー"
+      ],
+      "reflective_actions": [
+        "[39]タッパーを冷蔵庫にしまう"
+      ],
+      "ref_utterance": "グラス忘れてた。",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[23]グラスを持ってくる"
+      ]
+    },
+    {
+      "utterance": "明日まで水筒は使わないよね",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "あれ、じゃがいもは？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "水筒",
+        "ペットボトル",
+        "キッチンペーパー"
+      ],
+      "ref_reflective_actions": [
+        "[28]じゃがいもを持ってくる"
+      ]
+    },
+    {
+      "utterance": "明日はこれにお茶を入れて持っていこう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[30]水筒を持ってくる",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "サランラップ忘れてた",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "オムライス"
+      ],
+      "ref_reflective_actions": [
+        "[29]サランラップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "明日はやっと休みだ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒",
+        "ペットボトル"
+      ],
+      "reflective_actions": [
+        "[3]コップを持ってくる"
+      ],
+      "ref_utterance": "美味しかった",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "ペットボトル",
+        "パソコン"
+      ],
+      "ref_reflective_actions": [
+        "[15]ペットボトルを片付ける"
+      ]
+    },
+    {
+      "utterance": "あ、見たいテレビが始まっちゃう",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "水筒"
+      ],
+      "reflective_actions": [
+        "[7]リモコンを持ってくる"
+      ],
+      "ref_utterance": "コップ持ってくるの忘れた",
+      "ref_has": [],
+      "ref_position": "ソファ",
+      "ref_near_objects": [
+        "パソコン",
+        "ペットボトル"
+      ],
+      "ref_reflective_actions": [
+        "[3]コップを持ってくる"
+      ]
+    },
+    {
+      "utterance": "飲み物用意しなくて良いんだった",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "オリーブオイル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[15]ペットボトルを片付ける",
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "大根おろしも作っておこうかな",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [
+        "ペットボトル",
+        "大根"
+      ],
+      "ref_reflective_actions": [
+        "[24]おろし器を持ってくる"
+      ]
+    },
+    {
+      "utterance": "水筒洗っておいたよ",
+      "has": [],
+      "position": "キッチン",
+      "near_objects": [
+        "オリーブオイル",
+        "キッチンペーパー"
+      ],
+      "reflective_actions": [
+        "[40]水筒を棚にしまう"
+      ],
+      "ref_utterance": "クッキングシート、どこにあったっけ？",
+      "ref_has": [],
+      "ref_position": "キッチン",
+      "ref_near_objects": [],
+      "ref_reflective_actions": [
+        "[22]クッキングシートを持ってくる"
+      ]
+    }
+  ]
+}
