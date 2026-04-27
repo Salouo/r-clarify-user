@@ -270,6 +270,13 @@ def extract_trial_steps(final_state: dict) -> List[dict]:
         token_usage_agent = getattr(step, "token_usage", None)
         if isinstance(step, dict):
             token_usage_agent = step.get("token_usage", token_usage_agent)
+        user_source = getattr(step, "user_source", None)
+        response_latency_seconds = getattr(step, "response_latency_seconds", None)
+        if isinstance(step, dict):
+            user_source = step.get("user_source", user_source)
+            response_latency_seconds = step.get(
+                "response_latency_seconds", response_latency_seconds
+            )
 
         if next_decision == "clarify":
             question = ""
@@ -291,16 +298,19 @@ def extract_trial_steps(final_state: dict) -> List[dict]:
                 if not reply:
                     reply = messages[msg_idx].content or ""
                 msg_idx += 1
-            steps.append(
-                {
-                    "t": t,
-                    "action": "clarify",
-                    "clarification_question": question,
-                    "clarification_question_words": _count_words(question),
-                    "user_reply": reply,
-                    "user_reply_words": _count_words(reply),
-                }
-            )
+            clarify_step = {
+                "t": t,
+                "action": "clarify",
+                "clarification_question": question,
+                "clarification_question_words": _count_words(question),
+                "user_reply": reply,
+                "user_reply_words": _count_words(reply),
+            }
+            if user_source:
+                clarify_step["user_source"] = user_source
+            if response_latency_seconds is not None:
+                clarify_step["response_latency_seconds"] = response_latency_seconds
+            steps.append(clarify_step)
         else:
             action_id = getattr(step, "action_id", None)
             if isinstance(step, dict):

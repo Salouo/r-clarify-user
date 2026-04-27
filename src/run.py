@@ -215,6 +215,8 @@ def main(
                             "clarification_question_words": step.get("clarification_question_words"),
                             "user_reply": step.get("user_reply"),
                             "user_reply_words": step.get("user_reply_words"),
+                            "user_source": step.get("user_source"),
+                            "response_latency_seconds": step.get("response_latency_seconds"),
                         }
                         for step in detail
                         if step.get("action") == "clarify"
@@ -243,6 +245,7 @@ def main(
                     "steps_detail_per_trial": steps_detail_per_trial,
                     "clarify_turns_per_trial": clarifications_per_trial,
                     "gold_action": gold_action_desc,
+                    "user_source": "simulated",
                 }
             )
 

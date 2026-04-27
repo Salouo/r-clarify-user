@@ -63,6 +63,8 @@ class AgentStep(BaseModel):
     action_id: Optional[int] = None # Action chosen when executing.
     clarification_question: Optional[str] = None  # Question text generated in clarify.
     user_reply: Optional[str] = None    # User reply text in clarify.
+    user_source: Optional[str] = None   # simulated / human; only set for clarify replies.
+    response_latency_seconds: Optional[float] = None
     token_usage: Optional[dict] = None  # Token usage for this agent call (prompt/completion/total).
 
 
@@ -82,6 +84,7 @@ class AgentOutput(BaseModel):
         default=None,
         description="当你选择 next_decision 为 clarify 时，必须填写 1 条澄清问题; execute 时为 null",
     )
+    parse_error: Optional[str] = Field(default=None)
 
 
 # ========== Graph State ==========
@@ -142,3 +145,6 @@ class AgentState(BaseModel):
     clarification_question: Optional[str] = Field(
         default=None, description="agent 选择 clarify 时生成的一句话澄清问题"
     )
+
+    # Optional machine-readable error marker for UI wrappers.
+    last_error: Optional[str] = Field(default=None)

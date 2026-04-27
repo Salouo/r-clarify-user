@@ -157,6 +157,7 @@ def _safe_agent_output(message: AIMessage) -> AgentOutput:
             thought="解析失败。execute -1 にフォールバック。",
             next_decision="execute",
             action_id=-1,
+            parse_error=f"{exc}",
         )
 
 
@@ -269,6 +270,7 @@ def agent(state: AgentState) -> AgentState:
         "clarify_quota_total": state.clarify_quota_total,
         "messages": new_messages,
         "clarification_question": clarification_question,
+        "last_error": resp.parse_error,
         # Record the agent's action and append to trace; trace is used to build prompts.
         "trace": state.trace
         + [
@@ -364,10 +366,13 @@ def user_sim_node(state: AgentState) -> AgentState:
     if new_trace:
         last = new_trace[-1]
         if isinstance(last, AgentStep):
-            new_trace[-1] = last.copy(update={"user_reply": resp.content})
+            new_trace[-1] = last.copy(
+                update={"user_reply": resp.content, "user_source": "simulated"}
+            )
         elif isinstance(last, dict):
             last = dict(last)
             last["user_reply"] = resp.content
+            last["user_source"] = "simulated"
             new_trace[-1] = last
 
     return {
