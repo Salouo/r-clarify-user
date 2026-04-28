@@ -178,13 +178,43 @@ def build_app(initial_state: HumanExperimentState) -> gr.Blocks:
             memo = _format_current_reflection_memo(exp_state)
             return gr.update(value=memo, visible=True)
 
-        demo.load(lambda exp_state: _render(exp_state), inputs=[state], outputs=outputs)
-        start_btn.click(on_start, inputs=[state], outputs=outputs)
-        send_btn.click(on_submit, inputs=[state, answer], outputs=outputs)
-        answer.submit(on_submit, inputs=[state, answer], outputs=outputs)
-        next_btn.click(on_next, inputs=[state], outputs=outputs)
+        demo.load(
+            lambda exp_state: _render(exp_state),
+            inputs=[state],
+            outputs=outputs,
+            show_progress_on=[status],
+        )
+        start_btn.click(
+            on_start,
+            inputs=[state],
+            outputs=outputs,
+            show_progress_on=[status],
+        )
+        send_btn.click(
+            on_submit,
+            inputs=[state, answer],
+            outputs=outputs,
+            show_progress_on=[status],
+        )
+        answer.submit(
+            on_submit,
+            inputs=[state, answer],
+            outputs=outputs,
+            show_progress_on=[status],
+        )
+        next_btn.click(
+            on_next,
+            inputs=[state],
+            outputs=outputs,
+            show_progress_on=[status],
+        )
         memo_btn.click(on_show_memo, inputs=[state], outputs=[reflection_memo])
-        finish_btn.click(on_finish, inputs=[state], outputs=outputs)
+        finish_btn.click(
+            on_finish,
+            inputs=[state],
+            outputs=outputs,
+            show_progress_on=[status],
+        )
 
     return demo
 
@@ -438,10 +468,10 @@ def _format_value(value) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=3)
+    parser.add_argument("--n_samples", type=int, default=30)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
-    parser.add_argument("--participant_id", default=None)
+    parser.add_argument("--participant_id", default="participant_test")
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
     parser.add_argument("--run_id", default=None)

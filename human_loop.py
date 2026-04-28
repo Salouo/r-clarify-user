@@ -783,8 +783,13 @@ def _all_samples_done(experiment_state: HumanExperimentState) -> bool:
 
 
 def _run_finished_at(experiment_state: HumanExperimentState) -> str | None:
-    if not _all_samples_done(experiment_state):
+    latest_finished_at = _latest_finished_at(experiment_state)
+    if latest_finished_at is None:
         return None
+    return _format_epoch(latest_finished_at)
+
+
+def _latest_finished_at(experiment_state: HumanExperimentState) -> float | None:
     finished_times = [
         episode.finished_at
         for episode in experiment_state.finished_episodes.values()
@@ -792,20 +797,14 @@ def _run_finished_at(experiment_state: HumanExperimentState) -> str | None:
     ]
     if not finished_times:
         return None
-    return _format_epoch(max(finished_times))
+    return max(finished_times)
 
 
 def _run_duration_seconds(experiment_state: HumanExperimentState) -> float | None:
-    if not _all_samples_done(experiment_state):
+    latest_finished_at = _latest_finished_at(experiment_state)
+    if latest_finished_at is None:
         return None
-    finished_times = [
-        episode.finished_at
-        for episode in experiment_state.finished_episodes.values()
-        if episode.finished_at is not None
-    ]
-    if not finished_times:
-        return None
-    return _duration_seconds(experiment_state.run_start_time, max(finished_times))
+    return _duration_seconds(experiment_state.run_start_time, latest_finished_at)
 
 
 def _safe_slug(text: str) -> str:
