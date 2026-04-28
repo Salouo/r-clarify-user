@@ -43,6 +43,7 @@ class HumanExperimentConfig:
     memo_window: int | None = None
     show_gold_to_user: bool = True
     timestamp: str = ""
+    output_stem: str | None = None
 
 
 @dataclass
@@ -144,6 +145,7 @@ def load_human_subset(
     clarify_quota: int | None = 2,
     memo_window: int | None = None,
     show_gold_to_user: bool = True,
+    output_stem: str | None = None,
 ) -> HumanExperimentState:
     all_samples = load_dataset(dataset_path)
     sample_by_id = {int(s["index"]): s for s in all_samples if "index" in s}
@@ -194,6 +196,7 @@ def load_human_subset(
         memo_window=actual_memo_window,
         show_gold_to_user=show_gold_to_user,
         timestamp=timestamp,
+        output_stem=output_stem,
     )
     subset_metadata = {
         "run_id": actual_run_id,
@@ -206,6 +209,7 @@ def load_human_subset(
         "sampling_scope": SAMPLING_SCOPE,
         "within_run_replacement": False,
         "across_run_replacement": True,
+        "output_stem": output_stem,
     }
     if subset_path is not None:
         subset_path.parent.mkdir(parents=True, exist_ok=True)
@@ -377,22 +381,18 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
     episodes_dir = run_dir / "episodes"
     results_dir.mkdir(parents=True, exist_ok=True)
     episodes_dir.mkdir(parents=True, exist_ok=True)
+    output_stem = _output_stem(experiment_state.config)
 
     episode_paths: list[Path] = []
     for sample_id, episode in sorted(
         experiment_state.finished_episodes.items(),
         key=lambda item: item[1].sample_position,
     ):
-        path = episodes_dir / f"sample{sample_id}_human_{experiment_state.config.run_id}.txt"
+        path = episodes_dir / f"{output_stem}_sample{sample_id}.txt"
         path.write_text(_format_human_episode(episode), encoding="utf-8")
         episode_paths.append(path)
 
-    participant = _safe_slug(experiment_state.config.participant_id or "anon")
-    mode = _safe_slug(experiment_state.config.mode)
-    results_path = (
-        results_dir
-        / f"human_{mode}_n{len(experiment_state.sample_ids)}_{participant}_{experiment_state.config.run_id}.json"
-    )
+    results_path = results_dir / f"{output_stem}.json"
     records = sorted(
         experiment_state.records_by_sample_id.values(),
         key=lambda r: r.get("sample_position", 0),
@@ -430,6 +430,16 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
         f"ログを書き出しました: {results_path} / episodes={len(episode_paths)}"
     )
     return results_path, episode_paths
+
+
+def _output_stem(config: HumanExperimentConfig) -> str:
+    if config.output_stem:
+        return _safe_slug(config.output_stem)
+    if config.use_reflection:
+        return "reflection"
+    if config.mode == "clarify":
+        return "without_reflection"
+    return _safe_slug(config.mode)
 
 
 def build_human_visible_context(state: HumanEpisodeState) -> dict[str, Any]:
