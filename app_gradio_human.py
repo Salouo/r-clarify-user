@@ -85,12 +85,13 @@ def build_app(initial_state: HumanExperimentState) -> gr.Blocks:
         )
 
         with gr.Row():
-            start_btn = gr.Button("開始 / 現在のサンプルを再開始")
+            start_btn = gr.Button(_start_button_label(initial_state))
             send_btn = gr.Button("回答を送信", variant="primary")
             next_btn = gr.Button("次のサンプル")
             memo_btn = gr.Button(
                 "現在のReflection memoを見る",
-                visible=_has_current_reflection_memo(initial_state),
+                visible=initial_state.config.use_reflection,
+                interactive=_has_current_reflection_memo(initial_state),
             )
             finish_btn = gr.Button("実験を終了")
 
@@ -120,6 +121,7 @@ def build_app(initial_state: HumanExperimentState) -> gr.Blocks:
             qa_history,
             chatbot,
             answer,
+            start_btn,
             send_btn,
             next_btn,
             memo_btn,
@@ -229,10 +231,16 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         )
 
     answer_update = gr.update(value="", interactive=send_interactive)
+    start_update = gr.update(value=_start_button_label(exp_state))
     send_update = gr.update(interactive=send_interactive)
     next_variant = "primary" if episode and episode.finished else "secondary"
     next_update = gr.update(variant=next_variant)
-    memo_update = gr.update(visible=_has_current_reflection_memo(exp_state))
+    has_memo = _has_current_reflection_memo(exp_state)
+    memo_update = gr.update(
+        value="現在のReflection memoを見る" if has_memo else "Reflection memoなし",
+        visible=config.use_reflection,
+        interactive=has_memo,
+    )
     finish_update = gr.update(
         interactive=_all_samples_done(exp_state),
         variant="primary" if _all_samples_done(exp_state) else "secondary",
@@ -253,6 +261,7 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         qa_history,
         chat_messages,
         answer_update,
+        start_update,
         send_update,
         next_update,
         memo_update,
@@ -275,6 +284,10 @@ def _all_samples_done(exp_state: HumanExperimentState) -> bool:
     return bool(exp_state.samples) and len(exp_state.records_by_sample_id) >= len(
         exp_state.samples
     )
+
+
+def _start_button_label(exp_state: HumanExperimentState) -> str:
+    return "開始" if exp_state.current_pos == 0 else "現在のサンプルを再開始"
 
 
 def _current_reflection_memos(exp_state: HumanExperimentState) -> list[str]:
@@ -425,14 +438,27 @@ def _format_value(value) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=30)
+    parser.add_argument("--n_samples", type=int, default=3)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
     parser.add_argument("--participant_id", default=None)
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
     parser.add_argument("--run_id", default=None)
-    parser.add_argument("--show_gold_to_user", action="store_true")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        "--show_gold_to_user",
+        "--show-gold-to-user",
+        dest="show_gold_to_user",
+        action="store_true",
+    )
+    group.add_argument(
+        "--hide_gold_to_user",
+        "--hide-gold-to-user",
+        dest="show_gold_to_user",
+        action="store_false",
+    )
+    parser.set_defaults(show_gold_to_user=True)
     parser.add_argument("--mode", choices=MODES, default=None)
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--use_reflection", "--use-reflection", dest="use_reflection", action="store_true")

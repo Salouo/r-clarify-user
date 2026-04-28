@@ -41,7 +41,7 @@ class HumanExperimentConfig:
     max_trials: int = 5
     clarify_quota: int | None = 2
     memo_window: int | None = None
-    show_gold_to_user: bool = False
+    show_gold_to_user: bool = True
     timestamp: str = ""
 
 
@@ -88,7 +88,7 @@ class HumanExperimentState:
     sample_ids: list[int]
     subset_metadata: dict[str, Any]
     run_dir: Path
-    subset_path: Path
+    subset_path: Path | None
     current_pos: int = 0
     current_episode: HumanEpisodeState | None = None
     finished_episodes: dict[int, HumanEpisodeState] = field(default_factory=dict)
@@ -143,7 +143,7 @@ def load_human_subset(
     max_trials: int = 5,
     clarify_quota: int | None = 2,
     memo_window: int | None = None,
-    show_gold_to_user: bool = False,
+    show_gold_to_user: bool = True,
 ) -> HumanExperimentState:
     all_samples = load_dataset(dataset_path)
     sample_by_id = {int(s["index"]): s for s in all_samples if "index" in s}
@@ -174,8 +174,7 @@ def load_human_subset(
     actual_run_id = run_id or generate_run_id(participant_id)
     run_dir = Path(output_dir) / actual_run_id
     run_dir.mkdir(parents=True, exist_ok=True)
-    subset_path = Path(subset_output_path) if subset_output_path else run_dir / "sample_subset.json"
-    subset_path.parent.mkdir(parents=True, exist_ok=True)
+    subset_path = Path(subset_output_path) if subset_output_path else None
 
     timestamp = datetime.now().isoformat(timespec="seconds")
     actual_memo_window = _resolve_memo_window(mode=mode, memo_window=memo_window)
@@ -208,8 +207,10 @@ def load_human_subset(
         "within_run_replacement": False,
         "across_run_replacement": True,
     }
-    with subset_path.open("w", encoding="utf-8") as f:
-        json.dump(subset_metadata, f, ensure_ascii=False, indent=2)
+    if subset_path is not None:
+        subset_path.parent.mkdir(parents=True, exist_ok=True)
+        with subset_path.open("w", encoding="utf-8") as f:
+            json.dump(subset_metadata, f, ensure_ascii=False, indent=2)
 
     return HumanExperimentState(
         config=config,
@@ -406,6 +407,10 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
         "participant_id": experiment_state.config.participant_id,
         "run_id": experiment_state.config.run_id,
         "timestamp": experiment_state.config.timestamp,
+        "dataset_path": str(experiment_state.config.dataset_path),
+        "n_samples": experiment_state.config.n_samples,
+        "seed": experiment_state.config.seed,
+        "sample_ids": experiment_state.config.sample_ids,
         "run_started_at": experiment_state.config.timestamp,
         "run_finished_at": _run_finished_at(experiment_state),
         "total_duration_seconds": _run_duration_seconds(experiment_state),
@@ -413,9 +418,10 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
         "sampling_scope": SAMPLING_SCOPE,
         "within_run_replacement": False,
         "across_run_replacement": True,
-        "sample_subset_path": str(experiment_state.subset_path),
         "results": records,
     }
+    if experiment_state.subset_path is not None:
+        payload["sample_subset_path"] = str(experiment_state.subset_path)
     with results_path.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 

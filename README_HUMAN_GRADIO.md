@@ -46,13 +46,21 @@ uv run python app_gradio_human.py \
   --participant_id P001
 ```
 
-显示 gold action / hidden need 给真实用户：
+默认会显示 gold action / hidden need 给真实用户：
+
+```bash
+uv run python app_gradio_human.py \
+  --n_samples 30 \
+  --participant_id P001
+```
+
+如需在特殊对照中隐藏该信息：
 
 ```bash
 uv run python app_gradio_human.py \
   --n_samples 30 \
   --participant_id P001 \
-  --show_gold_to_user
+  --hide_gold_to_user
 ```
 
 UI 中对应区域标题为：
@@ -99,17 +107,12 @@ uv run python app_gradio_human.py \
 - 指定 `--sample_ids` 时严格使用给定样本，不随机抽样。
 - 未指定 `--seed` 时自动生成 seed。
 
-每次抽样后都会保存：
-
-```text
-outputs/human_runs/<run_id>/sample_subset.json
-```
-
-其中至少包含：
+抽样信息会写入最终 results JSON 顶层，其中至少包含：
 
 - `run_id`
 - `participant_id`
 - `timestamp`
+- `dataset_path`
 - `n_samples`
 - `seed`
 - `sample_ids`
@@ -117,7 +120,7 @@ outputs/human_runs/<run_id>/sample_subset.json
 - `within_run_replacement: false`
 - `across_run_replacement: true`
 
-也可以用 `--subset_output_path` 覆盖保存位置。
+默认不再生成单独的 `sample_subset.json`。如果需要额外保存抽样 manifest，可以显式指定 `--subset_output_path`。
 
 ## 输出位置
 
@@ -130,7 +133,6 @@ outputs/human_runs/<run_id>/
 主要文件：
 
 ```text
-outputs/human_runs/<run_id>/sample_subset.json
 outputs/human_runs/<run_id>/results/human_<mode>_n<N>_<participant_id>_<run_id>.json
 outputs/human_runs/<run_id>/episodes/sample<sample_id>_human_<run_id>.txt
 ```
@@ -173,7 +175,7 @@ human mode 追加向后兼容字段：
 - 最初の発話
 - ユーザ情報
 - 環境情報
-- 目标ニーズ（可选）
+- 目标ニーズ（默认显示，可用 `--hide_gold_to_user` 隐藏）
 - エージェントの明確化質問
 - 現在の試行内の質問・回答履歴
 - 対話
@@ -196,8 +198,8 @@ human mode 追加向后兼容字段：
 ```bash
 uv run python app_gradio_human.py \
   --run_id replay_P001 \
-  --seed <sample_subset.json中的seed> \
-  --n_samples <sample_subset.json中的n_samples> \
+  --seed <results JSON中的seed> \
+  --n_samples <results JSON中的n_samples> \
   --participant_id P001
 ```
 
@@ -209,7 +211,7 @@ uv run python app_gradio_human.py \
   --participant_id P001
 ```
 
-注意：这会复现样本集合与顺序，但不会自动恢复 Gradio 会话中的中途输入。建议每完成一个 sample 后使用页面上的日志导出按钮确认落盘。
+注意：这会复现样本集合与顺序，但不会自动恢复 Gradio 会话中的中途输入。当前实现会在每完成一个 sample 后自动落盘。
 
 ## 常见错误
 
@@ -218,4 +220,3 @@ uv run python app_gradio_human.py \
 - sample_ids 错误：确认每个 ID 都存在于 expanded dataset 的 `index` 字段中。
 - output_dir 无法写入：确认目录权限，或使用 `--output_dir` 指向可写目录。
 - no-reflection 对照：使用 `--no_reflection`，不要手动维护或删除 memo 文件。
-
