@@ -74,6 +74,84 @@ SECTION_SPECS = (
 )
 
 
+NEXT_SAMPLE_SOUND_INIT_JS = r"""
+(() => {
+  if (window.__rClarifySoundInitialized) {
+    return;
+  }
+  window.__rClarifySoundInitialized = true;
+  window.__rClarifyLastNextCue = "";
+
+  const getAudioContext = () => {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) {
+      return null;
+    }
+    if (!window.__rClarifyAudioContext) {
+      window.__rClarifyAudioContext = new AudioContext();
+    }
+    return window.__rClarifyAudioContext;
+  };
+
+  const unlockAudio = () => {
+    const ctx = getAudioContext();
+    if (ctx && ctx.state === "suspended") {
+      ctx.resume().catch(() => {});
+    }
+  };
+
+  window.addEventListener("pointerdown", unlockAudio, { capture: true });
+  window.addEventListener("keydown", unlockAudio, { capture: true });
+
+  window.__rClarifyPlayNextSampleCue = (cue) => {
+    if (!cue || cue === window.__rClarifyLastNextCue) {
+      return;
+    }
+    window.__rClarifyLastNextCue = cue;
+
+    const ctx = getAudioContext();
+    if (!ctx) {
+      return;
+    }
+
+    const play = () => {
+      const start = ctx.currentTime + 0.01;
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(0.16, start + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.42);
+      gain.connect(ctx.destination);
+
+      [880, 1174.66].forEach((frequency, index) => {
+        const oscillator = ctx.createOscillator();
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(frequency, start + index * 0.12);
+        oscillator.connect(gain);
+        oscillator.start(start + index * 0.12);
+        oscillator.stop(start + index * 0.12 + 0.18);
+      });
+    };
+
+    if (ctx.state === "suspended") {
+      ctx.resume().then(play).catch(() => {});
+    } else {
+      play();
+    }
+  };
+})();
+"""
+
+
+NEXT_SAMPLE_SOUND_CHANGE_JS = """
+(cue) => {
+  if (window.__rClarifyPlayNextSampleCue) {
+    window.__rClarifyPlayNextSampleCue(cue);
+  }
+  return [];
+}
+"""
+
+
 def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
     app_state = _coerce_app_state(initial_state)
     with gr.Blocks(title="R-Clarify Human Experiment") as demo:
@@ -166,6 +244,7 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 visible=False,
             )
             status = gr.Textbox(label="メッセージ", lines=3, interactive=False)
+            next_sample_audio_cue = gr.Textbox(value="", visible=False)
 
         outputs = [
             state,
@@ -193,6 +272,7 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             trial_status,
             reflection_memo,
             status,
+            next_sample_audio_cue,
         ]
 
         def on_select(app_state: HumanAppState, section_key: str):
@@ -385,6 +465,14 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             show_progress_on=[status],
         )
         memo_btn.click(on_show_memo, inputs=[state], outputs=[reflection_memo])
+        next_sample_audio_cue.change(
+            fn=None,
+            inputs=[next_sample_audio_cue],
+            outputs=None,
+            js=NEXT_SAMPLE_SOUND_CHANGE_JS,
+            queue=False,
+            show_progress="hidden",
+        )
         finish_btn.click(
             on_finish,
             inputs=[state],
@@ -438,6 +526,7 @@ def _empty_experiment_values(app_state: HumanAppState, notice: str = ""):
         "サンプルはまだ開始されていません。",
         gr.update(value="", visible=False),
         status,
+        "",
     )
 
 
@@ -515,6 +604,7 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         variant="primary" if all_done else "secondary",
     )
     reflection_memo_update = gr.update(value="", visible=False)
+    next_sample_audio_cue = _next_sample_audio_cue(exp_state)
 
     return (
         exp_state,
@@ -539,6 +629,7 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         trial_status,
         reflection_memo_update,
         notice,
+        next_sample_audio_cue,
     )
 
 
@@ -553,6 +644,13 @@ def _all_samples_done(exp_state: HumanExperimentState) -> bool:
     return bool(exp_state.samples) and len(exp_state.records_by_sample_id) >= len(
         exp_state.samples
     )
+
+
+def _next_sample_audio_cue(exp_state: HumanExperimentState) -> str:
+    episode = exp_state.current_episode
+    if not episode or not episode.finished or _all_samples_done(exp_state):
+        return ""
+    return f"{exp_state.config.run_id}:{exp_state.current_pos}:{episode.sample_id}"
 
 
 def _start_button_label(exp_state: HumanExperimentState) -> str:
@@ -867,7 +965,7 @@ def _section_subset_output_path(path_text: str | None, suffix: str) -> str | Non
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=2)
+    parser.add_argument("--n_samples", type=int, default=30)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
     parser.add_argument("--participant_id", default="test02")
@@ -931,6 +1029,7 @@ def main() -> None:
         server_name=args.server_name,
         server_port=args.server_port,
         share=args.share,
+        js=NEXT_SAMPLE_SOUND_INIT_JS,
     )
 
 
