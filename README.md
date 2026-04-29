@@ -186,3 +186,9 @@ Note: some script paths are hardcoded; adjust paths before use.
 - Thread pool in `src/run.py` is currently `max_workers=1` (sequential sample processing).
 - Agent backend uses the GPT model configured in `src/llm_factory.py`.
 - User simulator model is fixed to OpenAI `gpt-5.2` in current code.
+
+
+## Commands
+python app_gradio_human.py --participant_id p01 --server_name 127.0.0.1 --server_port 7860
+python app_gradio_human.py --participant_id p01 --server_name 0.0.0.0 --server_port 7860 --share
+
