@@ -95,6 +95,7 @@ class HumanExperimentState:
     finished_episodes: dict[int, HumanEpisodeState] = field(default_factory=dict)
     records_by_sample_id: dict[int, dict[str, Any]] = field(default_factory=dict)
     run_start_time: float = field(default_factory=time.time)
+    extra_results_metadata: dict[str, Any] = field(default_factory=dict)
     last_results_path: Path | None = None
     last_export_message: str = ""
 
@@ -397,6 +398,7 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
         experiment_state.records_by_sample_id.values(),
         key=lambda r: r.get("sample_position", 0),
     )
+    run_duration_seconds = _run_duration_seconds(experiment_state)
     payload = {
         "n_processed": len(records),
         "clarify_quota": experiment_state.config.clarify_quota,
@@ -411,9 +413,9 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
         "n_samples": experiment_state.config.n_samples,
         "seed": experiment_state.config.seed,
         "sample_ids": experiment_state.config.sample_ids,
-        "run_started_at": experiment_state.config.timestamp,
+        "run_started_at": _format_epoch(experiment_state.run_start_time),
         "run_finished_at": _run_finished_at(experiment_state),
-        "total_duration_seconds": _run_duration_seconds(experiment_state),
+        "total_duration_seconds": run_duration_seconds,
         "model": get_primary_model_name(),
         "sampling_scope": SAMPLING_SCOPE,
         "within_run_replacement": False,
@@ -422,6 +424,8 @@ def export_logs(experiment_state: HumanExperimentState) -> tuple[Path, list[Path
     }
     if experiment_state.subset_path is not None:
         payload["sample_subset_path"] = str(experiment_state.subset_path)
+    if experiment_state.extra_results_metadata:
+        payload.update(experiment_state.extra_results_metadata)
     with results_path.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 

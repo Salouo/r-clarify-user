@@ -3,7 +3,9 @@ from __future__ import annotations
 import argparse
 import inspect
 import re
+import time
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -50,6 +52,10 @@ class HumanAppState:
     section_states: dict[str, HumanExperimentState]
     current_section: str | None = None
     finalized_sections: set[str] = field(default_factory=set)
+    section_started_at: dict[str, float] = field(default_factory=dict)
+    section_finished_at: dict[str, float] = field(default_factory=dict)
+    experiment_started_at: float | None = None
+    experiment_finished_at: float | None = None
 
 
 SECTION_SPECS = (
@@ -81,6 +87,7 @@ NEXT_SAMPLE_SOUND_INIT_JS = r"""
   }
   window.__rClarifySoundInitialized = true;
   window.__rClarifyLastNextCue = "";
+  window.__rClarifyLastAnswerNeededCue = "";
 
   const getAudioContext = () => {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -138,6 +145,42 @@ NEXT_SAMPLE_SOUND_INIT_JS = r"""
       play();
     }
   };
+
+  window.__rClarifyPlayAnswerNeededCue = (cue) => {
+    if (!cue || cue === window.__rClarifyLastAnswerNeededCue) {
+      return;
+    }
+    window.__rClarifyLastAnswerNeededCue = cue;
+
+    const ctx = getAudioContext();
+    if (!ctx) {
+      return;
+    }
+
+    const play = () => {
+      const start = ctx.currentTime + 0.01;
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(0.14, start + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.34);
+      gain.connect(ctx.destination);
+
+      [659.25, 880].forEach((frequency, index) => {
+        const oscillator = ctx.createOscillator();
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(frequency, start + index * 0.1);
+        oscillator.connect(gain);
+        oscillator.start(start + index * 0.1);
+        oscillator.stop(start + index * 0.1 + 0.16);
+      });
+    };
+
+    if (ctx.state === "suspended") {
+      ctx.resume().then(play).catch(() => {});
+    } else {
+      play();
+    }
+  };
 })();
 """
 
@@ -148,6 +191,46 @@ NEXT_SAMPLE_SOUND_CHANGE_JS = """
     window.__rClarifyPlayNextSampleCue(cue);
   }
   return [];
+}
+"""
+
+
+ANSWER_NEEDED_SOUND_CHANGE_JS = """
+(cue) => {
+  if (window.__rClarifyPlayAnswerNeededCue) {
+    window.__rClarifyPlayAnswerNeededCue(cue);
+  }
+  return [];
+}
+"""
+
+
+INFO_PANEL_CSS = """
+.info-panel {
+  border: 1px solid var(--border-color-primary);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--background-fill-primary);
+  min-height: 120px;
+}
+
+.info-panel p {
+  margin: 0 0 0.35rem;
+}
+
+.info-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.timer-panel {
+  border: 1px solid var(--border-color-primary);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--background-fill-secondary);
+}
+
+.timer-panel p {
+  margin: 0;
 }
 """
 
@@ -178,6 +261,10 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
 
         with gr.Column():
             progress = gr.Markdown()
+            timer_display = gr.Markdown(
+                value=_timing_text(app_state),
+                elem_classes=["timer-panel"],
+            )
 
             with gr.Row():
                 participant_id = gr.Textbox(label="参加者ID", interactive=False)
@@ -198,8 +285,26 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 )
 
             with gr.Row():
-                user_info = gr.Textbox(label="ユーザ情報", lines=5, interactive=False)
-                env_info = gr.Textbox(label="環境情報", lines=7, interactive=False)
+                with gr.Column():
+                    gr.Markdown("### ユーザ情報")
+                    user_info = gr.Markdown(
+                        value="",
+                        show_label=False,
+                        container=False,
+                        line_breaks=True,
+                        min_height=120,
+                        elem_classes=["info-panel"],
+                    )
+                with gr.Column():
+                    gr.Markdown("### 環境情報")
+                    env_info = gr.Markdown(
+                        value="",
+                        show_label=False,
+                        container=False,
+                        line_breaks=True,
+                        min_height=120,
+                        elem_classes=["info-panel"],
+                    )
 
             question = gr.Textbox(
                 label="エージェントの明確化質問",
@@ -234,6 +339,7 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
 
             status = gr.Textbox(label="メッセージ", lines=3, interactive=False)
             next_sample_audio_cue = gr.Textbox(value="", visible=False)
+            answer_needed_audio_cue = gr.Textbox(value="", visible=False)
 
         outputs = [
             state,
@@ -241,6 +347,7 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             with_reflection_btn,
             without_reflection_btn,
             progress,
+            timer_display,
             participant_id,
             run_id,
             sample_id,
@@ -260,7 +367,9 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             trial_status,
             status,
             next_sample_audio_cue,
+            answer_needed_audio_cue,
         ]
+        timer = gr.Timer(1)
 
         def on_select(app_state: HumanAppState, section_key: str):
             if section_key in app_state.finalized_sections:
@@ -282,14 +391,28 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             if exp_state is None:
                 return _render_app(app_state, "先にsectionを選択してください。")
             try:
+                section_key = app_state.current_section
+                if section_key is not None:
+                    _ensure_section_started(app_state, section_key)
+                    exp_state.run_start_time = app_state.section_started_at[section_key]
+                    _sync_timing_metadata(app_state)
                 exp_state = start_current_episode(exp_state, restart=True)
                 _set_active_section_state(app_state, exp_state)
                 return _render_app(app_state, "現在のサンプルを開始しました。")
             except Exception as exc:
                 return _render_app(app_state, f"開始できませんでした: {exc}")
 
-        def on_start_processing():
+        def on_start_processing(app_state: HumanAppState):
+            section_key = app_state.current_section
+            exp_state = _active_section_state(app_state)
+            if section_key is not None and exp_state is not None:
+                _ensure_section_started(app_state, section_key)
+                exp_state.run_start_time = app_state.section_started_at[section_key]
+                _set_active_section_state(app_state, exp_state)
+                _sync_timing_metadata(app_state)
             return (
+                app_state,
+                _timing_text(app_state),
                 "開始中です。しばらくお待ちください。",
                 gr.update(value="", interactive=False),
                 gr.update(value="回答を送信", interactive=False, variant="secondary"),
@@ -360,10 +483,17 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             if not _all_samples_done(exp_state):
                 return _render_app(app_state, "まだすべてのサンプルが完了していません。")
             try:
-                results_path, episode_paths = export_logs(exp_state)
                 section_key = app_state.current_section
+                finished_at = None
                 if section_key is not None:
+                    finished_at = _mark_section_finished(app_state, section_key)
                     app_state.finalized_sections.add(section_key)
+                if _all_sections_finalized(app_state):
+                    _mark_experiment_finished(app_state, finished_at)
+                _sync_timing_metadata(app_state)
+                results_path, episode_paths = export_logs(exp_state)
+                if _all_sections_finalized(app_state):
+                    _export_finished_section_logs(app_state, skip_section_key=section_key)
                 app_state.current_section = None
                 if _all_sections_finalized(app_state):
                     lead = "2つのsectionが完了しました。この画面を閉じてください。"
@@ -383,6 +513,13 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             inputs=[state],
             outputs=outputs,
             show_progress_on=[status],
+        )
+        timer.tick(
+            lambda app_state: _timing_text(app_state),
+            inputs=[state],
+            outputs=[timer_display],
+            queue=False,
+            show_progress="hidden",
         )
         with_reflection_btn.click(
             lambda app_state: on_select(app_state, "with_reflection"),
@@ -406,10 +543,11 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             action,
             trial_status,
         ]
+        start_busy_outputs = [state, timer_display, *busy_outputs]
         start_btn.click(
             on_start_processing,
-            inputs=None,
-            outputs=busy_outputs,
+            inputs=[state],
+            outputs=start_busy_outputs,
             queue=False,
         ).then(
             on_start,
@@ -458,6 +596,14 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             queue=False,
             show_progress="hidden",
         )
+        answer_needed_audio_cue.change(
+            fn=None,
+            inputs=[answer_needed_audio_cue],
+            outputs=None,
+            js=ANSWER_NEEDED_SOUND_CHANGE_JS,
+            queue=False,
+            show_progress="hidden",
+        )
         finish_btn.click(
             on_finish,
             inputs=[state],
@@ -472,7 +618,7 @@ def _render_app(app_state: HumanAppState, notice: str = ""):
     has_active_section = app_state.current_section is not None
     if has_active_section:
         exp_state = _active_section_state(app_state) or _first_section_state(app_state)
-        _, *experiment_values = _render(exp_state, notice)
+        _, *experiment_values = _render(exp_state, app_state, notice)
     else:
         experiment_values = _empty_experiment_values(app_state, notice)
     landing_notice = notice if not has_active_section else ""
@@ -491,13 +637,14 @@ def _empty_experiment_values(app_state: HumanAppState, notice: str = ""):
     status = notice or "sectionを選択してください。"
     return (
         "**Section:** 未選択",
+        _timing_text(app_state),
         exp_state.config.participant_id or "",
         "",
         "",
         "",
         gr.update(value="", visible=exp_state.config.show_gold_to_user),
-        "",
-        "",
+        _format_user_info(None),
+        _format_env_info(None),
         "sectionを選択してください。",
         "まだ履歴はありません。",
         [],
@@ -510,10 +657,15 @@ def _empty_experiment_values(app_state: HumanAppState, notice: str = ""):
         "サンプルはまだ開始されていません。",
         status,
         "",
+        "",
     )
 
 
-def _render(exp_state: HumanExperimentState, notice: str = ""):
+def _render(
+    exp_state: HumanExperimentState,
+    app_state: HumanAppState,
+    notice: str = "",
+):
     sample = _current_sample(exp_state)
     episode = exp_state.current_episode
     config = exp_state.config
@@ -521,7 +673,7 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
 
     sample_id = str(sample.get("index", "")) if sample else ""
     initial_utterance = str(sample.get("utterance", "")) if sample else ""
-    hidden_need_value = str(sample.get("reflective_action", "")) if sample else ""
+    hidden_need_value = _format_hidden_need(sample.get("reflective_action")) if sample else ""
     hidden_update = gr.update(
         value=hidden_need_value if config.show_gold_to_user else "",
         visible=config.show_gold_to_user,
@@ -581,10 +733,12 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         variant="primary" if all_done else "secondary",
     )
     next_sample_audio_cue = _next_sample_audio_cue(exp_state)
+    answer_needed_audio_cue = _answer_needed_audio_cue(exp_state)
 
     return (
         exp_state,
         progress_text,
+        _timing_text(app_state),
         config.participant_id or "",
         config.run_id,
         sample_id,
@@ -604,7 +758,196 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         trial_status,
         notice,
         next_sample_audio_cue,
+        answer_needed_audio_cue,
     )
+
+
+def _ensure_section_started(app_state: HumanAppState, section_key: str) -> None:
+    started_at = time.time()
+    if app_state.experiment_started_at is None:
+        app_state.experiment_started_at = started_at
+    if section_key not in app_state.section_started_at:
+        app_state.section_started_at[section_key] = started_at
+        app_state.section_finished_at.pop(section_key, None)
+
+
+def _mark_section_finished(app_state: HumanAppState, section_key: str) -> float:
+    if section_key not in app_state.section_started_at:
+        _ensure_section_started(app_state, section_key)
+    finished_at = app_state.section_finished_at.get(section_key)
+    if finished_at is None:
+        finished_at = time.time()
+        app_state.section_finished_at[section_key] = finished_at
+    return finished_at
+
+
+def _mark_experiment_finished(
+    app_state: HumanAppState,
+    finished_at: float | None = None,
+) -> None:
+    if app_state.experiment_started_at is None:
+        return
+    if app_state.experiment_finished_at is None:
+        app_state.experiment_finished_at = finished_at or time.time()
+
+
+def _sync_timing_metadata(app_state: HumanAppState) -> None:
+    section_timings = _section_timings_payload(app_state)
+    experiment_total = _duration_seconds(
+        app_state.experiment_started_at,
+        app_state.experiment_finished_at,
+    )
+    total_section_duration = _total_section_duration_seconds(app_state)
+    experiment_timing = {
+        "experiment_started_at": _format_epoch(app_state.experiment_started_at),
+        "experiment_finished_at": _format_epoch(app_state.experiment_finished_at),
+        "experiment_total_duration_seconds": experiment_total,
+        "total_section_duration_seconds": total_section_duration,
+        "section_timings": section_timings,
+    }
+    for spec in SECTION_SPECS:
+        exp_state = app_state.section_states.get(spec.key)
+        if exp_state is None:
+            continue
+        section_timing = section_timings[_section_result_id(spec.key)]
+        metadata = {
+            "section_id": _section_result_id(spec.key),
+            "section_key": spec.key,
+            "section_title": spec.title,
+            "run_started_at": section_timing["started_at"],
+            "section_started_at": section_timing["started_at"],
+            "section_finished_at": section_timing["finished_at"],
+            "section_duration_seconds": section_timing["duration_seconds"],
+            "section_timings": section_timings,
+            "total_section_duration_seconds": total_section_duration,
+            "experiment_started_at": experiment_timing["experiment_started_at"],
+            "experiment_finished_at": experiment_timing["experiment_finished_at"],
+            "experiment_total_duration_seconds": experiment_total,
+            "experiment_timing": experiment_timing,
+        }
+        if section_timing["finished_at"] is not None:
+            metadata.update(
+                {
+                    "run_finished_at": section_timing["finished_at"],
+                    "total_duration_seconds": section_timing["duration_seconds"],
+                }
+            )
+        exp_state.extra_results_metadata = metadata
+
+
+def _export_finished_section_logs(
+    app_state: HumanAppState,
+    *,
+    skip_section_key: str | None = None,
+) -> None:
+    for spec in SECTION_SPECS:
+        if spec.key == skip_section_key or spec.key not in app_state.finalized_sections:
+            continue
+        exp_state = app_state.section_states.get(spec.key)
+        if exp_state is not None and _all_samples_done(exp_state):
+            export_logs(exp_state)
+
+
+def _timing_text(app_state: HumanAppState) -> str:
+    total_elapsed = _experiment_elapsed_seconds(app_state)
+    total_text = _format_duration(total_elapsed)
+    parts = [f"**経過時間:** 合計 `{total_text}`"]
+    for spec in SECTION_SPECS:
+        elapsed = _section_elapsed_seconds(app_state, spec.key)
+        status = _section_timing_status(app_state, spec.key)
+        parts.append(f"{spec.title} `{_format_duration(elapsed)}`（{status}）")
+    return "  \n".join(parts)
+
+
+def _section_timing_status(app_state: HumanAppState, section_key: str) -> str:
+    if section_key in app_state.section_finished_at:
+        return "完了"
+    if section_key in app_state.section_started_at:
+        return "進行中"
+    return "未開始"
+
+
+def _section_elapsed_seconds(
+    app_state: HumanAppState,
+    section_key: str,
+    now: float | None = None,
+) -> float | None:
+    started_at = app_state.section_started_at.get(section_key)
+    if started_at is None:
+        return None
+    finished_at = app_state.section_finished_at.get(section_key)
+    return _duration_seconds(started_at, finished_at or now or time.time())
+
+
+def _experiment_elapsed_seconds(app_state: HumanAppState) -> float | None:
+    if app_state.experiment_started_at is None:
+        return None
+    return _duration_seconds(
+        app_state.experiment_started_at,
+        app_state.experiment_finished_at or time.time(),
+    )
+
+
+def _section_timings_payload(app_state: HumanAppState) -> dict[str, dict[str, Any]]:
+    return {
+        _section_result_id(spec.key): _section_timing_payload(app_state, spec)
+        for spec in SECTION_SPECS
+    }
+
+
+def _section_timing_payload(
+    app_state: HumanAppState,
+    spec: SectionSpec,
+) -> dict[str, Any]:
+    started_at = app_state.section_started_at.get(spec.key)
+    finished_at = app_state.section_finished_at.get(spec.key)
+    return {
+        "section_id": _section_result_id(spec.key),
+        "section_key": spec.key,
+        "section_title": spec.title,
+        "started_at": _format_epoch(started_at),
+        "finished_at": _format_epoch(finished_at),
+        "duration_seconds": _duration_seconds(started_at, finished_at),
+    }
+
+
+def _total_section_duration_seconds(app_state: HumanAppState) -> float | None:
+    durations = [
+        _duration_seconds(
+            app_state.section_started_at.get(spec.key),
+            app_state.section_finished_at.get(spec.key),
+        )
+        for spec in SECTION_SPECS
+    ]
+    durations = [duration for duration in durations if duration is not None]
+    if not durations:
+        return None
+    return round(sum(durations), 3)
+
+
+def _section_result_id(section_key: str) -> str:
+    return f"section{_section_number(section_key)}"
+
+
+def _format_duration(seconds: float | None) -> str:
+    if seconds is None:
+        return "未開始"
+    whole_seconds = int(max(0, seconds))
+    hours, remainder = divmod(whole_seconds, 3600)
+    minutes, secs = divmod(remainder, 60)
+    return f"{hours:02d}:{minutes:02d}:{secs:02d}"
+
+
+def _format_epoch(value: float | None) -> str | None:
+    if value is None:
+        return None
+    return datetime.fromtimestamp(value).isoformat(timespec="seconds")
+
+
+def _duration_seconds(start: float | None, end: float | None) -> float | None:
+    if start is None or end is None:
+        return None
+    return round(max(0.0, end - start), 3)
 
 
 def _current_sample(exp_state: HumanExperimentState) -> dict[str, Any] | None:
@@ -625,6 +968,17 @@ def _next_sample_audio_cue(exp_state: HumanExperimentState) -> str:
     if not episode or not episode.finished or _all_samples_done(exp_state):
         return ""
     return f"{exp_state.config.run_id}:{exp_state.current_pos}:{episode.sample_id}"
+
+
+def _answer_needed_audio_cue(exp_state: HumanExperimentState) -> str:
+    episode = exp_state.current_episode
+    if not episode or episode.finished or not episode.current_question:
+        return ""
+    question_key = abs(hash(episode.current_question))
+    return (
+        f"{exp_state.config.run_id}:{exp_state.current_pos}:"
+        f"{episode.sample_id}:{episode.current_trial_index}:{question_key}"
+    )
 
 
 def _start_button_label(exp_state: HumanExperimentState) -> str:
@@ -679,9 +1033,9 @@ def _format_user_info(sample: dict[str, Any] | None) -> str:
     ann = sample.get("annotations") or {}
     return "\n".join(
         [
-            f"位置: {_format_value(ann.get('position'))}",
-            f"手にしている物: {_format_value(ann.get('has'))}",
-            f"近くにある物: {_format_value(ann.get('near_items'))}",
+            f"**位置:** {_format_value(ann.get('position'))}",
+            f"**手にしている物:** {_format_value(ann.get('has'))}",
+            f"**近くにある物:** {_format_value(ann.get('near_items'))}",
         ]
     )
 
@@ -690,14 +1044,15 @@ def _format_env_info(sample: dict[str, Any] | None) -> str:
     if not sample:
         return ""
     ann = sample.get("annotations") or {}
-    return "\n".join(
+    items = "\n".join(
         [
-            f"ソファ前テーブルの物品: {_format_value(ann.get('sofa_front_table_items'))}",
-            f"キッチン前テーブルの物品: {_format_value(ann.get('kitchen_front_table_items'))}",
-            f"キッチンの物品: {_format_value(ann.get('kitchen_items'))}",
-            "表示されている物品は現在見えている物だけです。リストにない物でも、別の場所から持ってくることがあります。",
+            f"**ソファ前テーブルの物品:** {_format_value(ann.get('sofa_front_table_items'))}",
+            f"**キッチン前テーブルの物品:** {_format_value(ann.get('kitchen_front_table_items'))}",
+            f"**キッチンの物品:** {_format_value(ann.get('kitchen_items'))}",
         ]
     )
+    note = "表示されている物品は現在見えている物だけです。リストにない物でも、別の場所から持ってくることがあります。"
+    return f"{items}\n\n{note}"
 
 
 def _format_qa_history(episode) -> str:
@@ -739,6 +1094,11 @@ def _format_value(value) -> str:
     if isinstance(value, list):
         return "、".join(str(v) for v in value) if value else "なし"
     return str(value)
+
+
+def _format_hidden_need(value) -> str:
+    text = "" if value is None else str(value).strip()
+    return re.sub(r"^\[\d+\]\s*", "", text)
 
 
 def _mode_label(exp_state: HumanExperimentState) -> str:
@@ -928,7 +1288,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--n_samples", type=int, default=2)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
-    parser.add_argument("--participant_id", default=None)
+    parser.add_argument("--participant_id", default="test01")
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
     parser.add_argument("--run_id", default=None)
@@ -989,6 +1349,7 @@ def main() -> None:
         server_name=args.server_name,
         server_port=args.server_port,
         share=args.share,
+        css=INFO_PANEL_CSS,
         js=NEXT_SAMPLE_SOUND_INIT_JS,
     )
 
