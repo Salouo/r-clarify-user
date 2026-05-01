@@ -280,6 +280,12 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 return _render_app(app_state, "このsectionはすでに完了しています。")
             if section_key not in app_state.section_states:
                 return _render_app(app_state, "sectionを選択できませんでした。")
+            locked_by = _first_unfinished_previous_section(app_state, section_key)
+            if locked_by is not None:
+                return _render_app(
+                    app_state,
+                    f"先にSection {_section_number(locked_by.key)}を完了してください。",
+                )
             app_state.current_section = section_key
             title = _section_spec(section_key).title
             return _render_app(app_state, f"{title}を選択しました。")
@@ -856,17 +862,42 @@ def _all_sections_finalized(app_state: HumanAppState) -> bool:
     return all(spec.key in app_state.finalized_sections for spec in SECTION_SPECS)
 
 
+def _section_number(section_key: str) -> int:
+    for idx, spec in enumerate(SECTION_SPECS, start=1):
+        if spec.key == section_key:
+            return idx
+    raise KeyError(f"Unknown section: {section_key}")
+
+
+def _first_unfinished_previous_section(
+    app_state: HumanAppState,
+    section_key: str,
+) -> SectionSpec | None:
+    for spec in SECTION_SPECS:
+        if spec.key == section_key:
+            return None
+        if spec.key in app_state.section_states and spec.key not in app_state.finalized_sections:
+            return spec
+    return None
+
+
 def _section_button_update(app_state: HumanAppState, section_key: str):
     spec = _section_spec(section_key)
     finalized = section_key in app_state.finalized_sections
     state = app_state.section_states.get(section_key)
     has_active = app_state.current_section is not None
+    locked_by = _first_unfinished_previous_section(app_state, section_key)
     label = spec.button_label
     if finalized:
         label = f"{label}（完了）"
+    elif locked_by is not None:
+        label = f"{label}（Section {_section_number(locked_by.key)}完了後）"
     elif state is not None and len(state.records_by_sample_id) > 0:
         label = f"{label}（途中）"
-    return gr.update(value=label, interactive=(not finalized and not has_active))
+    return gr.update(
+        value=label,
+        interactive=(not finalized and not has_active and locked_by is None),
+    )
 
 
 def _landing_status_text(app_state: HumanAppState, notice: str = "") -> str:
@@ -965,10 +996,10 @@ def _section_subset_output_path(path_text: str | None, suffix: str) -> str | Non
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=30)
+    parser.add_argument("--n_samples", type=int, default=2)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
-    parser.add_argument("--participant_id", default="test02")
+    parser.add_argument("--participant_id", default=None)
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
     parser.add_argument("--run_id", default=None)
