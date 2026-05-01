@@ -55,8 +55,8 @@ class HumanAppState:
 SECTION_SPECS = (
     SectionSpec(
         key="with_reflection",
-        title="Full version（Reflection memoあり）",
-        button_label="Reflection memoあり",
+        title="Section 1",
+        button_label="Section 1",
         mode="r-clarify",
         use_reflection=True,
         run_suffix="with_reflection",
@@ -64,8 +64,8 @@ SECTION_SPECS = (
     ),
     SectionSpec(
         key="without_reflection",
-        title="No-reflection version（Reflection memoなし）",
-        button_label="Reflection memoなし",
+        title="Section 2",
+        button_label="Section 2",
         mode="clarify",
         use_reflection=False,
         run_suffix="without_reflection",
@@ -226,23 +226,12 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 )
                 send_btn = gr.Button("回答を送信", variant="secondary")
                 next_btn = gr.Button("次のサンプル")
-                memo_btn = gr.Button(
-                    "現在のReflection memoを見る",
-                    visible=_first_section_state(app_state).config.use_reflection,
-                    interactive=_has_current_reflection_memo(_first_section_state(app_state)),
-                )
                 finish_btn = gr.Button("完了")
 
             with gr.Row():
                 action = gr.Textbox(label="実行された行動", lines=2, interactive=False)
                 trial_status = gr.Textbox(label="現在の状態", lines=4, interactive=False)
 
-            reflection_memo = gr.Textbox(
-                label="現在のReflection memo",
-                lines=8,
-                interactive=False,
-                visible=False,
-            )
             status = gr.Textbox(label="メッセージ", lines=3, interactive=False)
             next_sample_audio_cue = gr.Textbox(value="", visible=False)
 
@@ -266,11 +255,9 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             start_btn,
             send_btn,
             next_btn,
-            memo_btn,
             finish_btn,
             action,
             trial_status,
-            reflection_memo,
             status,
             next_sample_audio_cue,
         ]
@@ -391,13 +378,6 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             except Exception as exc:
                 return _render_app(app_state, f"終了処理中にログを書き出せませんでした: {exc}")
 
-        def on_show_memo(app_state: HumanAppState):
-            exp_state = _active_section_state(app_state)
-            if exp_state is None:
-                return gr.update(value="", visible=False)
-            memo = _format_current_reflection_memo(exp_state)
-            return gr.update(value=memo, visible=True)
-
         demo.load(
             lambda app_state: _render_app(app_state),
             inputs=[state],
@@ -470,7 +450,6 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             outputs=outputs,
             show_progress_on=[status],
         )
-        memo_btn.click(on_show_memo, inputs=[state], outputs=[reflection_memo])
         next_sample_audio_cue.change(
             fn=None,
             inputs=[next_sample_audio_cue],
@@ -526,11 +505,9 @@ def _empty_experiment_values(app_state: HumanAppState, notice: str = ""):
         gr.update(value="開始", interactive=False, variant="secondary"),
         gr.update(value="回答を送信", interactive=False, variant="secondary"),
         gr.update(interactive=False, variant="secondary"),
-        gr.update(value="Reflection memoなし", visible=False, interactive=False),
         gr.update(interactive=False, variant="secondary"),
         "",
         "サンプルはまだ開始されていません。",
-        gr.update(value="", visible=False),
         status,
         "",
     )
@@ -599,17 +576,10 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         interactive=bool(episode and episode.finished and not all_done),
         variant=next_variant,
     )
-    has_memo = _has_current_reflection_memo(exp_state)
-    memo_update = gr.update(
-        value="現在のReflection memoを見る" if has_memo else "Reflection memoなし",
-        visible=config.use_reflection,
-        interactive=has_memo,
-    )
     finish_update = gr.update(
         interactive=all_done,
         variant="primary" if all_done else "secondary",
     )
-    reflection_memo_update = gr.update(value="", visible=False)
     next_sample_audio_cue = _next_sample_audio_cue(exp_state)
 
     return (
@@ -629,11 +599,9 @@ def _render(exp_state: HumanExperimentState, notice: str = ""):
         start_update,
         send_update,
         next_update,
-        memo_update,
         finish_update,
         action_text,
         trial_status,
-        reflection_memo_update,
         notice,
         next_sample_audio_cue,
     )
@@ -663,41 +631,6 @@ def _start_button_label(exp_state: HumanExperimentState) -> str:
     return "開始" if exp_state.current_pos == 0 else "現在のサンプルを再開始"
 
 
-def _current_reflection_memos(exp_state: HumanExperimentState) -> list[str]:
-    if not exp_state.config.use_reflection:
-        return []
-    episode = exp_state.current_episode
-    if not episode:
-        return []
-
-    prior_memos: list[str] = []
-    if episode.trial_contexts:
-        context = episode.trial_contexts[-1]
-        raw_memos = context.get("prior_memos") or []
-        prior_memos = [str(memo).strip() for memo in raw_memos if str(memo).strip()]
-    if prior_memos:
-        return prior_memos
-
-    return [
-        str(memo).strip()
-        for memo in episode.reflection_memos[-episode.memo_window :]
-        if str(memo).strip()
-    ]
-
-
-def _has_current_reflection_memo(exp_state: HumanExperimentState) -> bool:
-    return bool(_current_reflection_memos(exp_state))
-
-
-def _format_current_reflection_memo(exp_state: HumanExperimentState) -> str:
-    memos = _current_reflection_memos(exp_state)
-    if not memos:
-        return "現在表示できるReflection memoはありません。"
-    if len(memos) == 1:
-        return memos[0]
-    return "\n\n".join(f"[{idx}]\n{memo}" for idx, memo in enumerate(memos, start=1))
-
-
 def _make_chatbot():
     kwargs = {"label": "対話", "height": 260}
     if "type" in inspect.signature(gr.Chatbot).parameters:
@@ -709,13 +642,11 @@ def _progress_text(exp_state: HumanExperimentState) -> str:
     total = len(exp_state.samples)
     current = min(exp_state.current_pos + 1, total) if total else 0
     completed = len(exp_state.records_by_sample_id)
-    reflection = "有効" if exp_state.config.use_reflection else "無効"
     mode_label = _mode_label(exp_state)
     return (
         f"**Section:** {mode_label}　"
         f"**進捗:** {current} / {total}　"
         f"**完了:** {completed}　"
-        f"**Reflection memo:** {reflection}　"
         f"**抽出seed:** {exp_state.config.seed}"
     )
 
