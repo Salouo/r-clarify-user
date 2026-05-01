@@ -821,8 +821,6 @@ def _section_button_update(app_state: HumanAppState, section_key: str):
     label = spec.button_label
     if finalized:
         label = f"{label}（完了）"
-    elif locked_by is not None:
-        label = f"{label}（Section {_section_number(locked_by.key)}完了後）"
     elif state is not None and len(state.records_by_sample_id) > 0:
         label = f"{label}（途中）"
     return gr.update(
