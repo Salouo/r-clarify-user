@@ -1285,7 +1285,7 @@ def _section_subset_output_path(path_text: str | None, suffix: str) -> str | Non
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=2)
+    parser.add_argument("--n_samples", type=int, default=30)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
     parser.add_argument("--participant_id", default="test01")

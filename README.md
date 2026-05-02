@@ -189,6 +189,5 @@ Note: some script paths are hardcoded; adjust paths before use.
 
 
 ## Commands
-python app_gradio_human.py --participant_id p01 --server_name 127.0.0.1 --server_port 7860
-python app_gradio_human.py --participant_id p01 --server_name 0.0.0.0 --server_port 7860 --share
-
+uv run python app_gradio_human.py
+uv run python app_gradio_human.py --share
