@@ -565,7 +565,8 @@ def _continue_episode(state: HumanEpisodeState) -> HumanEpisodeState:
 
         if state.current_agent_state.last_error:
             state.error_message = (
-                "モデル出力の解析に失敗したため、この試行では失敗行動として処理されました。"
+                "モデル出力の解析に失敗しました。"
+                "この試行は失敗扱いになりますが、実験は継続できます（中断は不要です）。"
             )
 
         if state.current_agent_state.next_decision == "clarify":

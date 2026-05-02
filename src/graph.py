@@ -24,6 +24,16 @@ _FENCE_RE = re.compile(
     re.MULTILINE,
 )
 
+_JSON_REPAIR_PROMPT = (
+    "You repair malformed model output into valid JSON.\n"
+    "Return exactly one JSON object only (no markdown, no extra text).\n"
+    "Allowed keys: thought, next_decision, action_id, clarification_question.\n"
+    "Rules:\n"
+    '- next_decision must be "clarify" or "execute".\n'
+    "- action_id must be an integer 1..40 when next_decision is execute, otherwise null.\n"
+    "- clarification_question must be a single-sentence question when next_decision is clarify, otherwise null.\n"
+)
+
 
 def _trace_to_messages(trace: list[AgentStep]) -> list[SystemMessage]:
     """
@@ -161,6 +171,42 @@ def _safe_agent_output(message: AIMessage) -> AgentOutput:
         )
 
 
+def _token_usage_from_message(message: AIMessage) -> dict[str, int]:
+    try:
+        usage = getattr(message, "additional_kwargs", {}).get("token_usage") or {}
+    except Exception:
+        return {}
+    prompt = int(usage.get("prompt_tokens") or 0)
+    completion = int(usage.get("completion_tokens") or 0)
+    total = int(usage.get("total_tokens") or (prompt + completion))
+    if total <= 0 and prompt <= 0 and completion <= 0:
+        return {}
+    return {
+        "prompt_tokens": prompt,
+        "completion_tokens": completion,
+        "total_tokens": total,
+    }
+
+
+def _merge_token_usage(first: dict[str, int], second: dict[str, int]) -> dict[str, int]:
+    if not first and not second:
+        return {}
+    return {
+        "prompt_tokens": int(first.get("prompt_tokens", 0)) + int(second.get("prompt_tokens", 0)),
+        "completion_tokens": int(first.get("completion_tokens", 0))
+        + int(second.get("completion_tokens", 0)),
+        "total_tokens": int(first.get("total_tokens", 0)) + int(second.get("total_tokens", 0)),
+    }
+
+
+def _repair_agent_output_once(raw_text: str) -> AIMessage:
+    repair_messages = [
+        SystemMessage(content=_JSON_REPAIR_PROMPT),
+        HumanMessage(content=raw_text),
+    ]
+    return llm.invoke(repair_messages)
+
+
 # ========== Agent Node ==========
 
 def agent(state: AgentState) -> AgentState:
@@ -209,14 +255,19 @@ def agent(state: AgentState) -> AgentState:
     raw_resp = llm.invoke(messages)
 
     # Record token usage.
-    token_usage = {}
-    try:
-        token_usage = getattr(raw_resp, "additional_kwargs", {}).get("token_usage") or {}
-    except Exception:
-        token_usage = {}
+    token_usage = _token_usage_from_message(raw_resp)
     
     # Parse agent's raw output and obtain clear agent's output.
     resp = _safe_agent_output(raw_resp)
+    if resp.parse_error:
+        repaired_raw_resp = _repair_agent_output_once(str(getattr(raw_resp, "content", "")))
+        token_usage = _merge_token_usage(
+            token_usage,
+            _token_usage_from_message(repaired_raw_resp),
+        )
+        repaired = _safe_agent_output(repaired_raw_resp)
+        if not repaired.parse_error:
+            resp = repaired
 
     # Determine the agent's decision (Clarify / Execute).
     valid_decisions = {"clarify", "execute"}
@@ -391,7 +442,7 @@ def execute_node(state: AgentState) -> AgentState:
     if action_id == -1:
         result_text = "動作を特定できません。"
     else:
-        result_text = f"{desc}を执行しました。"
+        result_text = f"{desc}を執行しました。"
 
     return {
         "messages": state.messages + [AIMessage(content=result_text)],

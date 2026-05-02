@@ -400,7 +400,13 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 _set_active_section_state(app_state, exp_state)
                 return _render_app(app_state, "現在のサンプルを開始しました。")
             except Exception as exc:
-                return _render_app(app_state, f"開始できませんでした: {exc}")
+                if exp_state is not None:
+                    exp_state.current_episode = None
+                    _set_active_section_state(app_state, exp_state)
+                return _render_app(
+                    app_state,
+                    f"開始できませんでした: {exc}\n「開始」を押して現在のサンプルを再開始してください。",
+                )
 
         def on_start_processing(app_state: HumanAppState):
             section_key = app_state.current_section
@@ -432,7 +438,13 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 _set_active_section_state(app_state, exp_state)
                 return _render_app(app_state, "回答を送信しました。")
             except Exception as exc:
-                return _render_app(app_state, f"回答を送信できませんでした: {exc}")
+                exp_state.current_episode = None
+                _set_active_section_state(app_state, exp_state)
+                return _render_app(
+                    app_state,
+                    f"回答を送信できませんでした: {exc}\n"
+                    "「開始」を押して現在のサンプルを再開始してください。",
+                )
 
         def on_submit_processing():
             return (
@@ -452,17 +464,26 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
                 return _render_app(app_state, "先にsectionを選択してください。")
             if exp_state.current_episode is None:
                 return _render_app(app_state, "まず現在のサンプルを開始してください。")
-            before_pos = exp_state.current_pos
-            exp_state = next_sample(exp_state, auto_start=True)
-            _set_active_section_state(app_state, exp_state)
-            if exp_state.current_pos == before_pos:
-                if before_pos + 1 >= len(exp_state.samples) and (
-                    exp_state.current_episode is None
-                    or exp_state.current_episode.finished
-                ):
-                    return _render_app(app_state, "すべてのサンプルが完了しました。")
-                return _render_app(app_state, "現在のサンプルはまだ完了していません。")
-            return _render_app(app_state, "次のサンプルを開始しました。")
+            try:
+                before_pos = exp_state.current_pos
+                exp_state = next_sample(exp_state, auto_start=True)
+                _set_active_section_state(app_state, exp_state)
+                if exp_state.current_pos == before_pos:
+                    if before_pos + 1 >= len(exp_state.samples) and (
+                        exp_state.current_episode is None
+                        or exp_state.current_episode.finished
+                    ):
+                        return _render_app(app_state, "すべてのサンプルが完了しました。")
+                    return _render_app(app_state, "現在のサンプルはまだ完了していません。")
+                return _render_app(app_state, "次のサンプルを開始しました。")
+            except Exception as exc:
+                exp_state.current_episode = None
+                _set_active_section_state(app_state, exp_state)
+                return _render_app(
+                    app_state,
+                    f"次のサンプルを開始できませんでした: {exc}\n"
+                    "「開始」を押して現在のサンプルを再開始してください。",
+                )
 
         def on_next_processing():
             return (
@@ -1285,10 +1306,10 @@ def _section_subset_output_path(path_text: str | None, suffix: str) -> str | Non
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=30)
+    parser.add_argument("--n_samples", type=int, default=5)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
-    parser.add_argument("--participant_id", default="test01")
+    parser.add_argument("--participant_id", default="uchiyama")
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
     parser.add_argument("--run_id", default=None)
@@ -1334,6 +1355,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--server_name", default=None)
     parser.add_argument("--server_port", type=int, default=None)
     parser.add_argument("--share", action="store_true")
+    parser.add_argument("--show_error", action="store_true")
     return parser.parse_args()
 
 
@@ -1349,6 +1371,7 @@ def main() -> None:
         server_name=args.server_name,
         server_port=args.server_port,
         share=args.share,
+        show_error=args.show_error,
         css=INFO_PANEL_CSS,
         js=NEXT_SAMPLE_SOUND_INIT_JS,
     )
