@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import inspect
+import json
+import pickle
 import re
 import time
 from dataclasses import dataclass, field
@@ -56,6 +58,7 @@ class HumanAppState:
     section_finished_at: dict[str, float] = field(default_factory=dict)
     experiment_started_at: float | None = None
     experiment_finished_at: float | None = None
+    startup_notice: str = ""
 
 
 SECTION_SPECS = (
@@ -233,6 +236,9 @@ INFO_PANEL_CSS = """
   margin: 0;
 }
 """
+
+CHECKPOINT_DIRNAME = ".ui_checkpoints"
+CHECKPOINT_FILE_NAME = "human_app_state.pkl"
 
 
 def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
@@ -529,8 +535,19 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
             except Exception as exc:
                 return _render_app(app_state, f"終了処理中にログを書き出せませんでした: {exc}")
 
+        def on_load(app_state: HumanAppState):
+            restored_state, restore_notice = _load_app_state_checkpoint(app_state)
+            notice_parts = []
+            if restore_notice:
+                notice_parts.append(restore_notice)
+            startup_notice = (getattr(restored_state, "startup_notice", "") or "").strip()
+            if startup_notice:
+                notice_parts.append(startup_notice)
+                restored_state.startup_notice = ""
+            return _render_app(restored_state, "\n".join(notice_parts).strip())
+
         demo.load(
-            lambda app_state: _render_app(app_state),
+            on_load,
             inputs=[state],
             outputs=outputs,
             show_progress_on=[status],
@@ -636,6 +653,14 @@ def build_app(initial_state: HumanAppState | HumanExperimentState) -> gr.Blocks:
 
 
 def _render_app(app_state: HumanAppState, notice: str = ""):
+    checkpoint_notice = ""
+    try:
+        _save_app_state_checkpoint(app_state)
+    except Exception:
+        checkpoint_notice = "進捗の自動保存に失敗しました。"
+    if checkpoint_notice:
+        notice = f"{notice}\n{checkpoint_notice}".strip()
+
     has_active_section = app_state.current_section is not None
     if has_active_section:
         exp_state = _active_section_state(app_state) or _first_section_state(app_state)
@@ -1235,10 +1260,135 @@ def _landing_status_text(app_state: HumanAppState, notice: str = "") -> str:
     return "\n".join(lines)
 
 
+def _checkpoint_path(app_state: HumanAppState) -> Path:
+    exp_state = _first_section_state(app_state)
+    return (
+        Path(exp_state.config.output_dir)
+        / CHECKPOINT_DIRNAME
+        / _safe_run_slug(exp_state.config.run_id)
+        / CHECKPOINT_FILE_NAME
+    )
+
+
+def _save_app_state_checkpoint(app_state: HumanAppState) -> None:
+    path = _checkpoint_path(app_state)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = path.with_suffix(".tmp")
+    payload = {
+        "saved_at": datetime.now().isoformat(timespec="seconds"),
+        "app_state": app_state,
+    }
+    with tmp_path.open("wb") as f:
+        pickle.dump(payload, f, protocol=pickle.HIGHEST_PROTOCOL)
+    tmp_path.replace(path)
+
+
+def _load_app_state_checkpoint(
+    fallback_state: HumanAppState,
+) -> tuple[HumanAppState, str]:
+    path = _checkpoint_path(fallback_state)
+    if not path.exists():
+        return fallback_state, ""
+    try:
+        with path.open("rb") as f:
+            payload = pickle.load(f)
+        restored = payload.get("app_state")
+        if isinstance(restored, HumanAppState):
+            if not hasattr(restored, "startup_notice"):
+                restored.startup_notice = ""
+            return restored, "前回の進捗を復元しました。"
+    except Exception:
+        return fallback_state, "前回の進捗を復元できませんでした。新しい状態で開始します。"
+    return fallback_state, ""
+
+
+def _resume_results_path_for_section(
+    args: argparse.Namespace,
+    section_key: str,
+) -> str | None:
+    if section_key == "with_reflection":
+        return args.resume_reflection_json
+    if section_key == "without_reflection":
+        return args.resume_without_reflection_json
+    return None
+
+
+def _apply_resume_from_results(
+    exp_state: HumanExperimentState,
+    results_path: str | Path,
+) -> tuple[int, int]:
+    path = Path(results_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Resume file not found: {path}")
+
+    with path.open("r", encoding="utf-8") as f:
+        payload = json.load(f)
+    results = payload.get("results")
+    if not isinstance(results, list):
+        raise ValueError(f"Invalid resume file (missing list 'results'): {path}")
+
+    sample_ids_set = set(exp_state.sample_ids)
+    sample_pos_by_id = {sid: idx + 1 for idx, sid in enumerate(exp_state.sample_ids)}
+    restored_records: dict[int, dict[str, Any]] = {}
+    ignored = 0
+    for item in results:
+        if not isinstance(item, dict):
+            continue
+        sample_index = item.get("sample_index")
+        try:
+            sid = int(sample_index)
+        except (TypeError, ValueError):
+            continue
+        if sid in sample_ids_set:
+            normalized = dict(item)
+            normalized["sample_position"] = sample_pos_by_id[sid]
+            normalized["participant_id"] = exp_state.config.participant_id
+            normalized["run_id"] = exp_state.config.run_id
+            normalized["mode"] = exp_state.config.mode
+            normalized["use_reflection"] = exp_state.config.use_reflection
+            restored_records[sid] = normalized
+        else:
+            ignored += 1
+
+    exp_state.records_by_sample_id = restored_records
+    exp_state.current_episode = None
+    exp_state.finished_episodes = {}
+
+    done_ids = set(restored_records.keys())
+    next_pos = None
+    for idx, sid in enumerate(exp_state.sample_ids):
+        if sid not in done_ids:
+            next_pos = idx
+            break
+    if next_pos is None:
+        exp_state.current_pos = max(len(exp_state.samples) - 1, 0)
+    else:
+        exp_state.current_pos = next_pos
+
+    return len(restored_records), ignored
+
+
+def _read_sample_ids_from_results(results_path: str | Path) -> list[int]:
+    path = Path(results_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Resume file not found: {path}")
+    with path.open("r", encoding="utf-8") as f:
+        payload = json.load(f)
+    sample_ids = payload.get("sample_ids")
+    if not isinstance(sample_ids, list):
+        raise ValueError(f"Invalid resume file (missing list 'sample_ids'): {path}")
+    return [int(x) for x in sample_ids]
+
+
 def _build_app_state(args: argparse.Namespace) -> HumanAppState:
     requested_base_run_id = args.run_id or args.participant_id or "anon"
     base_run_id = _unique_base_run_id(args.output_dir, requested_base_run_id)
     section_states: dict[str, HumanExperimentState] = {}
+    resume_notes: list[str] = []
+    bootstrap_sample_ids: str | list[int] | None = args.sample_ids
+    if bootstrap_sample_ids is None and args.resume_reflection_json:
+        bootstrap_sample_ids = _read_sample_ids_from_results(args.resume_reflection_json)
+        resume_notes.append("Section 1 の既存結果から sample_ids を復元しました。")
     selected_sample_ids: list[int] | None = None
     selected_seed: int | None = args.seed
 
@@ -1251,7 +1401,7 @@ def _build_app_state(args: argparse.Namespace) -> HumanAppState:
             dataset_path=args.dataset_path,
             n_samples=args.n_samples,
             seed=selected_seed,
-            sample_ids=selected_sample_ids if selected_sample_ids is not None else args.sample_ids,
+            sample_ids=selected_sample_ids if selected_sample_ids is not None else bootstrap_sample_ids,
             participant_id=args.participant_id,
             subset_output_path=subset_output_path,
             output_dir=args.output_dir,
@@ -1266,9 +1416,22 @@ def _build_app_state(args: argparse.Namespace) -> HumanAppState:
         )
         selected_sample_ids = exp_state.sample_ids
         selected_seed = exp_state.config.seed
+
+        resume_path = _resume_results_path_for_section(args, spec.key)
+        if resume_path:
+            restored_count, ignored_count = _apply_resume_from_results(exp_state, resume_path)
+            remaining = len(exp_state.samples) - restored_count
+            note = (
+                f"{spec.title}: {restored_count} 件を復元、残り {remaining} 件。"
+            )
+            if ignored_count:
+                note += f"（対象外サンプル {ignored_count} 件をスキップ）"
+            resume_notes.append(note)
+
         section_states[spec.key] = exp_state
 
-    return HumanAppState(section_states=section_states)
+    startup_notice = "\n".join(resume_notes).strip()
+    return HumanAppState(section_states=section_states, startup_notice=startup_notice)
 
 
 def _unique_base_run_id(output_dir: str | Path, requested_base_run_id: str) -> str:
@@ -1306,13 +1469,23 @@ def _section_subset_output_path(path_text: str | None, suffix: str) -> str | Non
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=5)
+    parser.add_argument("--n_samples", type=int, default=25)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
-    parser.add_argument("--participant_id", default="uchiyama")
+    parser.add_argument("--participant_id", default="chen")
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
     parser.add_argument("--run_id", default=None)
+    parser.add_argument(
+        "--resume_reflection_json",
+        default=None,
+        help="Path to an existing reflection.json to resume Section 1 by skipping completed samples.",
+    )
+    parser.add_argument(
+        "--resume_without_reflection_json",
+        default=None,
+        help="Path to an existing without_reflection.json to resume Section 2 by skipping completed samples.",
+    )
     group = parser.add_mutually_exclusive_group()
     group.add_argument(
         "--show_gold_to_user",
