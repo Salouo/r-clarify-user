@@ -117,7 +117,7 @@ human run 的输出默认位于：
 outputs/human_runs/<participant_id>/
 ```
 
-如果同一个 participant id 已经存在，新的 run 会自动加序号，例如 `outputs/human_runs/P001_2/`。
+不指定 `--run_id` 时，`run_id` 与 `participant_id` 相同；同一 participant 的中断恢复会继续使用同一个目录。
 
 主要文件：
 

@@ -1382,7 +1382,7 @@ def _read_sample_ids_from_results(results_path: str | Path) -> list[int]:
 
 def _build_app_state(args: argparse.Namespace) -> HumanAppState:
     requested_base_run_id = args.run_id or args.participant_id or "anon"
-    base_run_id = _unique_base_run_id(args.output_dir, requested_base_run_id)
+    base_run_id = _safe_run_slug(requested_base_run_id)
     section_states: dict[str, HumanExperimentState] = {}
     resume_notes: list[str] = []
     bootstrap_sample_ids: str | list[int] | None = args.sample_ids
@@ -1434,26 +1434,6 @@ def _build_app_state(args: argparse.Namespace) -> HumanAppState:
     return HumanAppState(section_states=section_states, startup_notice=startup_notice)
 
 
-def _unique_base_run_id(output_dir: str | Path, requested_base_run_id: str) -> str:
-    base = _safe_run_slug(requested_base_run_id)
-    candidate = base
-    counter = 2
-    while _base_run_id_exists(output_dir, candidate):
-        candidate = f"{base}_{counter}"
-        counter += 1
-    return candidate
-
-
-def _base_run_id_exists(output_dir: str | Path, base_run_id: str) -> bool:
-    root = Path(output_dir)
-    if (root / base_run_id).exists():
-        return True
-    return any(
-        (root / f"{base_run_id}_{spec.run_suffix}").exists()
-        for spec in SECTION_SPECS
-    )
-
-
 def _safe_run_slug(text: str) -> str:
     slug = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(text).strip())
     return slug.strip("_") or "anon"
@@ -1469,13 +1449,16 @@ def _section_subset_output_path(path_text: str | None, suffix: str) -> str | Non
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="R-Clarify human-in-the-loop Gradio app.")
     parser.add_argument("--dataset_path", default="data/processed_data_expanded.json")
-    parser.add_argument("--n_samples", type=int, default=25)
+    parser.add_argument("--n_samples", type=int, default=3)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--sample_ids", default=None)
     parser.add_argument("--participant_id", default="chen")
     parser.add_argument("--subset_output_path", default=None)
     parser.add_argument("--output_dir", default="outputs/human_runs")
-    parser.add_argument("--run_id", default=None)
+    parser.add_argument("--run_id", default=None)   # 如果不指定的话，就和 participant_id 一样，或者是 "anon"（如果 participant_id 也没有指定的话）
+    # resume_reflection_json 和 resume_without_reflection_json 只能指定一个，优先级一样，
+    # 主要是为了方便命令行操作时的灵活性（比如直接指定 resume_reflection_json 来恢复 Section 1 的进度，
+    # 而不需要担心 resume_without_reflection_json 是否也被指定了）
     parser.add_argument(
         "--resume_reflection_json",
         default=None,
