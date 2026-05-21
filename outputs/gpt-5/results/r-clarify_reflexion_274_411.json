@@ -1,0 +1,362 @@
+{
+  "n_processed": 4,
+  "clarify_quota": 2,
+  "memo_window": 3,
+  "results": [
+    {
+      "sample_index": 274,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2140,
+              "completion_tokens": 1490,
+              "total_tokens": 3630
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[18]お菓子を片付ける",
+      "user_source": "simulated"
+    },
+    {
+      "sample_index": 275,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 19,
+            "token_usage_agent": {
+              "prompt_tokens": 2161,
+              "completion_tokens": 767,
+              "total_tokens": 2928
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[19]ティッシュ箱を片付ける",
+      "user_source": "simulated"
+    },
+    {
+      "sample_index": 276,
+      "max_trials": 5,
+      "num_trials": 2,
+      "correct": true,
+      "steps_total": 4,
+      "steps_per_trial": [
+        2,
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "このあとくつろぐ？それとも夕食の支度を始める？",
+            "clarification_question_words": 21,
+            "user_reply": "夕食の支度を始めようかな。キッチンの前のテーブルがちょっと散らかってるのが気になってて。",
+            "user_reply_words": 42,
+            "user_source": "simulated",
+            "token_usage_agent": {
+              "prompt_tokens": 2162,
+              "completion_tokens": 1917,
+              "total_tokens": 4079
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 11,
+            "token_usage_agent": {
+              "prompt_tokens": 2459,
+              "completion_tokens": 2093,
+              "total_tokens": 4552
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1076,
+              "completion_tokens": 1491,
+              "total_tokens": 2567
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "キッチン前テーブル、料理用に全面クリアにしてコップはシンク・お菓子は棚・ケーブルは充電場所に戻していい？",
+            "clarification_question_words": 50,
+            "user_reply": "うん、それで大丈夫。コップはもう空だよ。",
+            "user_reply_words": 17,
+            "user_source": "simulated",
+            "token_usage_agent": {
+              "prompt_tokens": 2505,
+              "completion_tokens": 2267,
+              "total_tokens": 4772
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 12,
+            "token_usage_agent": {
+              "prompt_tokens": 2812,
+              "completion_tokens": 857,
+              "total_tokens": 3669
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "このあとくつろぐ？それとも夕食の支度を始める？",
+            "clarification_question_words": 21,
+            "user_reply": "夕食の支度を始めようかな。キッチンの前のテーブルがちょっと散らかってるのが気になってて。",
+            "user_reply_words": 42,
+            "user_source": "simulated",
+            "response_latency_seconds": null
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "キッチン前テーブル、料理用に全面クリアにしてコップはシンク・お菓子は棚・ケーブルは充電場所に戻していい？",
+            "clarification_question_words": 50,
+            "user_reply": "うん、それで大丈夫。コップはもう空だよ。",
+            "user_reply_words": 17,
+            "user_source": "simulated",
+            "response_latency_seconds": null
+          }
+        ]
+      ],
+      "gold_action": "[12]コップを片付ける",
+      "user_source": "simulated"
+    },
+    {
+      "sample_index": 277,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 9,
+      "steps_per_trial": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 7,
+            "token_usage_agent": {
+              "prompt_tokens": 2162,
+              "completion_tokens": 1630,
+              "total_tokens": 3792
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 842,
+              "completion_tokens": 1604,
+              "total_tokens": 2446
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今は短時間で仕事を片付けたいですか、それとももう休憩に入りますか？",
+            "clarification_question_words": 31,
+            "user_reply": "今日は短時間でキリよく片付けて、早めに終わりたいです。",
+            "user_reply_words": 25,
+            "user_source": "simulated",
+            "token_usage_agent": {
+              "prompt_tokens": 2554,
+              "completion_tokens": 1674,
+              "total_tokens": 4228
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 2,
+            "token_usage_agent": {
+              "prompt_tokens": 2843,
+              "completion_tokens": 1512,
+              "total_tokens": 4355
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1449,
+              "completion_tokens": 1285,
+              "total_tokens": 2734
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今はすぐ休憩に切り替える？それとも短時間で片付けるためにもうひと踏ん張りする？",
+            "clarification_question_words": 37,
+            "user_reply": "もうひと踏ん張りして、短時間で片付けちゃいたいかな。",
+            "user_reply_words": 24,
+            "user_source": "simulated",
+            "token_usage_agent": {
+              "prompt_tokens": 2882,
+              "completion_tokens": 3871,
+              "total_tokens": 6753
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 3197,
+              "completion_tokens": 1828,
+              "total_tokens": 5025
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1780,
+              "completion_tokens": 925,
+              "total_tokens": 2705
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "PCのバッテリー残量は十分か教えて、少なければ充電ケーブルを持ってくるね。",
+            "clarification_question_words": 34,
+            "user_reply": "【回答できません】",
+            "user_reply_words": 7,
+            "user_source": "simulated",
+            "token_usage_agent": {
+              "prompt_tokens": 3170,
+              "completion_tokens": 2104,
+              "total_tokens": 5274
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 3411,
+              "completion_tokens": 3003,
+              "total_tokens": 6414
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 2027,
+              "completion_tokens": 1748,
+              "total_tokens": 3775
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "早めに片付けるために今すぐ手元に欲しいのは充電ケーブル、それとも飲み物用のコップ（ほかに希望があればそれ）？",
+            "clarification_question_words": 50,
+            "user_reply": "【回答できません】",
+            "user_reply_words": 7,
+            "user_source": "simulated",
+            "token_usage_agent": {
+              "prompt_tokens": 3120,
+              "completion_tokens": 3157,
+              "total_tokens": 6277
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 20,
+            "token_usage_agent": {
+              "prompt_tokens": 3405,
+              "completion_tokens": 4200,
+              "total_tokens": 7605
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今は短時間で仕事を片付けたいですか、それとももう休憩に入りますか？",
+            "clarification_question_words": 31,
+            "user_reply": "今日は短時間でキリよく片付けて、早めに終わりたいです。",
+            "user_reply_words": 25,
+            "user_source": "simulated",
+            "response_latency_seconds": null
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今はすぐ休憩に切り替える？それとも短時間で片付けるためにもうひと踏ん張りする？",
+            "clarification_question_words": 37,
+            "user_reply": "もうひと踏ん張りして、短時間で片付けちゃいたいかな。",
+            "user_reply_words": 24,
+            "user_source": "simulated",
+            "response_latency_seconds": null
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "PCのバッテリー残量は十分か教えて、少なければ充電ケーブルを持ってくるね。",
+            "clarification_question_words": 34,
+            "user_reply": "【回答できません】",
+            "user_reply_words": 7,
+            "user_source": "simulated",
+            "response_latency_seconds": null
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "早めに片付けるために今すぐ手元に欲しいのは充電ケーブル、それとも飲み物用のコップ（ほかに希望があればそれ）？",
+            "clarification_question_words": 50,
+            "user_reply": "【回答できません】",
+            "user_reply_words": 7,
+            "user_source": "simulated",
+            "response_latency_seconds": null
+          }
+        ]
+      ],
+      "gold_action": "[15]ペットボトルを片付ける",
+      "user_source": "simulated"
+    }
+  ]
+}
