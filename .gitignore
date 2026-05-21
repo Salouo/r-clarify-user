@@ -217,4 +217,4 @@ Thumbs.db
 .env
 
 # Local files
-outputs/
+# outputs/

@@ -1,0 +1,2977 @@
+{
+  "n_processed": 20,
+  "clarify_quota": 2,
+  "memo_window": 1,
+  "mode": "clarify",
+  "use_reflection": false,
+  "user_source": "human",
+  "participant_id": "yamasaki",
+  "run_id": "yamasaki",
+  "timestamp": "2026-05-18T23:09:46",
+  "dataset_path": "data\\processed_data_expanded.json",
+  "n_samples": 20,
+  "seed": 2134900975,
+  "sample_ids": [
+    257,
+    313,
+    452,
+    56,
+    285,
+    279,
+    35,
+    473,
+    432,
+    343,
+    232,
+    94,
+    328,
+    121,
+    13,
+    131,
+    142,
+    143,
+    326,
+    144
+  ],
+  "run_started_at": "2026-05-18T23:21:55",
+  "run_finished_at": "2026-05-19T00:16:11",
+  "total_duration_seconds": 3255.234,
+  "model": "gpt-5",
+  "sampling_scope": "full_dataset_each_run",
+  "within_run_replacement": false,
+  "across_run_replacement": true,
+  "results": [
+    {
+      "sample_index": 257,
+      "sample_position": 1,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2048,
+              "completion_tokens": 995,
+              "total_tokens": 3043
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[18]お菓子を片付ける",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:21:56",
+      "sample_finished_at": "2026-05-18T23:22:11",
+      "sample_duration_seconds": 15.22,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 313,
+      "sample_position": 2,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 20,
+            "token_usage_agent": {
+              "prompt_tokens": 2024,
+              "completion_tokens": 1115,
+              "total_tokens": 3139
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[20]ゴミをゴミ箱に入れる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:22:16",
+      "sample_finished_at": "2026-05-18T23:22:33",
+      "sample_duration_seconds": 17.006,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 452,
+      "sample_position": 3,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 33,
+            "token_usage_agent": {
+              "prompt_tokens": 2004,
+              "completion_tokens": 900,
+              "total_tokens": 2904
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[33]グラスを棚にしまう",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:22:39",
+      "sample_finished_at": "2026-05-18T23:22:52",
+      "sample_duration_seconds": 12.925,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 56,
+      "sample_position": 4,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今は宅配の荷物を整理したいですか、それとも周りの物の片付けから始めますか？",
+            "clarification_question_words": 35,
+            "user_reply": "周りのもの",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 24.478,
+            "token_usage_agent": {
+              "prompt_tokens": 2024,
+              "completion_tokens": 1970,
+              "total_tokens": 3994
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 15,
+            "token_usage_agent": {
+              "prompt_tokens": 2257,
+              "completion_tokens": 1705,
+              "total_tokens": 3962
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "今は宅配の荷物を整理したいですか、それとも周りの物の片付けから始めますか？",
+            "clarification_question_words": 35,
+            "user_reply": "周りのもの",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 24.478
+          }
+        ]
+      ],
+      "gold_action": "[15]ペットボトルを片付ける",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:23:12",
+      "sample_finished_at": "2026-05-18T23:24:39",
+      "sample_duration_seconds": 86.213,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "今は宅配の荷物を整理したいですか、それとも周りの物の片付けから始めますか？",
+          "response_latency_seconds": 24.478
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 56,
+          "sample_position": 4,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "荷物の整理しなくちゃ",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "充電ケーブル",
+              "コップ"
+            ],
+            "kitchen_items": [
+              "ケチャップ",
+              "サランラップ",
+              "水筒",
+              "キッチンペーパー"
+            ]
+          },
+          "hidden_need": "[15]ペットボトルを片付ける",
+          "clarification_question": "今は宅配の荷物を整理したいですか、それとも周りの物の片付けから始めますか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "周りのもの",
+          "response_latency_seconds": 24.478
+        }
+      ]
+    },
+    {
+      "sample_index": 285,
+      "sample_position": 5,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 19,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 822,
+              "total_tokens": 2843
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[19]ティッシュ箱を片付ける",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:24:46",
+      "sample_finished_at": "2026-05-18T23:24:58",
+      "sample_duration_seconds": 12.32,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 279,
+      "sample_position": 6,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 9,
+      "steps_per_trial": [
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "このあとソファでテレビ観てくつろぐ？",
+            "clarification_question_words": 17,
+            "user_reply": "くつろがないよ。",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 25.101,
+            "token_usage_agent": {
+              "prompt_tokens": 2047,
+              "completion_tokens": 2354,
+              "total_tokens": 4401
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 8,
+            "token_usage_agent": {
+              "prompt_tokens": 2271,
+              "completion_tokens": 2492,
+              "total_tokens": 4763
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 7,
+            "token_usage_agent": {
+              "prompt_tokens": 2047,
+              "completion_tokens": 2422,
+              "total_tokens": 4469
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今すぐリラックスに切り替える？それとも仕事を早く締めるのを手伝おうか？",
+            "clarification_question_words": 33,
+            "user_reply": "手伝って！",
+            "user_reply_words": 4,
+            "user_source": "human",
+            "response_latency_seconds": 18.252,
+            "token_usage_agent": {
+              "prompt_tokens": 2047,
+              "completion_tokens": 2035,
+              "total_tokens": 4082
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 2,
+            "token_usage_agent": {
+              "prompt_tokens": 2281,
+              "completion_tokens": 1493,
+              "total_tokens": 3774
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "このあとテレビ観る？",
+            "clarification_question_words": 9,
+            "user_reply": "回答できません",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 18.934,
+            "token_usage_agent": {
+              "prompt_tokens": 2047,
+              "completion_tokens": 1397,
+              "total_tokens": 3444
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2259,
+              "completion_tokens": 1469,
+              "total_tokens": 3728
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今はこのままソファでくつろぐ予定？",
+            "clarification_question_words": 16,
+            "user_reply": "回答できません",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 9.867,
+            "token_usage_agent": {
+              "prompt_tokens": 2047,
+              "completion_tokens": 1768,
+              "total_tokens": 3815
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 7,
+            "token_usage_agent": {
+              "prompt_tokens": 2254,
+              "completion_tokens": 1664,
+              "total_tokens": 3918
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "このあとソファでテレビ観てくつろぐ？",
+            "clarification_question_words": 17,
+            "user_reply": "くつろがないよ。",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 25.101
+          }
+        ],
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今すぐリラックスに切り替える？それとも仕事を早く締めるのを手伝おうか？",
+            "clarification_question_words": 33,
+            "user_reply": "手伝って！",
+            "user_reply_words": 4,
+            "user_source": "human",
+            "response_latency_seconds": 18.252
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "このあとテレビ観る？",
+            "clarification_question_words": 9,
+            "user_reply": "回答できません",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 18.934
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今はこのままソファでくつろぐ予定？",
+            "clarification_question_words": 16,
+            "user_reply": "回答できません",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 9.867
+          }
+        ]
+      ],
+      "gold_action": "[37]サランラップを棚にしまう",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:25:07",
+      "sample_finished_at": "2026-05-18T23:31:05",
+      "sample_duration_seconds": 357.984,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "このあとソファでテレビ観てくつろぐ？",
+          "response_latency_seconds": 25.101
+        },
+        {
+          "trial": 3,
+          "question": "今すぐリラックスに切り替える？それとも仕事を早く締めるのを手伝おうか？",
+          "response_latency_seconds": 18.252
+        },
+        {
+          "trial": 4,
+          "question": "このあとテレビ観る？",
+          "response_latency_seconds": 18.934
+        },
+        {
+          "trial": 5,
+          "question": "今はこのままソファでくつろぐ予定？",
+          "response_latency_seconds": 9.867
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 279,
+          "sample_position": 6,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "今日は早めに仕事終わろう",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "コップ",
+              "充電ケーブル",
+              "お菓子"
+            ],
+            "kitchen_items": [
+              "ケチャップ",
+              "水筒",
+              "キッチンペーパー",
+              "サランラップ",
+              "オリーブオイル"
+            ]
+          },
+          "hidden_need": "[37]サランラップを棚にしまう",
+          "clarification_question": "このあとソファでテレビ観てくつろぐ？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "くつろがないよ。",
+          "response_latency_seconds": 25.101
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 279,
+          "sample_position": 6,
+          "total_samples": 20,
+          "trial": 3,
+          "initial_utterance": "今日は早めに仕事終わろう",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "コップ",
+              "充電ケーブル",
+              "お菓子"
+            ],
+            "kitchen_items": [
+              "ケチャップ",
+              "水筒",
+              "キッチンペーパー",
+              "サランラップ",
+              "オリーブオイル"
+            ]
+          },
+          "hidden_need": "[37]サランラップを棚にしまう",
+          "clarification_question": "今すぐリラックスに切り替える？それとも仕事を早く締めるのを手伝おうか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "手伝って！",
+          "response_latency_seconds": 18.252
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 279,
+          "sample_position": 6,
+          "total_samples": 20,
+          "trial": 4,
+          "initial_utterance": "今日は早めに仕事終わろう",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "コップ",
+              "充電ケーブル",
+              "お菓子"
+            ],
+            "kitchen_items": [
+              "ケチャップ",
+              "水筒",
+              "キッチンペーパー",
+              "サランラップ",
+              "オリーブオイル"
+            ]
+          },
+          "hidden_need": "[37]サランラップを棚にしまう",
+          "clarification_question": "このあとテレビ観る？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "回答できません",
+          "response_latency_seconds": 18.934
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 279,
+          "sample_position": 6,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "今日は早めに仕事終わろう",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "ティッシュ",
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "コップ",
+              "充電ケーブル",
+              "お菓子"
+            ],
+            "kitchen_items": [
+              "ケチャップ",
+              "水筒",
+              "キッチンペーパー",
+              "サランラップ",
+              "オリーブオイル"
+            ]
+          },
+          "hidden_need": "[37]サランラップを棚にしまう",
+          "clarification_question": "今はこのままソファでくつろぐ予定？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "回答できません",
+          "response_latency_seconds": 9.867
+        }
+      ]
+    },
+    {
+      "sample_index": 35,
+      "sample_position": 7,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": true,
+      "steps_total": 10,
+      "steps_per_trial": [
+        2,
+        3,
+        1,
+        1,
+        3
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "おかえりなさい、何か飲む？",
+            "clarification_question_words": 11,
+            "user_reply": "いらない",
+            "user_reply_words": 4,
+            "user_source": "human",
+            "response_latency_seconds": 10.092,
+            "token_usage_agent": {
+              "prompt_tokens": 2015,
+              "completion_tokens": 1758,
+              "total_tokens": 3773
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 10,
+            "token_usage_agent": {
+              "prompt_tokens": 2210,
+              "completion_tokens": 2948,
+              "total_tokens": 5158
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "いま飲み物持ってこようか？",
+            "clarification_question_words": 12,
+            "user_reply": "飲み物はいらない",
+            "user_reply_words": 8,
+            "user_source": "human",
+            "response_latency_seconds": 17.001,
+            "token_usage_agent": {
+              "prompt_tokens": 2015,
+              "completion_tokens": 2144,
+              "total_tokens": 4159
+            }
+          },
+          {
+            "t": 2,
+            "action": "clarify",
+            "clarification_question": "テレビつける？",
+            "clarification_question_words": 6,
+            "user_reply": "回答できません",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 12.793,
+            "token_usage_agent": {
+              "prompt_tokens": 2218,
+              "completion_tokens": 2133,
+              "total_tokens": 4351
+            }
+          },
+          {
+            "t": 3,
+            "action": "execute",
+            "chosen_action": 10,
+            "token_usage_agent": {
+              "prompt_tokens": 2398,
+              "completion_tokens": 1432,
+              "total_tokens": 3830
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 2015,
+              "completion_tokens": 1497,
+              "total_tokens": 3512
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 2015,
+              "completion_tokens": 1990,
+              "total_tokens": 4005
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "おかえりなさい、いま何か飲みますか？",
+            "clarification_question_words": 16,
+            "user_reply": "飲まないよ。",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 21.791,
+            "token_usage_agent": {
+              "prompt_tokens": 2015,
+              "completion_tokens": 1638,
+              "total_tokens": 3653
+            }
+          },
+          {
+            "t": 2,
+            "action": "clarify",
+            "clarification_question": "今はパソコン使いますか？",
+            "clarification_question_words": 11,
+            "user_reply": "そうね、でも充電が、",
+            "user_reply_words": 8,
+            "user_source": "human",
+            "response_latency_seconds": 10.184,
+            "token_usage_agent": {
+              "prompt_tokens": 2226,
+              "completion_tokens": 1954,
+              "total_tokens": 4180
+            }
+          },
+          {
+            "t": 3,
+            "action": "execute",
+            "chosen_action": 2,
+            "token_usage_agent": {
+              "prompt_tokens": 2432,
+              "completion_tokens": 967,
+              "total_tokens": 3399
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "おかえりなさい、何か飲む？",
+            "clarification_question_words": 11,
+            "user_reply": "いらない",
+            "user_reply_words": 4,
+            "user_source": "human",
+            "response_latency_seconds": 10.092
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "いま飲み物持ってこようか？",
+            "clarification_question_words": 12,
+            "user_reply": "飲み物はいらない",
+            "user_reply_words": 8,
+            "user_source": "human",
+            "response_latency_seconds": 17.001
+          },
+          {
+            "t": 2,
+            "clarification_question": "テレビつける？",
+            "clarification_question_words": 6,
+            "user_reply": "回答できません",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 12.793
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "おかえりなさい、いま何か飲みますか？",
+            "clarification_question_words": 16,
+            "user_reply": "飲まないよ。",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 21.791
+          },
+          {
+            "t": 2,
+            "clarification_question": "今はパソコン使いますか？",
+            "clarification_question_words": 11,
+            "user_reply": "そうね、でも充電が、",
+            "user_reply_words": 8,
+            "user_source": "human",
+            "response_latency_seconds": 10.184
+          }
+        ]
+      ],
+      "gold_action": "[2]充電ケーブルを持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:31:17",
+      "sample_finished_at": "2026-05-18T23:38:28",
+      "sample_duration_seconds": 430.657,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "おかえりなさい、何か飲む？",
+          "response_latency_seconds": 10.092
+        },
+        {
+          "trial": 2,
+          "question": "いま飲み物持ってこようか？",
+          "response_latency_seconds": 17.001
+        },
+        {
+          "trial": 2,
+          "question": "テレビつける？",
+          "response_latency_seconds": 12.793
+        },
+        {
+          "trial": 5,
+          "question": "おかえりなさい、いま何か飲みますか？",
+          "response_latency_seconds": 21.791
+        },
+        {
+          "trial": 5,
+          "question": "今はパソコン使いますか？",
+          "response_latency_seconds": 10.184
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 35,
+          "sample_position": 7,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "ただいま",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "キッチンペーパー",
+              "コップ",
+              "お菓子",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル",
+              "缶詰",
+              "水筒"
+            ]
+          },
+          "hidden_need": "[2]充電ケーブルを持ってくる",
+          "clarification_question": "おかえりなさい、何か飲む？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "いらない",
+          "response_latency_seconds": 10.092
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 35,
+          "sample_position": 7,
+          "total_samples": 20,
+          "trial": 2,
+          "initial_utterance": "ただいま",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "キッチンペーパー",
+              "コップ",
+              "お菓子",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル",
+              "缶詰",
+              "水筒"
+            ]
+          },
+          "hidden_need": "[2]充電ケーブルを持ってくる",
+          "clarification_question": "いま飲み物持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "飲み物はいらない",
+          "response_latency_seconds": 17.001
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 35,
+          "sample_position": 7,
+          "total_samples": 20,
+          "trial": 2,
+          "initial_utterance": "ただいま",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "キッチンペーパー",
+              "コップ",
+              "お菓子",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル",
+              "缶詰",
+              "水筒"
+            ]
+          },
+          "hidden_need": "[2]充電ケーブルを持ってくる",
+          "clarification_question": "テレビつける？",
+          "qa_history": [
+            {
+              "question": "いま飲み物持ってこようか？",
+              "answer": "飲み物はいらない"
+            }
+          ],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "回答できません",
+          "response_latency_seconds": 12.793
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 35,
+          "sample_position": 7,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "ただいま",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "キッチンペーパー",
+              "コップ",
+              "お菓子",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル",
+              "缶詰",
+              "水筒"
+            ]
+          },
+          "hidden_need": "[2]充電ケーブルを持ってくる",
+          "clarification_question": "おかえりなさい、いま何か飲みますか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "飲まないよ。",
+          "response_latency_seconds": 21.791
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 35,
+          "sample_position": 7,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "ただいま",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "キッチンペーパー",
+              "コップ",
+              "お菓子",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル",
+              "缶詰",
+              "水筒"
+            ]
+          },
+          "hidden_need": "[2]充電ケーブルを持ってくる",
+          "clarification_question": "今はパソコン使いますか？",
+          "qa_history": [
+            {
+              "question": "おかえりなさい、いま何か飲みますか？",
+              "answer": "飲まないよ。"
+            }
+          ],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "そうね、でも充電が、",
+          "response_latency_seconds": 10.184
+        }
+      ]
+    },
+    {
+      "sample_index": 473,
+      "sample_position": 8,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2020,
+              "completion_tokens": 2267,
+              "total_tokens": 4287
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[18]お菓子を片付ける",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:38:32",
+      "sample_finished_at": "2026-05-18T23:39:04",
+      "sample_duration_seconds": 32.956,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 432,
+      "sample_position": 9,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 31,
+            "token_usage_agent": {
+              "prompt_tokens": 2000,
+              "completion_tokens": 847,
+              "total_tokens": 2847
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 31,
+            "token_usage_agent": {
+              "prompt_tokens": 2000,
+              "completion_tokens": 562,
+              "total_tokens": 2562
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 31,
+            "token_usage_agent": {
+              "prompt_tokens": 2000,
+              "completion_tokens": 840,
+              "total_tokens": 2840
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 31,
+            "token_usage_agent": {
+              "prompt_tokens": 2000,
+              "completion_tokens": 1042,
+              "total_tokens": 3042
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 31,
+            "token_usage_agent": {
+              "prompt_tokens": 2000,
+              "completion_tokens": 796,
+              "total_tokens": 2796
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[35]キッチンペーパーを棚にしまう",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:39:08",
+      "sample_finished_at": "2026-05-18T23:40:15",
+      "sample_duration_seconds": 67.303,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 343,
+      "sample_position": 10,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "もう一個って、グラスをもう一つ持ってこようか？",
+            "clarification_question_words": 21,
+            "user_reply": "よろしく",
+            "user_reply_words": 4,
+            "user_source": "human",
+            "response_latency_seconds": 11.034,
+            "token_usage_agent": {
+              "prompt_tokens": 2022,
+              "completion_tokens": 1803,
+              "total_tokens": 3825
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 23,
+            "token_usage_agent": {
+              "prompt_tokens": 2200,
+              "completion_tokens": 823,
+              "total_tokens": 3023
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "もう一個って、グラスをもう一つ持ってこようか？",
+            "clarification_question_words": 21,
+            "user_reply": "よろしく",
+            "user_reply_words": 4,
+            "user_source": "human",
+            "response_latency_seconds": 11.034
+          }
+        ]
+      ],
+      "gold_action": "[23]グラスを持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:40:18",
+      "sample_finished_at": "2026-05-18T23:41:13",
+      "sample_duration_seconds": 54.654,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "もう一個って、グラスをもう一つ持ってこようか？",
+          "response_latency_seconds": 11.034
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 343,
+          "sample_position": 10,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "あれ？もう一個足りない",
+          "user_specific_information": {
+            "position": "キッチン",
+            "has": [
+              "グラス",
+              "お酒"
+            ],
+            "near_items": []
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [],
+            "kitchen_front_table_items": [
+              "水筒",
+              "コップ",
+              "サランラップ",
+              "お菓子",
+              "キッチンペーパー",
+              "クッキングシート",
+              "ティッシュ"
+            ],
+            "kitchen_items": []
+          },
+          "hidden_need": "[23]グラスを持ってくる",
+          "clarification_question": "もう一個って、グラスをもう一つ持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "よろしく",
+          "response_latency_seconds": 11.034
+        }
+      ]
+    },
+    {
+      "sample_index": 232,
+      "sample_position": 11,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": true,
+      "steps_total": 9,
+      "steps_per_trial": [
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 30,
+            "token_usage_agent": {
+              "prompt_tokens": 2019,
+              "completion_tokens": 1974,
+              "total_tokens": 3993
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "寝る前に飲み物を持ってこようか、それとも周りを片付けておく？",
+            "clarification_question_words": 28,
+            "user_reply": "ちょっと片づけたほうが良いかな",
+            "user_reply_words": 15,
+            "user_source": "human",
+            "response_latency_seconds": 20.663,
+            "token_usage_agent": {
+              "prompt_tokens": 2019,
+              "completion_tokens": 1534,
+              "total_tokens": 3553
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 16,
+            "token_usage_agent": {
+              "prompt_tokens": 2280,
+              "completion_tokens": 1859,
+              "total_tokens": 4139
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 2019,
+              "completion_tokens": 2274,
+              "total_tokens": 4293
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "寝る前にお水持ってこようか？",
+            "clarification_question_words": 13,
+            "user_reply": "水いらないよ。でも、キッチンまえが何だかごちゃごちゃしてるなぁ",
+            "user_reply_words": 29,
+            "user_source": "human",
+            "response_latency_seconds": 32.702,
+            "token_usage_agent": {
+              "prompt_tokens": 2019,
+              "completion_tokens": 1681,
+              "total_tokens": 3700
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 12,
+            "token_usage_agent": {
+              "prompt_tokens": 2306,
+              "completion_tokens": 2499,
+              "total_tokens": 4805
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "寝る前にお水持ってこようか？",
+            "clarification_question_words": 13,
+            "user_reply": "水いらない",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 68.445,
+            "token_usage_agent": {
+              "prompt_tokens": 2019,
+              "completion_tokens": 1782,
+              "total_tokens": 3801
+            }
+          },
+          {
+            "t": 2,
+            "action": "clarify",
+            "clarification_question": "リモコン片付けておこうか？",
+            "clarification_question_words": 12,
+            "user_reply": "リモコンは、そのままでいい",
+            "user_reply_words": 12,
+            "user_source": "human",
+            "response_latency_seconds": 21.352,
+            "token_usage_agent": {
+              "prompt_tokens": 2240,
+              "completion_tokens": 1635,
+              "total_tokens": 3875
+            }
+          },
+          {
+            "t": 3,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2448,
+              "completion_tokens": 1572,
+              "total_tokens": 4020
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "寝る前に飲み物を持ってこようか、それとも周りを片付けておく？",
+            "clarification_question_words": 28,
+            "user_reply": "ちょっと片づけたほうが良いかな",
+            "user_reply_words": 15,
+            "user_source": "human",
+            "response_latency_seconds": 20.663
+          }
+        ],
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "寝る前にお水持ってこようか？",
+            "clarification_question_words": 13,
+            "user_reply": "水いらないよ。でも、キッチンまえが何だかごちゃごちゃしてるなぁ",
+            "user_reply_words": 29,
+            "user_source": "human",
+            "response_latency_seconds": 32.702
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "寝る前にお水持ってこようか？",
+            "clarification_question_words": 13,
+            "user_reply": "水いらない",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 68.445
+          },
+          {
+            "t": 2,
+            "clarification_question": "リモコン片付けておこうか？",
+            "clarification_question_words": 12,
+            "user_reply": "リモコンは、そのままでいい",
+            "user_reply_words": 12,
+            "user_source": "human",
+            "response_latency_seconds": 21.352
+          }
+        ]
+      ],
+      "gold_action": "[18]お菓子を片付ける",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:41:19",
+      "sample_finished_at": "2026-05-18T23:49:52",
+      "sample_duration_seconds": 513.163,
+      "response_latencies": [
+        {
+          "trial": 2,
+          "question": "寝る前に飲み物を持ってこようか、それとも周りを片付けておく？",
+          "response_latency_seconds": 20.663
+        },
+        {
+          "trial": 4,
+          "question": "寝る前にお水持ってこようか？",
+          "response_latency_seconds": 32.702
+        },
+        {
+          "trial": 5,
+          "question": "寝る前にお水持ってこようか？",
+          "response_latency_seconds": 68.445
+        },
+        {
+          "trial": 5,
+          "question": "リモコン片付けておこうか？",
+          "response_latency_seconds": 21.352
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 232,
+          "sample_position": 11,
+          "total_samples": 20,
+          "trial": 2,
+          "initial_utterance": "おやすみ",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "リモコン",
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "リモコン",
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "オリーブオイル",
+              "キッチンペーパー",
+              "お菓子",
+              "水筒",
+              "コップ"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[18]お菓子を片付ける",
+          "clarification_question": "寝る前に飲み物を持ってこようか、それとも周りを片付けておく？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "ちょっと片づけたほうが良いかな",
+          "response_latency_seconds": 20.663
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 232,
+          "sample_position": 11,
+          "total_samples": 20,
+          "trial": 4,
+          "initial_utterance": "おやすみ",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "リモコン",
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "リモコン",
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "オリーブオイル",
+              "キッチンペーパー",
+              "お菓子",
+              "水筒",
+              "コップ"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[18]お菓子を片付ける",
+          "clarification_question": "寝る前にお水持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "水いらないよ。でも、キッチンまえが何だかごちゃごちゃしてるなぁ",
+          "response_latency_seconds": 32.702
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 232,
+          "sample_position": 11,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "おやすみ",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "リモコン",
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "リモコン",
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "オリーブオイル",
+              "キッチンペーパー",
+              "お菓子",
+              "水筒",
+              "コップ"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[18]お菓子を片付ける",
+          "clarification_question": "寝る前にお水持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "水いらない",
+          "response_latency_seconds": 68.445
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 232,
+          "sample_position": 11,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "おやすみ",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "リモコン",
+              "パソコン"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "リモコン",
+              "パソコン"
+            ],
+            "kitchen_front_table_items": [
+              "オリーブオイル",
+              "キッチンペーパー",
+              "お菓子",
+              "水筒",
+              "コップ"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[18]お菓子を片付ける",
+          "clarification_question": "リモコン片付けておこうか？",
+          "qa_history": [
+            {
+              "question": "寝る前にお水持ってこようか？",
+              "answer": "水いらない"
+            }
+          ],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "リモコンは、そのままでいい",
+          "response_latency_seconds": 21.352
+        }
+      ]
+    },
+    {
+      "sample_index": 94,
+      "sample_position": 12,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今から観るのはテレビとパソコンどっち？",
+            "clarification_question_words": 18,
+            "user_reply": "それはどっちでもよいけど、見てるときにおなか減りそうだな",
+            "user_reply_words": 27,
+            "user_source": "human",
+            "response_latency_seconds": 47.792,
+            "token_usage_agent": {
+              "prompt_tokens": 2036,
+              "completion_tokens": 1335,
+              "total_tokens": 3371
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2303,
+              "completion_tokens": 1514,
+              "total_tokens": 3817
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "今から観るのはテレビとパソコンどっち？",
+            "clarification_question_words": 18,
+            "user_reply": "それはどっちでもよいけど、見てるときにおなか減りそうだな",
+            "user_reply_words": 27,
+            "user_source": "human",
+            "response_latency_seconds": 47.792
+          }
+        ]
+      ],
+      "gold_action": "[9]お菓子を持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:54:30",
+      "sample_finished_at": "2026-05-18T23:56:01",
+      "sample_duration_seconds": 91.301,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "今から観るのはテレビとパソコンどっち？",
+          "response_latency_seconds": 47.792
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 94,
+          "sample_position": 12,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "そろそろ始まるな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "充電ケーブル",
+              "コップ",
+              "ティッシュ"
+            ],
+            "kitchen_items": [
+              "ケチャップ",
+              "水筒",
+              "キッチンペーパー",
+              "サランラップ",
+              "オリーブオイル"
+            ]
+          },
+          "hidden_need": "[9]お菓子を持ってくる",
+          "clarification_question": "今から観るのはテレビとパソコンどっち？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "それはどっちでもよいけど、見てるときにおなか減りそうだな",
+          "response_latency_seconds": 47.792
+        }
+      ]
+    },
+    {
+      "sample_index": 328,
+      "sample_position": 13,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 22,
+            "token_usage_agent": {
+              "prompt_tokens": 2009,
+              "completion_tokens": 1168,
+              "total_tokens": 3177
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[22]クッキングシートを持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:56:05",
+      "sample_finished_at": "2026-05-18T23:56:20",
+      "sample_duration_seconds": 15.198,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 121,
+      "sample_position": 14,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2006,
+              "completion_tokens": 1161,
+              "total_tokens": 3167
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2006,
+              "completion_tokens": 964,
+              "total_tokens": 2970
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2006,
+              "completion_tokens": 849,
+              "total_tokens": 2855
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2006,
+              "completion_tokens": 848,
+              "total_tokens": 2854
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2006,
+              "completion_tokens": 1566,
+              "total_tokens": 3572
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[1]バナナを持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:56:26",
+      "sample_finished_at": "2026-05-18T23:57:36",
+      "sample_duration_seconds": 69.936,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 13,
+      "sample_position": 15,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2025,
+              "completion_tokens": 1220,
+              "total_tokens": 3245
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[9]お菓子を持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:57:48",
+      "sample_finished_at": "2026-05-18T23:58:08",
+      "sample_duration_seconds": 19.817,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 131,
+      "sample_position": 16,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今は飲み物とおやつ、どっちがいい？",
+            "clarification_question_words": 15,
+            "user_reply": "飲み物かな",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 15.687,
+            "token_usage_agent": {
+              "prompt_tokens": 2020,
+              "completion_tokens": 1389,
+              "total_tokens": 3409
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 2235,
+              "completion_tokens": 3740,
+              "total_tokens": 5975
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "今は飲み物とおやつ、どっちがいい？",
+            "clarification_question_words": 15,
+            "user_reply": "飲み物かな",
+            "user_reply_words": 5,
+            "user_source": "human",
+            "response_latency_seconds": 15.687
+          }
+        ]
+      ],
+      "gold_action": "[6]ペットボトルを持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-18T23:58:16",
+      "sample_finished_at": "2026-05-19T00:00:00",
+      "sample_duration_seconds": 104.299,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "今は飲み物とおやつ、どっちがいい？",
+          "response_latency_seconds": 15.687
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 131,
+          "sample_position": 16,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "疲れたね",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[6]ペットボトルを持ってくる",
+          "clarification_question": "今は飲み物とおやつ、どっちがいい？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "飲み物かな",
+          "response_latency_seconds": 15.687
+        }
+      ]
+    },
+    {
+      "sample_index": 142,
+      "sample_position": 17,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 9,
+      "steps_per_trial": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今はティッシュとお菓子、どっちが欲しい？",
+            "clarification_question_words": 18,
+            "user_reply": "どっちもいらない。それよりもキッチンごちゃごちゃしてるね",
+            "user_reply_words": 27,
+            "user_source": "human",
+            "response_latency_seconds": 41.136,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1249,
+              "total_tokens": 3270
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2258,
+              "completion_tokens": 2155,
+              "total_tokens": 4413
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "いまテレビで観てる？",
+            "clarification_question_words": 9,
+            "user_reply": "回答できません。",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 13.84,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1709,
+              "total_tokens": 3730
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2230,
+              "completion_tokens": 1565,
+              "total_tokens": 3795
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今、なにかつまむもの持ってこようか？",
+            "clarification_question_words": 16,
+            "user_reply": "いらない。それよりも、キッチンを片づけたいんだけど、今目が離せない",
+            "user_reply_words": 30,
+            "user_source": "human",
+            "response_latency_seconds": 39.124,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1966,
+              "total_tokens": 3987
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2279,
+              "completion_tokens": 2236,
+              "total_tokens": 4515
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1605,
+              "total_tokens": 3626
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今はお菓子がいい？それともペットボトル用にグラス持ってこようか？",
+            "clarification_question_words": 30,
+            "user_reply": "どっちもいらないよ。それより、片づけたいんだけど、今、目が離せないんだよね。",
+            "user_reply_words": 33,
+            "user_source": "human",
+            "response_latency_seconds": 41.594,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 2743,
+              "total_tokens": 4764
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2311,
+              "completion_tokens": 2219,
+              "total_tokens": 4530
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "今はティッシュとお菓子、どっちが欲しい？",
+            "clarification_question_words": 18,
+            "user_reply": "どっちもいらない。それよりもキッチンごちゃごちゃしてるね",
+            "user_reply_words": 27,
+            "user_source": "human",
+            "response_latency_seconds": 41.136
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "いまテレビで観てる？",
+            "clarification_question_words": 9,
+            "user_reply": "回答できません。",
+            "user_reply_words": 7,
+            "user_source": "human",
+            "response_latency_seconds": 13.84
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今、なにかつまむもの持ってこようか？",
+            "clarification_question_words": 16,
+            "user_reply": "いらない。それよりも、キッチンを片づけたいんだけど、今目が離せない",
+            "user_reply_words": 30,
+            "user_source": "human",
+            "response_latency_seconds": 39.124
+          }
+        ],
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今はお菓子がいい？それともペットボトル用にグラス持ってこようか？",
+            "clarification_question_words": 30,
+            "user_reply": "どっちもいらないよ。それより、片づけたいんだけど、今、目が離せないんだよね。",
+            "user_reply_words": 33,
+            "user_source": "human",
+            "response_latency_seconds": 41.594
+          }
+        ]
+      ],
+      "gold_action": "[35]キッチンペーパーを棚にしまう",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-19T00:00:06",
+      "sample_finished_at": "2026-05-19T00:08:21",
+      "sample_duration_seconds": 495.791,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "今はティッシュとお菓子、どっちが欲しい？",
+          "response_latency_seconds": 41.136
+        },
+        {
+          "trial": 2,
+          "question": "いまテレビで観てる？",
+          "response_latency_seconds": 13.84
+        },
+        {
+          "trial": 3,
+          "question": "今、なにかつまむもの持ってこようか？",
+          "response_latency_seconds": 39.124
+        },
+        {
+          "trial": 5,
+          "question": "今はお菓子がいい？それともペットボトル用にグラス持ってこようか？",
+          "response_latency_seconds": 41.594
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 142,
+          "sample_position": 17,
+          "total_samples": 20,
+          "trial": 1,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[35]キッチンペーパーを棚にしまう",
+          "clarification_question": "今はティッシュとお菓子、どっちが欲しい？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "どっちもいらない。それよりもキッチンごちゃごちゃしてるね",
+          "response_latency_seconds": 41.136
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 142,
+          "sample_position": 17,
+          "total_samples": 20,
+          "trial": 2,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[35]キッチンペーパーを棚にしまう",
+          "clarification_question": "いまテレビで観てる？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "回答できません。",
+          "response_latency_seconds": 13.84
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 142,
+          "sample_position": 17,
+          "total_samples": 20,
+          "trial": 3,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[35]キッチンペーパーを棚にしまう",
+          "clarification_question": "今、なにかつまむもの持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "いらない。それよりも、キッチンを片づけたいんだけど、今目が離せない",
+          "response_latency_seconds": 39.124
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 142,
+          "sample_position": 17,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[35]キッチンペーパーを棚にしまう",
+          "clarification_question": "今はお菓子がいい？それともペットボトル用にグラス持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "どっちもいらないよ。それより、片づけたいんだけど、今、目が離せないんだよね。",
+          "response_latency_seconds": 41.594
+        }
+      ]
+    },
+    {
+      "sample_index": 143,
+      "sample_position": 18,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 8,
+      "steps_per_trial": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1867,
+              "total_tokens": 3888
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 10,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1678,
+              "total_tokens": 3699
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "お菓子持ってこようか？",
+            "clarification_question_words": 10,
+            "user_reply": "お菓子いらないよ。でも、キッチンまえテーブルがちょっとごちゃごちゃしてるね。",
+            "user_reply_words": 35,
+            "user_source": "human",
+            "response_latency_seconds": 47.41,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1854,
+              "total_tokens": 3875
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2297,
+              "completion_tokens": 1674,
+              "total_tokens": 3971
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今はお菓子とティッシュ、どっちを持ってこようか？",
+            "clarification_question_words": 22,
+            "user_reply": "どっちもいらないよ。キッチンを整理したいのだけど、ちょっと手が離せなくてね。",
+            "user_reply_words": 35,
+            "user_source": "human",
+            "response_latency_seconds": 27.772,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1378,
+              "total_tokens": 3399
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 35,
+            "token_usage_agent": {
+              "prompt_tokens": 2284,
+              "completion_tokens": 3142,
+              "total_tokens": 5426
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今ほしいのはお菓子？それともティッシュ？",
+            "clarification_question_words": 18,
+            "user_reply": "どっちもいらない。それより、キッチンを片づけたいのだけど、",
+            "user_reply_words": 26,
+            "user_source": "human",
+            "response_latency_seconds": 27.313,
+            "token_usage_agent": {
+              "prompt_tokens": 2021,
+              "completion_tokens": 1326,
+              "total_tokens": 3347
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 18,
+            "token_usage_agent": {
+              "prompt_tokens": 2273,
+              "completion_tokens": 2716,
+              "total_tokens": 4989
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [
+          {
+            "t": 1,
+            "clarification_question": "お菓子持ってこようか？",
+            "clarification_question_words": 10,
+            "user_reply": "お菓子いらないよ。でも、キッチンまえテーブルがちょっとごちゃごちゃしてるね。",
+            "user_reply_words": 35,
+            "user_source": "human",
+            "response_latency_seconds": 47.41
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今はお菓子とティッシュ、どっちを持ってこようか？",
+            "clarification_question_words": 22,
+            "user_reply": "どっちもいらないよ。キッチンを整理したいのだけど、ちょっと手が離せなくてね。",
+            "user_reply_words": 35,
+            "user_source": "human",
+            "response_latency_seconds": 27.772
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "clarification_question": "今ほしいのはお菓子？それともティッシュ？",
+            "clarification_question_words": 18,
+            "user_reply": "どっちもいらない。それより、キッチンを片づけたいのだけど、",
+            "user_reply_words": 26,
+            "user_source": "human",
+            "response_latency_seconds": 27.313
+          }
+        ]
+      ],
+      "gold_action": "[40]水筒を棚にしまう",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-19T00:08:27",
+      "sample_finished_at": "2026-05-19T00:15:28",
+      "sample_duration_seconds": 421.382,
+      "response_latencies": [
+        {
+          "trial": 3,
+          "question": "お菓子持ってこようか？",
+          "response_latency_seconds": 47.41
+        },
+        {
+          "trial": 4,
+          "question": "今はお菓子とティッシュ、どっちを持ってこようか？",
+          "response_latency_seconds": 27.772
+        },
+        {
+          "trial": 5,
+          "question": "今ほしいのはお菓子？それともティッシュ？",
+          "response_latency_seconds": 27.313
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 143,
+          "sample_position": 18,
+          "total_samples": 20,
+          "trial": 3,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[40]水筒を棚にしまう",
+          "clarification_question": "お菓子持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "お菓子いらないよ。でも、キッチンまえテーブルがちょっとごちゃごちゃしてるね。",
+          "response_latency_seconds": 47.41
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 143,
+          "sample_position": 18,
+          "total_samples": 20,
+          "trial": 4,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[40]水筒を棚にしまう",
+          "clarification_question": "今はお菓子とティッシュ、どっちを持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "どっちもいらないよ。キッチンを整理したいのだけど、ちょっと手が離せなくてね。",
+          "response_latency_seconds": 27.772
+        },
+        {
+          "run_id": "yamasaki",
+          "participant_id": "yamasaki",
+          "sample_id": 143,
+          "sample_position": 18,
+          "total_samples": 20,
+          "trial": 5,
+          "initial_utterance": "いいシーンだな",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[40]水筒を棚にしまう",
+          "clarification_question": "今ほしいのはお菓子？それともティッシュ？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "どっちもいらない。それより、キッチンを片づけたいのだけど、",
+          "response_latency_seconds": 27.313
+        }
+      ]
+    },
+    {
+      "sample_index": 326,
+      "sample_position": 19,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 22,
+            "token_usage_agent": {
+              "prompt_tokens": 2025,
+              "completion_tokens": 713,
+              "total_tokens": 2738
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[22]クッキングシートを持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-19T00:15:32",
+      "sample_finished_at": "2026-05-19T00:15:42",
+      "sample_duration_seconds": 10.313,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 144,
+      "sample_position": 20,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 10,
+            "token_usage_agent": {
+              "prompt_tokens": 2019,
+              "completion_tokens": 954,
+              "total_tokens": 2973
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[10]ティッシュ箱を持ってくる",
+      "user_source": "human",
+      "participant_id": "yamasaki",
+      "run_id": "yamasaki",
+      "mode": "clarify",
+      "use_reflection": false,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-05-19T00:15:50",
+      "sample_finished_at": "2026-05-19T00:16:07",
+      "sample_duration_seconds": 16.563,
+      "response_latencies": [],
+      "human_visible_context": []
+    }
+  ],
+  "section_id": "section2",
+  "section_key": "without_reflection",
+  "section_title": "Section 2",
+  "section_started_at": "2026-05-18T23:21:55",
+  "section_finished_at": "2026-05-19T00:16:11",
+  "section_duration_seconds": 3255.234,
+  "section_timings": {
+    "section1": {
+      "section_id": "section1",
+      "section_key": "with_reflection",
+      "section_title": "Section 1",
+      "started_at": "2026-05-18T21:41:34",
+      "finished_at": "2026-05-18T23:21:38",
+      "duration_seconds": 4206.953
+    },
+    "section2": {
+      "section_id": "section2",
+      "section_key": "without_reflection",
+      "section_title": "Section 2",
+      "started_at": "2026-05-18T23:21:55",
+      "finished_at": "2026-05-19T00:16:11",
+      "duration_seconds": 3255.234
+    }
+  },
+  "total_section_duration_seconds": 7462.187,
+  "experiment_started_at": "2026-05-18T21:41:34",
+  "experiment_finished_at": "2026-05-19T00:16:11",
+  "experiment_total_duration_seconds": 9277.0,
+  "experiment_timing": {
+    "experiment_started_at": "2026-05-18T21:41:34",
+    "experiment_finished_at": "2026-05-19T00:16:11",
+    "experiment_total_duration_seconds": 9277.0,
+    "total_section_duration_seconds": 7462.187,
+    "section_timings": {
+      "section1": {
+        "section_id": "section1",
+        "section_key": "with_reflection",
+        "section_title": "Section 1",
+        "started_at": "2026-05-18T21:41:34",
+        "finished_at": "2026-05-18T23:21:38",
+        "duration_seconds": 4206.953
+      },
+      "section2": {
+        "section_id": "section2",
+        "section_key": "without_reflection",
+        "section_title": "Section 2",
+        "started_at": "2026-05-18T23:21:55",
+        "finished_at": "2026-05-19T00:16:11",
+        "duration_seconds": 3255.234
+      }
+    }
+  }
+}
