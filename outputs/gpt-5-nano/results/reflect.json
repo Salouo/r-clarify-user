@@ -1,0 +1,629 @@
+{
+  "n_processed": 10,
+  "clarify_quota": 2,
+  "memo_window": 1,
+  "results": [
+    {
+      "sample_index": 5,
+      "max_trials": 5,
+      "num_trials": 2,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 3,
+            "token_usage_agent": {
+              "prompt_tokens": 1157,
+              "completion_tokens": 2147,
+              "total_tokens": 3304
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 745,
+              "completion_tokens": 4045,
+              "total_tokens": 4790
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 1617,
+              "completion_tokens": 1437,
+              "total_tokens": 3054
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        []
+      ],
+      "gold_action": "[6]ペットボトルを持ってくる"
+    },
+    {
+      "sample_index": 6,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 3,
+            "token_usage_agent": {
+              "prompt_tokens": 1157,
+              "completion_tokens": 2631,
+              "total_tokens": 3788
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 717,
+              "completion_tokens": 2679,
+              "total_tokens": 3396
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 1467,
+              "completion_tokens": 1449,
+              "total_tokens": 2916
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1063,
+              "completion_tokens": 1518,
+              "total_tokens": 2581
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 1522,
+              "completion_tokens": 1594,
+              "total_tokens": 3116
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1133,
+              "completion_tokens": 1892,
+              "total_tokens": 3025
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 3,
+            "token_usage_agent": {
+              "prompt_tokens": 1512,
+              "completion_tokens": 2311,
+              "total_tokens": 3823
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1127,
+              "completion_tokens": 2889,
+              "total_tokens": 4016
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 1549,
+              "completion_tokens": 1512,
+              "total_tokens": 3061
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[8]スマホを持ってくる"
+    },
+    {
+      "sample_index": 7,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 2,
+            "token_usage_agent": {
+              "prompt_tokens": 1108,
+              "completion_tokens": 1882,
+              "total_tokens": 2990
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 693,
+              "completion_tokens": 1925,
+              "total_tokens": 2618
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 2,
+            "token_usage_agent": {
+              "prompt_tokens": 1431,
+              "completion_tokens": 2343,
+              "total_tokens": 3774
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1021,
+              "completion_tokens": 1597,
+              "total_tokens": 2618
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 7,
+            "token_usage_agent": {
+              "prompt_tokens": 1488,
+              "completion_tokens": 2785,
+              "total_tokens": 4273
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1129,
+              "completion_tokens": 2000,
+              "total_tokens": 3129
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 2,
+            "token_usage_agent": {
+              "prompt_tokens": 1506,
+              "completion_tokens": 935,
+              "total_tokens": 2441
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1094,
+              "completion_tokens": 1806,
+              "total_tokens": 2900
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 7,
+            "token_usage_agent": {
+              "prompt_tokens": 1440,
+              "completion_tokens": 2908,
+              "total_tokens": 4348
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[1]バナナを持ってくる"
+    },
+    {
+      "sample_index": 8,
+      "max_trials": 5,
+      "num_trials": 2,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1158,
+              "completion_tokens": 852,
+              "total_tokens": 2010
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 738,
+              "completion_tokens": 4676,
+              "total_tokens": 5414
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 1,
+            "token_usage_agent": {
+              "prompt_tokens": 1544,
+              "completion_tokens": 923,
+              "total_tokens": 2467
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        []
+      ],
+      "gold_action": "[1]バナナを持ってくる"
+    },
+    {
+      "sample_index": 9,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1158,
+              "completion_tokens": 929,
+              "total_tokens": 2087
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[9]お菓子を持ってくる"
+    },
+    {
+      "sample_index": 10,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 1,
+            "token_usage_agent": {
+              "prompt_tokens": 1145,
+              "completion_tokens": 1003,
+              "total_tokens": 2148
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[1]バナナを持ってくる"
+    },
+    {
+      "sample_index": 11,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 1,
+            "token_usage_agent": {
+              "prompt_tokens": 1145,
+              "completion_tokens": 920,
+              "total_tokens": 2065
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 726,
+              "completion_tokens": 2378,
+              "total_tokens": 3104
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1474,
+              "completion_tokens": 1590,
+              "total_tokens": 3064
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1079,
+              "completion_tokens": 1888,
+              "total_tokens": 2967
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 26,
+            "token_usage_agent": {
+              "prompt_tokens": 1496,
+              "completion_tokens": 2942,
+              "total_tokens": 4438
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1106,
+              "completion_tokens": 1791,
+              "total_tokens": 2897
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 1,
+            "token_usage_agent": {
+              "prompt_tokens": 1463,
+              "completion_tokens": 983,
+              "total_tokens": 2446
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1098,
+              "completion_tokens": 2097,
+              "total_tokens": 3195
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 1,
+            "token_usage_agent": {
+              "prompt_tokens": 1447,
+              "completion_tokens": 1267,
+              "total_tokens": 2714
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[6]ペットボトルを持ってくる"
+    },
+    {
+      "sample_index": 12,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1147,
+              "completion_tokens": 859,
+              "total_tokens": 2006
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 733,
+              "completion_tokens": 3134,
+              "total_tokens": 3867
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 1656,
+              "completion_tokens": 3043,
+              "total_tokens": 4699
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1245,
+              "completion_tokens": 2138,
+              "total_tokens": 3383
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1556,
+              "completion_tokens": 4611,
+              "total_tokens": 6167
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1174,
+              "completion_tokens": 1442,
+              "total_tokens": 2616
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 30,
+            "token_usage_agent": {
+              "prompt_tokens": 1500,
+              "completion_tokens": 3244,
+              "total_tokens": 4744
+            },
+            "token_usage_reflect": {
+              "prompt_tokens": 1156,
+              "completion_tokens": 2268,
+              "total_tokens": 3424
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1492,
+              "completion_tokens": 1838,
+              "total_tokens": 3330
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[1]バナナを持ってくる"
+    },
+    {
+      "sample_index": 13,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 9,
+            "token_usage_agent": {
+              "prompt_tokens": 1147,
+              "completion_tokens": 723,
+              "total_tokens": 1870
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[9]お菓子を持ってくる"
+    },
+    {
+      "sample_index": 14,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 1,
+            "token_usage_agent": {
+              "prompt_tokens": 1149,
+              "completion_tokens": 1014,
+              "total_tokens": 2163
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[1]バナナを持ってくる"
+    }
+  ]
+}

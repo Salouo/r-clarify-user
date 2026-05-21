@@ -373,8 +373,7 @@ def calculate_total_token_usage_before_success(
 
 
 DEFAULT_RESULT_PATHS = [
-    Path("outputs/human_runs/merged_results/reflection.json"),
-    Path("outputs/human_runs/merged_results/without_reflection.json"),
+    Path("outputs/gpt-5/results/r-clarify.json")
 ]
 
 
