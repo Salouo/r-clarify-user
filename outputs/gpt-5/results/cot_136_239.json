@@ -1,5 +1,5 @@
 {
-  "n_processed": 60,
+  "n_processed": 62,
   "clarify_quota": 2,
   "memo_window": 1,
   "results": [
@@ -3379,6 +3379,120 @@
         []
       ],
       "gold_action": "[12]コップを片付ける",
+      "user_source": "simulated"
+    },
+    {
+      "sample_index": 196,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 14,
+            "token_usage_agent": {
+              "prompt_tokens": 1045,
+              "completion_tokens": 1686,
+              "total_tokens": 2731
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[14]ミニカーを片付ける",
+      "user_source": "simulated"
+    },
+    {
+      "sample_index": 197,
+      "max_trials": 5,
+      "num_trials": 5,
+      "correct": false,
+      "steps_total": 5,
+      "steps_per_trial": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 14,
+            "token_usage_agent": {
+              "prompt_tokens": 1045,
+              "completion_tokens": 2022,
+              "total_tokens": 3067
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 14,
+            "token_usage_agent": {
+              "prompt_tokens": 1045,
+              "completion_tokens": 797,
+              "total_tokens": 1842
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 14,
+            "token_usage_agent": {
+              "prompt_tokens": 1045,
+              "completion_tokens": 1053,
+              "total_tokens": 2098
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 14,
+            "token_usage_agent": {
+              "prompt_tokens": 1045,
+              "completion_tokens": 1787,
+              "total_tokens": 2832
+            }
+          }
+        ],
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 35,
+            "token_usage_agent": {
+              "prompt_tokens": 1045,
+              "completion_tokens": 1972,
+              "total_tokens": 3017
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "gold_action": "[18]お菓子を片付ける",
       "user_source": "simulated"
     }
   ]
