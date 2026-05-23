@@ -4,11 +4,11 @@ set -euo pipefail
 max_trials=5
 memo_window=3      # only used for r-clarify_reflexion unless overridden
 clarify_quota=2    # Default clarify count: 2
-start_idx="411"
-end_idx="546"
-mode_list="r-clarify_reflexion"
+start_idx="0"
+end_idx="137"
+mode_list="clarify"
 
-# modes setting (clarify, r-clarify, r-clarify_reflexion, r-clarify_non_cot, reflect, non_thinking_clarify, cot, cot_reflect, direct, reflect_action_only)
+# modes setting (clarify, r-clarify, r-clarify_reflexion, reflect, non_thinking_clarify, cot, cot_reflect, reflect_action_only)
 
 while getopts ":t:w:c:s:e:m:h" opt; do
   case "$opt" in
@@ -31,7 +31,7 @@ done
 
 runner_cmd=(uv run python)
 
-# modes setting (clarify, r-clarify, r-clarify_reflexion, r-clarify_non_cot, reflect, non_thinking_clarify, cot, cot_reflect, direct, reflect_action_only)
+# modes setting (clarify, r-clarify, r-clarify_reflexion, reflect, non_thinking_clarify, cot, cot_reflect, direct, reflect_action_only)
 IFS=',' read -r -a modes <<< "$mode_list"
 
 for mode in "${modes[@]}"; do

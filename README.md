@@ -157,20 +157,18 @@ Each entry in `results` includes:
 
 ## Evaluation
 
-`src/eval.py` provides:
+`src/eval.py` evaluates one result JSON at a time and provides:
 
 - `Pass@k`-style accuracy by allowed trial count
 - average steps for successful trials
 - `DPass@k(alpha)` (step-discounted success score)
-- token usage breakdown before success (`reflect` / `execute` / `clarify`)
+- token usage totals for agent and reflection calls, excluding simulated-user usage
 
 Run:
 
 ```bash
-uv run python -m src.eval
+uv run python -m src.eval outputs/<model_dir>/results/<mode>.json
 ```
-
-Before running, update `metrics_path` inside `src/eval.py` to your target result file.
 
 ## Utility Scripts
 

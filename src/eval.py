@@ -372,20 +372,107 @@ def calculate_total_token_usage_before_success(
     }
 
 
-DEFAULT_RESULT_PATHS = [
-    Path("outputs/gpt-5/results/r-clarify.json")
-]
-
-
 def load_metrics_data(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def new_token_bucket() -> dict[str, int]:
+    return {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+
+
+def add_token_usage(bucket: dict[str, int], usage: dict | None) -> None:
+    if not isinstance(usage, dict):
+        return
+    prompt = int(usage.get("prompt_tokens") or 0)
+    completion = int(usage.get("completion_tokens") or 0)
+    total = int(usage.get("total_tokens") or (prompt + completion))
+    bucket["prompt_tokens"] += prompt
+    bucket["completion_tokens"] += completion
+    bucket["total_tokens"] += total
+
+
+def average_token_bucket(bucket: dict[str, int], denominator: int) -> dict[str, float]:
+    if denominator <= 0:
+        return {"prompt_tokens": 0.0, "completion_tokens": 0.0, "total_tokens": 0.0}
+    return {
+        "prompt_tokens": bucket["prompt_tokens"] / denominator,
+        "completion_tokens": bucket["completion_tokens"] / denominator,
+        "total_tokens": bucket["total_tokens"] / denominator,
+    }
+
+
+def calculate_token_usage(data: dict) -> dict[str, Any]:
+    """
+    Sum token usage stored in result steps.
+
+    This intentionally counts only the main agent (`token_usage_agent`) and
+    reflection (`token_usage_reflect`) fields. Simulated-user LLM calls are not
+    serialized into those fields, so they are excluded from the total here.
+    """
+    results = data.get("results", [])
+    totals: dict[str, dict[str, int]] = {
+        "overall": new_token_bucket(),
+        "agent": new_token_bucket(),
+        "clarify": new_token_bucket(),
+        "execute": new_token_bucket(),
+        "reflect": new_token_bucket(),
+    }
+    counts = {
+        "agent_calls": 0,
+        "clarify_agent_calls": 0,
+        "execute_agent_calls": 0,
+        "reflection_calls": 0,
+        "steps": 0,
+        "trials": 0,
+    }
+
+    for res in results:
+        for trial_steps in res.get("steps_detail_per_trial", []):
+            if not isinstance(trial_steps, list):
+                continue
+            counts["trials"] += 1
+            for step in trial_steps:
+                if not isinstance(step, dict):
+                    continue
+                counts["steps"] += 1
+                action = step.get("action")
+
+                agent_usage = step.get("token_usage_agent")
+                if isinstance(agent_usage, dict):
+                    add_token_usage(totals["overall"], agent_usage)
+                    add_token_usage(totals["agent"], agent_usage)
+                    counts["agent_calls"] += 1
+                    if action == "clarify":
+                        add_token_usage(totals["clarify"], agent_usage)
+                        counts["clarify_agent_calls"] += 1
+                    else:
+                        add_token_usage(totals["execute"], agent_usage)
+                        counts["execute_agent_calls"] += 1
+
+                reflect_usage = step.get("token_usage_reflect")
+                if isinstance(reflect_usage, dict):
+                    add_token_usage(totals["overall"], reflect_usage)
+                    add_token_usage(totals["reflect"], reflect_usage)
+                    counts["reflection_calls"] += 1
+
+    num_samples = len(results)
+    return {
+        "totals": totals,
+        "avg_per_sample": {
+            name: average_token_bucket(bucket, num_samples)
+            for name, bucket in totals.items()
+        },
+        "counts": counts,
+        "num_samples": num_samples,
+    }
 
 
 def compute_summary_metrics(data: dict, alpha: float) -> dict[str, Any]:
     results = data.get("results", [])
     metrics: dict[str, Any] = {
         "total_samples": len(results),
+        "token_usage": calculate_token_usage(data),
     }
     for k in (3, 5):
         metrics[f"pass_{k}"] = calculate_accuracy_by_trial(data=data, trial=k)
@@ -411,6 +498,14 @@ def _percent(value: float) -> float:
     return value * 100
 
 
+def _format_tokens(usage: dict[str, int] | dict[str, float]) -> str:
+    return (
+        f"prompt={usage.get('prompt_tokens', 0):,.0f}, "
+        f"completion={usage.get('completion_tokens', 0):,.0f}, "
+        f"total={usage.get('total_tokens', 0):,.0f}"
+    )
+
+
 def print_metric_summary(label: str, metrics: dict[str, Any], alpha: float) -> None:
     print(f"{label}:")
     print(
@@ -430,6 +525,24 @@ def print_metric_summary(label: str, metrics: dict[str, Any], alpha: float) -> N
         f"{metrics['avg_clarify_success_3']:.2f} | "
         "Avg. # Clarify in Success @5: "
         f"{metrics['avg_clarify_success_5']:.2f}"
+    )
+    token_usage = metrics["token_usage"]
+    token_totals = token_usage["totals"]
+    avg_per_sample = token_usage["avg_per_sample"]
+    counts = token_usage["counts"]
+    print("  Token usage (excludes simulated user):")
+    print(f"    Total: {_format_tokens(token_totals['overall'])}")
+    print(f"    Reflection: {_format_tokens(token_totals['reflect'])}")
+    print(f"    Agent total: {_format_tokens(token_totals['agent'])}")
+    print(f"    Agent clarify: {_format_tokens(token_totals['clarify'])}")
+    print(f"    Agent execute: {_format_tokens(token_totals['execute'])}")
+    print(f"    Avg/sample total: {_format_tokens(avg_per_sample['overall'])}")
+    print(
+        "    Calls: "
+        f"agent={counts['agent_calls']}, "
+        f"reflection={counts['reflection_calls']}, "
+        f"trials={counts['trials']}, "
+        f"steps={counts['steps']}"
     )
 
 
@@ -474,26 +587,23 @@ def parse_args() -> argparse.Namespace:
         description="Evaluate Pass, DPass, CSPass, and clarification counts."
     )
     parser.add_argument(
+        "result_path",
+        nargs="?",
+        type=Path,
+        help="Path to one result JSON file.",
+    )
+    parser.add_argument(
         "--result-path",
         "-r",
-        action="append",
         type=Path,
-        dest="result_paths",
-        help=(
-            "Path to a result JSON file. Repeat this flag to evaluate multiple "
-            "result files. Defaults to the merged human reflection and "
-            "without_reflection files."
-        ),
+        dest="result_path_flag",
+        help="Path to one result JSON file. Equivalent to the positional path.",
     )
     parser.add_argument(
         "--label",
         "-l",
-        action="append",
-        dest="labels",
-        help=(
-            "Optional display label for a result path. If provided, use the same "
-            "number of --label flags as --result-path flags."
-        ),
+        dest="label",
+        help="Optional display label for the result path.",
     )
     parser.add_argument(
         "--alpha",
@@ -507,28 +617,23 @@ def parse_args() -> argparse.Namespace:
 def main():
     args = parse_args()
     alpha = args.alpha
-    result_paths = args.result_paths or DEFAULT_RESULT_PATHS
-    labels = args.labels or []
+    metrics_path = args.result_path_flag or args.result_path
 
-    if labels and len(labels) != len(result_paths):
-        raise ValueError("If --label is provided, it must match --result-path count.")
+    if metrics_path is None:
+        raise SystemExit("Please provide one result JSON path.")
+    if args.result_path_flag and args.result_path:
+        raise SystemExit("Please provide the result path only once.")
 
-    summaries: list[tuple[str, Path, dict[str, Any]]] = []
-
-    for idx, metrics_path in enumerate(result_paths):
-        data = load_metrics_data(metrics_path)
-        label = labels[idx] if labels else infer_result_label(metrics_path, data)
-        metrics = compute_summary_metrics(data=data, alpha=alpha)
-        summaries.append((label, metrics_path, metrics))
+    data = load_metrics_data(metrics_path)
+    label = args.label or infer_result_label(metrics_path, data)
+    metrics = compute_summary_metrics(data=data, alpha=alpha)
 
     print("Metric summary")
-    for label, metrics_path, metrics in summaries:
-        print(f"\nResult path: {metrics_path}")
-        print_metric_summary(label, metrics, alpha)
+    print(f"\nResult path: {metrics_path}")
+    print_metric_summary(label, metrics, alpha)
 
     print("\nSanity check summary")
-    for label, _, metrics in summaries:
-        print_sanity_check_summary(label, metrics)
+    print_sanity_check_summary(label, metrics)
 
 
 if __name__ == "__main__":
