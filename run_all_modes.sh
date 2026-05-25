@@ -6,7 +6,7 @@ memo_window=3      # only used for r-clarify_reflexion unless overridden
 clarify_quota=2    # Default clarify count: 2
 start_idx="411"
 end_idx="546"
-mode_list="clarify"
+mode_list="reflect"
 
 # modes setting (clarify, r-clarify, r-clarify_reflexion, reflect, non_thinking_clarify, cot, cot_reflect, reflect_action_only)
 
