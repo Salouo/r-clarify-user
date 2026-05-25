@@ -80,6 +80,34 @@ def count_clarifications_in_trial(trial: dict[str, Any] | list[dict]) -> int:
     return clarify_count
 
 
+def count_interaction_steps_in_trial(instance_result: dict, trial_idx: int) -> int:
+    """
+    Count interaction steps for one trial as q_i^t + 1.
+
+    The +1 is the final execute action, so a direct-execute trial has one step.
+    """
+    clarify_turns = instance_result.get("clarify_turns_per_trial", [])
+    if isinstance(clarify_turns, list) and trial_idx < len(clarify_turns):
+        clarifications = clarify_turns[trial_idx]
+        if isinstance(clarifications, list):
+            return len(clarifications) + 1
+
+    steps_detail = instance_result.get("steps_detail_per_trial", [])
+    if isinstance(steps_detail, list) and trial_idx < len(steps_detail):
+        trial_steps = steps_detail[trial_idx] or []
+        if isinstance(trial_steps, list):
+            return count_clarifications_in_trial(trial_steps) + 1
+
+    steps_per_trial = instance_result.get("steps_per_trial", [])
+    if isinstance(steps_per_trial, list) and trial_idx < len(steps_per_trial):
+        try:
+            return max(int(steps_per_trial[trial_idx]), 1)
+        except (TypeError, ValueError):
+            pass
+
+    return 1
+
+
 def compute_cspass(results: list[dict], k: int) -> float:
     """Clarification-supported Pass@k."""
     total = len(results)
@@ -224,6 +252,37 @@ def calculate_dpass_by_trial(
             continue
         steps = steps_per_trial[num_trials - 1]
         total_score += alpha ** (steps - 1)
+
+    return total_score / total
+
+
+def compute_tdpass_at_k(results: list[dict], k: int, alpha: float) -> float:
+    """
+    Total Discounted Pass@k for the given trial budget.
+
+    Unlike DPass, which discounts only the first successful trial, TDPass
+    discounts all interaction steps from trial 1 through the first success.
+    Failed samples score 0, and the result is normalized by total samples.
+    """
+    if not (0.0 < alpha < 1.0):
+        raise ValueError("alpha must be in (0, 1).")
+
+    total = len(results)
+    if total == 0:
+        return 0.0
+
+    total_score = 0.0
+
+    for res in results:
+        successful_trial = get_first_successful_trial(res, k)
+        if successful_trial is None:
+            continue
+
+        total_steps = 0
+        for trial_idx in range(successful_trial["trial_index"]):
+            total_steps += count_interaction_steps_in_trial(res, trial_idx)
+
+        total_score += alpha ** (total_steps - 1)
 
     return total_score / total
 
@@ -481,6 +540,11 @@ def compute_summary_metrics(data: dict, alpha: float) -> dict[str, Any]:
             trial=k,
             alpha=alpha,
         )
+        metrics[f"tdpass_{k}"] = compute_tdpass_at_k(
+            results=results,
+            k=k,
+            alpha=alpha,
+        )
         metrics[f"cspass_{k}"] = compute_cspass(results=results, k=k)
         metrics[f"avg_clarify_success_{k}"] = compute_avg_clarify_in_success(
             results=results,
@@ -515,6 +579,10 @@ def print_metric_summary(label: str, metrics: dict[str, Any], alpha: float) -> N
     print(
         f"  DPass@3 (alpha={alpha}): {_percent(metrics['dpass_3']):.2f} | "
         f"DPass@5 (alpha={alpha}): {_percent(metrics['dpass_5']):.2f}"
+    )
+    print(
+        f"  TDPass@3 (alpha={alpha}): {_percent(metrics['tdpass_3']):.2f} | "
+        f"TDPass@5 (alpha={alpha}): {_percent(metrics['tdpass_5']):.2f}"
     )
     print(
         f"  CSPass@3: {_percent(metrics['cspass_3']):.2f} | "
@@ -584,7 +652,7 @@ def infer_result_label(path: Path, data: dict) -> str:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Evaluate Pass, DPass, CSPass, and clarification counts."
+        description="Evaluate Pass, DPass, TDPass, CSPass, and clarification counts."
     )
     parser.add_argument(
         "result_path",
@@ -609,7 +677,7 @@ def parse_args() -> argparse.Namespace:
         "--alpha",
         type=float,
         default=0.8,
-        help="Discount factor for DPass. Default: 0.8.",
+        help="Discount factor for DPass and TDPass. Default: 0.8.",
     )
     return parser.parse_args()
 

@@ -49,8 +49,8 @@ def merge_results(files: list[Path]) -> dict:
 
 def main() -> None:
     input_dir = Path("outputs/gpt-5/results")
-    glob_pattern = "r-clarify_*.json"
-    output_path = Path("outputs/gpt-5/results/r-clarify.json")
+    glob_pattern = "clarify_*.json"
+    output_path = Path("outputs/gpt-5/results/clarify.json")
 
     files = sorted(input_dir.glob(glob_pattern))
     if not files:
