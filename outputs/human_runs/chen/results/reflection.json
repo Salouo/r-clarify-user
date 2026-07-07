@@ -1,0 +1,257 @@
+{
+  "n_processed": 2,
+  "clarify_quota": 2,
+  "memo_window": 1,
+  "mode": "r-clarify",
+  "use_reflection": true,
+  "user_source": "human",
+  "participant_id": "chen",
+  "run_id": "chen",
+  "timestamp": "2026-07-07T21:26:12",
+  "dataset_path": "data\\processed_data_expanded.json",
+  "n_samples": 30,
+  "seed": 3527577815,
+  "sample_ids": [
+    333,
+    131,
+    478,
+    398,
+    3,
+    129,
+    138,
+    352,
+    56,
+    474,
+    532,
+    58,
+    103,
+    472,
+    325,
+    57,
+    459,
+    134,
+    228,
+    390,
+    258,
+    371,
+    264,
+    161,
+    124,
+    481,
+    334,
+    461,
+    538,
+    47
+  ],
+  "run_started_at": "2026-07-07T21:26:29",
+  "run_finished_at": "2026-07-07T21:28:29",
+  "total_duration_seconds": 119.589,
+  "model": "gpt-5",
+  "sampling_scope": "full_dataset_each_run",
+  "within_run_replacement": false,
+  "across_run_replacement": true,
+  "results": [
+    {
+      "sample_index": 333,
+      "sample_position": 1,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 1,
+      "steps_per_trial": [
+        1
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "execute",
+            "chosen_action": 22,
+            "token_usage_agent": {
+              "prompt_tokens": 2089,
+              "completion_tokens": 1098,
+              "total_tokens": 3187
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        []
+      ],
+      "gold_action": "[22]クッキングシートを持ってくる",
+      "user_source": "human",
+      "participant_id": "chen",
+      "run_id": "chen",
+      "mode": "r-clarify",
+      "use_reflection": true,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-07-07T21:26:30",
+      "sample_finished_at": "2026-07-07T21:26:46",
+      "sample_duration_seconds": 16.557,
+      "response_latencies": [],
+      "human_visible_context": []
+    },
+    {
+      "sample_index": 131,
+      "sample_position": 2,
+      "max_trials": 5,
+      "num_trials": 1,
+      "correct": true,
+      "steps_total": 2,
+      "steps_per_trial": [
+        2
+      ],
+      "steps_detail_per_trial": [
+        [
+          {
+            "t": 1,
+            "action": "clarify",
+            "clarification_question": "今いちばん助かるのは、飲み物とおやつとリモコンのどれを持ってこようか？",
+            "clarification_question_words": 33,
+            "user_reply": "飲み物でお願いします",
+            "user_reply_words": 10,
+            "user_source": "human",
+            "response_latency_seconds": 29.26,
+            "token_usage_agent": {
+              "prompt_tokens": 2109,
+              "completion_tokens": 1838,
+              "total_tokens": 3947
+            }
+          },
+          {
+            "t": 2,
+            "action": "execute",
+            "chosen_action": 6,
+            "token_usage_agent": {
+              "prompt_tokens": 2343,
+              "completion_tokens": 1356,
+              "total_tokens": 3699
+            }
+          }
+        ]
+      ],
+      "clarify_turns_per_trial": [
+        [
+          {
+            "t": 1,
+            "clarification_question": "今いちばん助かるのは、飲み物とおやつとリモコンのどれを持ってこようか？",
+            "clarification_question_words": 33,
+            "user_reply": "飲み物でお願いします",
+            "user_reply_words": 10,
+            "user_source": "human",
+            "response_latency_seconds": 29.26
+          }
+        ]
+      ],
+      "gold_action": "[6]ペットボトルを持ってくる",
+      "user_source": "human",
+      "participant_id": "chen",
+      "run_id": "chen",
+      "mode": "r-clarify",
+      "use_reflection": true,
+      "sampling_scope": "full_dataset_each_run",
+      "sample_started_at": "2026-07-07T21:27:10",
+      "sample_finished_at": "2026-07-07T21:28:29",
+      "sample_duration_seconds": 78.804,
+      "response_latencies": [
+        {
+          "trial": 1,
+          "question": "今いちばん助かるのは、飲み物とおやつとリモコンのどれを持ってこようか？",
+          "response_latency_seconds": 29.26
+        }
+      ],
+      "human_visible_context": [
+        {
+          "run_id": "chen",
+          "participant_id": "chen",
+          "sample_id": 131,
+          "sample_position": 2,
+          "total_samples": 30,
+          "trial": 1,
+          "initial_utterance": "疲れたね",
+          "user_specific_information": {
+            "position": "ソファ",
+            "has": [],
+            "near_items": [
+              "パソコン",
+              "ペットボトル"
+            ]
+          },
+          "environmental_context": {
+            "sofa_front_table_items": [
+              "パソコン",
+              "ペットボトル"
+            ],
+            "kitchen_front_table_items": [
+              "お菓子",
+              "水筒",
+              "キッチンペーパー",
+              "オリーブオイル"
+            ],
+            "kitchen_items": [
+              "ペットボトル"
+            ]
+          },
+          "hidden_need": "[6]ペットボトルを持ってくる",
+          "clarification_question": "今いちばん助かるのは、飲み物とおやつとリモコンのどれを持ってこようか？",
+          "qa_history": [],
+          "answer_rules": "状況情報と目標ニーズに基づいて、実際のユーザとして自然に答えてください。質問で明確に求められていない限り、エージェントに具体的な行動を直接命令しないでください。",
+          "human_answer": "飲み物でお願いします",
+          "response_latency_seconds": 29.26
+        }
+      ]
+    }
+  ],
+  "section_id": "section1",
+  "section_key": "with_reflection",
+  "section_title": "Section 1",
+  "section_started_at": "2026-07-07T21:26:29",
+  "section_finished_at": null,
+  "section_duration_seconds": null,
+  "section_timings": {
+    "section1": {
+      "section_id": "section1",
+      "section_key": "with_reflection",
+      "section_title": "Section 1",
+      "started_at": "2026-07-07T21:26:29",
+      "finished_at": null,
+      "duration_seconds": null
+    },
+    "section2": {
+      "section_id": "section2",
+      "section_key": "without_reflection",
+      "section_title": "Section 2",
+      "started_at": null,
+      "finished_at": null,
+      "duration_seconds": null
+    }
+  },
+  "total_section_duration_seconds": null,
+  "experiment_started_at": "2026-07-07T21:26:29",
+  "experiment_finished_at": null,
+  "experiment_total_duration_seconds": null,
+  "experiment_timing": {
+    "experiment_started_at": "2026-07-07T21:26:29",
+    "experiment_finished_at": null,
+    "experiment_total_duration_seconds": null,
+    "total_section_duration_seconds": null,
+    "section_timings": {
+      "section1": {
+        "section_id": "section1",
+        "section_key": "with_reflection",
+        "section_title": "Section 1",
+        "started_at": "2026-07-07T21:26:29",
+        "finished_at": null,
+        "duration_seconds": null
+      },
+      "section2": {
+        "section_id": "section2",
+        "section_key": "without_reflection",
+        "section_title": "Section 2",
+        "started_at": null,
+        "finished_at": null,
+        "duration_seconds": null
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 {
   "n_processed": 220,
   "result_name": "reflection.json",
-  "merged_at": "2026-05-20T23:14:50",
   "source_root": "outputs\\human_runs",
   "n_source_files": 11,
   "source_files": [
